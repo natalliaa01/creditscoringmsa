@@ -28,7 +28,7 @@
                                     <a href="{{ route('users.index') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Kelola Pengguna & Peran &rarr;</a> {{-- Menggunakan custom class --}}
                                 </div>
                                 <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
-                                    <p class="text-sm text-msa-blue-700">Semua Aplikasi Kredit</p>
+                                    <p class="text-sm text-msa-blue-700">Kredit</p>
                                     <a href="{{ route('applications.index') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Lihat Semua Aplikasi &rarr;</a>
                                 </div>
                                 <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
@@ -39,11 +39,6 @@
                                     <p class="text-sm text-msa-blue-700">Manajemen Data Master</p>
                                     <a href="{{ route('economic-sectors.index') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Kelola Sektor Ekonomi &rarr;</a>
                                 </div>
-                                {{-- Menghapus card Aplikasi Draft untuk Admin --}}
-                                {{-- <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
-                                    <p class="text-sm text-msa-blue-700">Aplikasi Draft</p>
-                                    <a href="{{ route('applications.drafts') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Lihat Semua Draft &rarr;</a>
-                                </div> --}}
                             </div>
                         </div>
                     @endrole
@@ -54,7 +49,7 @@
                             <h4 class="text-xl font-semibold text-msa-blue-700 mb-4">Ringkasan Direksi</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
-                                    <p class="text-sm text-msa-blue-700">Tinjau Aplikasi Kredit</p>
+                                    <p class="text-sm text-msa-blue-700">Tinjau Kredit</p>
                                     <a href="{{ route('applications.index') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Lihat Daftar Aplikasi &rarr;</a>
                                 </div>
                                 <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
@@ -76,7 +71,7 @@
                             <h4 class="text-xl font-semibold text-msa-blue-700 mb-4">Ringkasan Kepala Bagian Kredit</h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
-                                    <p class="text-sm text-msa-blue-700">Ajukan Aplikasi Baru</p>
+                                    <p class="text-sm text-msa-blue-700">Ajukan Kredit</p>
                                     <a href="{{ route('applications.create') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Mulai Pengajuan Kredit &rarr;</a>
                                 </div>
                                 <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">

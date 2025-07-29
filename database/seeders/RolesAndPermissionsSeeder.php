@@ -20,7 +20,7 @@ class RolesAndPermissionsSeeder extends Seeder
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
         // 1. Definisikan Permissions
-        // Permissions untuk aplikasi kredit
+        // Permissions untuk Kredit
         Permission::firstOrCreate(['name' => 'view all credit applications']);
         Permission::firstOrCreate(['name' => 'create credit application']);
         Permission::firstOrCreate(['name' => 'edit credit application']);

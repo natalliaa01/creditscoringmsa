@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Log;
+use Carbon\Carbon; // Import Carbon for date handling
 
 /**
  * @mixin \Illuminate\Foundation\Auth\User
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Log;
 class CreditApplicationController extends Controller
 {
     /**
-     * Menampilkan daftar aplikasi kredit (non-draft).
+     * Menampilkan daftar Kredit (non-draft).
      * Hak akses: Admin, Direksi, Kepala Bagian Kredit, Teller (terbatas)
      */
     public function index()
@@ -34,7 +35,7 @@ class CreditApplicationController extends Controller
     }
 
     /**
-     * Menampilkan daftar aplikasi kredit berstatus 'Draft'.
+     * Menampilkan daftar Kredit berstatus 'Draft'.
      * Hak akses: Teller (hanya miliknya), Kepala Bagian Kredit (semua draft), Admin (semua draft)
      */
     public function drafts()
@@ -55,7 +56,7 @@ class CreditApplicationController extends Controller
 
 
     /**
-     * Menampilkan form untuk membuat aplikasi kredit baru.
+     * Menampilkan form untuk membuat Ajukan Kredit.
      * Hak akses: Teller, Kepala Bagian Kredit, Admin
      */
     public function create()
@@ -67,7 +68,7 @@ class CreditApplicationController extends Controller
     }
 
     /**
-     * Menyimpan aplikasi kredit baru ke database.
+     * Menyimpan Ajukan Kredit ke database.
      * Hak akses: Teller, Kepala Bagian Kredit, Admin
      */
     public function store(Request $request)
@@ -82,15 +83,47 @@ class CreditApplicationController extends Controller
         // Validasi dasar yang selalu diperlukan
         $request->validate([
             'applicant_name' => 'required|string|max:255',
+            'nik' => 'required|string|max:255|unique:credit_applications', // Validasi NIK
+            'tanggal_lahir' => 'required|date', // Validasi Tanggal Lahir
+            'nama_kantor_usaha' => 'nullable|string|max:255', // Validasi Nama Kantor/Usaha
             'application_type' => 'required|in:UMKM/Pengusaha,Pegawai',
+            'jenis_jaminan' => 'nullable|string|max:255', // Validasi jenis jaminan utama
         ]);
+
+        // Mengumpulkan detail jaminan dinamis
+        $collateralDetails = [];
+        if ($request->filled('jenis_jaminan')) {
+            switch ($request->jenis_jaminan) {
+                case 'Bangunan':
+                    $request->validate([
+                        'luas_bangunan' => 'required|numeric|min:0',
+                        'alamat_jaminan_bangunan' => 'required|string|max:255',
+                    ]);
+                    $collateralDetails = $request->only(['luas_bangunan', 'alamat_jaminan_bangunan']);
+                    break;
+                case 'Kendaraan Bermotor':
+                    $request->validate([
+                        'merk_kendaraan' => 'required|string|max:255',
+                        'tahun_kendaraan' => 'required|integer|min:1900|max:' . Carbon::now()->year,
+                        'atas_nama_kendaraan' => 'required|string|max:255',
+                    ]);
+                    $collateralDetails = $request->only(['merk_kendaraan', 'tahun_kendaraan', 'atas_nama_kendaraan']);
+                    break;
+                // Tambahkan case lain jika ada jenis jaminan lain yang perlu detail spesifik
+            }
+        }
+
 
         // Simpan data ke tabel credit_applications
         $creditApplication = CreditApplication::create([
             'user_id' => Auth::id(),
             'applicant_name' => $request->applicant_name,
+            'nik' => $request->nik,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'nama_kantor_usaha' => $request->nama_kantor_usaha,
             'application_type' => $request->application_type,
             'status' => $initialStatus,
+            'collateral_details' => !empty($collateralDetails) ? $collateralDetails : null, // Simpan detail jaminan
         ]);
 
         // Validasi dan penyimpanan data ke tabel spesifik berdasarkan application_type
@@ -156,7 +189,9 @@ class CreditApplicationController extends Controller
                     'gaji_bulanan', 'jumlah_tanggungan', 'riwayat_kredit',
                     'jenis_penggunaan_kredit', 'jenis_jaminan', 'sumber_dana_pengembalian',
                     'plafond_pengajuan', 'jangka_waktu_kredit'
-                ])
+                ]),
+                'common_data' => $request->only(['nik', 'tanggal_lahir', 'nama_kantor_usaha']), // Sertakan data umum
+                'collateral_details' => $collateralDetails // Sertakan detail jaminan dinamis
             ];
 
             try {
@@ -182,20 +217,16 @@ class CreditApplicationController extends Controller
             }
         }
 
-        $message = ($action === 'draft') ? 'Aplikasi kredit berhasil disimpan sebagai draft!' : 'Aplikasi kredit berhasil diajukan dan sedang diproses!';
+        $message = ($action === 'draft') ? 'Kredit berhasil disimpan sebagai draft!' : 'Kredit berhasil diajukan dan sedang diproses!';
         return redirect()->route('applications.index')->with('success', $message);
     }
 
     /**
-     * Menampilkan detail aplikasi kredit.
+     * Menampilkan detail Kredit.
      * Hak akses: Admin, Direksi, Kepala Bagian Kredit (terbatas), Teller (terbatas)
      */
     public function show(CreditApplication $application)
     {
-        // Logika otorisasi untuk melihat detail aplikasi
-        // Admin, Direksi, Kepala Bagian Kredit bisa melihat semua.
-        // Teller hanya bisa melihat miliknya sendiri.
-        // Jika Teller tapi bukan miliknya, maka abort.
         if (Auth::user()->hasRole('Teller') && $application->user_id !== Auth::id()) {
             abort(403, 'Unauthorized action.');
         }
@@ -208,19 +239,15 @@ class CreditApplicationController extends Controller
     }
 
     /**
-     * Menampilkan form untuk mengedit aplikasi kredit.
+     * Menampilkan form untuk mengedit Kredit.
      * Hak akses: Admin, Kepala Bagian Kredit (terbatas), Teller (terbatas pada miliknya), Direksi (jika diberi izin)
      */
     public function edit(CreditApplication $application)
     {
-        // Admin bisa edit semua.
-        // Kepala Bagian Kredit bisa edit jika punya 'edit credit application'.
-        // Teller bisa edit aplikasi yang dia input sendiri DAN punya 'edit credit application'.
-        // Direksi bisa edit jika punya 'edit credit application'.
         if (Auth::user()->hasRole('Admin') ||
             (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('edit credit application')) ||
             (Auth::user()->hasRole('Teller') && Auth::user()->can('edit credit application') && $application->user_id === Auth::id()) ||
-            (Auth::user()->hasRole('Direksi') && Auth::user()->can('edit credit application'))) { // Tambahkan kondisi ini untuk Direksi
+            (Auth::user()->hasRole('Direksi') && Auth::user()->can('edit credit application'))) {
             $application->load(['umkmApplication', 'employeeApplication']);
             return view('applications.edit', compact('application'));
         }
@@ -229,30 +256,57 @@ class CreditApplicationController extends Controller
     }
 
     /**
-     * Memperbarui aplikasi kredit di database.
+     * Memperbarui Kredit di database.
      * Hak akses: Admin, Kepala Bagian Kredit (terbatas), Teller (terbatas pada miliknya), Direksi (jika diberi izin)
      */
     public function update(Request $request, CreditApplication $application)
     {
-        // Admin bisa update semua.
-        // Kepala Bagian Kredit bisa update jika punya 'edit credit application'.
-        // Teller bisa update aplikasi yang dia input sendiri DAN punya 'edit credit application'.
-        // Direksi bisa update jika punya 'edit credit application'.
         if (Auth::user()->hasRole('Admin') ||
             (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('edit credit application')) ||
             (Auth::user()->hasRole('Teller') && Auth::user()->can('edit credit application') && $application->user_id === Auth::id()) ||
-            (Auth::user()->hasRole('Direksi') && Auth::user()->can('edit credit application'))) { // Tambahkan kondisi ini untuk Direksi
+            (Auth::user()->hasRole('Direksi') && Auth::user()->can('edit credit application'))) {
             $request->validate([
                 'applicant_name' => 'required|string|max:255',
+                'nik' => 'required|string|max:255|unique:credit_applications,nik,' . $application->id, // Validasi NIK, abaikan NIK sendiri
+                'tanggal_lahir' => 'required|date',
+                'nama_kantor_usaha' => 'nullable|string|max:255',
                 'application_type' => 'required|in:UMKM/Pengusaha,Pegawai',
+                'jenis_jaminan' => 'nullable|string|max:255', // Validasi jenis jaminan utama
             ]);
+
+            // Mengumpulkan detail jaminan dinamis saat update
+            $collateralDetails = [];
+            if ($request->filled('jenis_jaminan')) {
+                switch ($request->jenis_jaminan) {
+                    case 'Bangunan':
+                        $request->validate([
+                            'luas_bangunan' => 'required|numeric|min:0',
+                            'alamat_jaminan_bangunan' => 'required|string|max:255',
+                        ]);
+                        $collateralDetails = $request->only(['luas_bangunan', 'alamat_jaminan_bangunan']);
+                        break;
+                    case 'Kendaraan Bermotor':
+                        $request->validate([
+                            'merk_kendaraan' => 'required|string|max:255',
+                            'tahun_kendaraan' => 'required|integer|min:1900|max:' . Carbon::now()->year,
+                            'atas_nama_kendaraan' => 'required|string|max:255',
+                        ]);
+                        $collateralDetails = $request->only(['merk_kendaraan', 'tahun_kendaraan', 'atas_nama_kendaraan']);
+                        break;
+                    // Tambahkan case lain jika ada jenis jaminan lain yang perlu detail spesifik
+                }
+            }
 
             $newStatus = $request->status ?? $application->status;
 
             $application->update([
                 'applicant_name' => $request->applicant_name,
+                'nik' => $request->nik,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'nama_kantor_usaha' => $request->nama_kantor_usaha,
                 'application_type' => $request->application_type,
                 'status' => $newStatus,
+                'collateral_details' => !empty($collateralDetails) ? $collateralDetails : null, // Simpan detail jaminan
             ]);
 
             if ($request->application_type === 'UMKM/Pengusaha' && $application->umkmApplication) {
@@ -300,7 +354,9 @@ class CreditApplicationController extends Controller
                 $dataToPython = [
                     'application_id' => $application->id,
                     'application_type' => $application->application_type,
-                    'data' => ($application->application_type === 'UMKM/Pengusaha') ? ($application->umkmApplication ? $application->umkmApplication->toArray() : []) : ($application->employeeApplication ? $application->employeeApplication->toArray() : [])
+                    'data' => ($application->application_type === 'UMKM/Pengusaha') ? ($application->umkmApplication ? $application->umkmApplication->toArray() : []) : ($application->employeeApplication ? $application->employeeApplication->toArray() : []),
+                    'common_data' => $request->only(['nik', 'tanggal_lahir', 'nama_kantor_usaha']), // Sertakan data umum
+                    'collateral_details' => $collateralDetails // Sertakan detail jaminan dinamis
                 ];
 
                 try {
@@ -326,28 +382,24 @@ class CreditApplicationController extends Controller
                 }
             }
 
-            return redirect()->route('applications.index')->with('success', 'Aplikasi kredit berhasil diperbarui!');
+            return redirect()->route('applications.index')->with('success', 'Kredit berhasil diperbarui!');
         }
 
         abort(403, 'Unauthorized action.');
     }
 
     /**
-     * Menghapus aplikasi kredit.
+     * Menghapus Kredit.
      * Hak akses: Admin, Kepala Bagian Kredit (terbatas), Teller (terbatas pada miliknya), Direksi (jika diberi izin)
      */
     public function destroy(CreditApplication $application)
     {
-        // Admin bisa hapus semua.
-        // Kepala Bagian Kredit bisa hapus jika punya 'delete credit application'.
-        // Teller bisa hapus aplikasi yang dia input sendiri DAN punya 'delete credit application'.
-        // Direksi bisa hapus jika punya 'delete credit application'.
         if (Auth::user()->hasRole('Admin') ||
             (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('delete credit application')) ||
             (Auth::user()->hasRole('Teller') && Auth::user()->can('delete credit application') && $application->user_id === Auth::id()) ||
-            (Auth::user()->hasRole('Direksi') && Auth::user()->can('delete credit application'))) { // Tambahkan kondisi ini untuk Direksi
+            (Auth::user()->hasRole('Direksi') && Auth::user()->can('delete credit application'))) {
             $application->delete();
-            return redirect()->route('applications.index')->with('success', 'Aplikasi kredit berhasil dihapus!');
+            return redirect()->route('applications.index')->with('success', 'Kredit berhasil dihapus!');
         }
 
         abort(403, 'Unauthorized action.');

@@ -25,7 +25,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                         <!-- Total Aplikasi -->
                         <div class="bg-blue-50 p-4 rounded-lg shadow-sm">
-                            <p class="text-sm text-blue-700">Total Aplikasi Kredit</p>
+                            <p class="text-sm text-blue-700">Total Kredit</p>
                             <p class="text-3xl font-bold text-blue-900">{{ $totalApplications }}</p>
                         </div>
 
@@ -88,7 +88,7 @@
 
                     {{-- Bagian untuk Grafik Tren Aplikasi --}}
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 mb-8">
-                        <h4 class="text-md font-medium text-gray-900 mb-3">Tren Aplikasi Kredit per Bulan (Tahun Ini)</h4>
+                        <h4 class="text-md font-medium text-gray-900 mb-3">Tren Kredit per Bulan (Tahun Ini)</h4>
                         <div class="relative h-80"> {{-- Tambahkan kontainer responsif --}}
                             <canvas id="applicationsChart"></canvas>
                         </div>
@@ -159,7 +159,7 @@
                                         },
                                         title: {
                                             display: false,
-                                            text: 'Tren Aplikasi Kredit'
+                                            text: 'Tren Kredit'
                                         }
                                     },
                                     scales: {

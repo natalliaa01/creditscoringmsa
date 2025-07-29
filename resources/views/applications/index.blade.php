@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Daftar Aplikasi Kredit') }}
+            {{ __('Daftar Kredit') }}
         </h2>
     </x-slot>
 
@@ -10,10 +10,10 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <div class="p-6 text-gray-900">
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-lg font-medium text-gray-900">Daftar Aplikasi Kredit</h3>
+                        <h3 class="text-lg font-medium text-gray-900">Daftar Kredit</h3>
                         @can('create credit application')
                             <a href="{{ route('applications.create') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                                {{ __('Ajukan Aplikasi Baru') }}
+                                {{ __('Ajukan Kredit') }}
                             </a>
                         @endcan
                     </div>
@@ -25,7 +25,7 @@
                     @endif
 
                     @if ($applications->isEmpty())
-                        <p class="text-gray-600">Belum ada aplikasi kredit yang tersedia.</p>
+                        <p class="text-gray-600">Belum ada Kredit yang tersedia.</p>
                     @else
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200">
