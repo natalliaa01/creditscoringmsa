@@ -5,7 +5,7 @@
             <div class="mb-6 flex justify-center">
                 {{-- Menggunakan komponen logo aplikasi jika tersedia, atau gambar statis --}}
                 <a href="/">
-                    <img src="{{ asset('img/logo3.png') }}" alt="Logo Credit Scoring" class="h-20 w-auto">
+                    <img src="{{ asset('img/cod.png') }}" alt="Logo Credit Scoring" class="h-20 w-auto">
                 </a>
             </div>
             <h2 class="text-2xl lg:text-3xl font-extrabold text-center mb-3 text-gray-800 leading-tight">Selamat Datang Kembali</h2>

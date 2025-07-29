@@ -11,9 +11,6 @@
             <h2 class="text-2xl lg:text-3xl font-extrabold text-center mb-3 text-gray-800 leading-tight">Bergabung dengan Kami</h2>
             <p class="text-center text-gray-600 mb-6 text-sm">Buat akun baru untuk mengakses sistem credit scoring terdepan.</p>
 
-            {{-- Error validasi --}}
-            <x-validation-errors class="mb-4" />
-
             <form method="POST" action="{{ route('register') }}" class="space-y-4">
                 @csrf
 
