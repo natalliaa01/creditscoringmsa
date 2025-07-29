@@ -37,7 +37,9 @@ class ReportController extends Controller
         } elseif ($filterPeriod === 'this_year') {
             $query->whereYear('created_at', Carbon::now()->year);
         }
-        // 'all' tidak memerlukan filter tambahan
+
+        // Mengecualikan aplikasi berstatus 'Draft' dari semua laporan
+        $query->where('status', '!=', 'Draft');
 
         $applications = $query->get();
 
@@ -74,16 +76,15 @@ class ReportController extends Controller
                                     DB::raw('SUM(CASE WHEN status = "Rejected" THEN 1 ELSE 0 END) as rejected_applications')
                                 )
                                 ->whereYear('created_at', Carbon::now()->year) // Hanya tahun ini untuk tren
+                                ->where('status', '!=', 'Draft') // Mengecualikan draft dari tren
                                 ->groupBy('month')
                                 ->orderBy('month')
                                 ->get();
 
         // Data untuk distribusi skor (histogram sederhana)
-        // Mengumpulkan semua skor yang ada
         $allScores = $scoredApplications->pluck('scoring_result.score')->filter()->toArray();
         $scoreDistribution = [];
         if (!empty($allScores)) {
-            // Contoh binning: 0-20, 21-40, ..., 81-100
             $bins = [0, 20, 40, 60, 80, 100];
             foreach ($bins as $i => $lowerBound) {
                 if ($i + 1 < count($bins)) {
@@ -108,7 +109,7 @@ class ReportController extends Controller
             'averageScore',
             'applicationsPerMonth',
             'scoreDistribution',
-            'filterPeriod' // Kirim kembali filter yang dipilih ke view
+            'filterPeriod'
         ));
     }
 }

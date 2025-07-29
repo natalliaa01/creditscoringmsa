@@ -90,7 +90,7 @@
 
                                 @role('Admin|Direksi|Kepala Bagian Kredit|Teller')
                                     <x-nav-link :href="route('applications.index')" :active="request()->routeIs('applications.index')" class="text-msa-blue-700 hover:text-msa-blue-darker">
-                                        {{ __('Aplikasi Kredit') }}
+                                        {{ __('Kredit') }}
                                     </x-nav-link>
                                 @endrole
 
@@ -174,7 +174,7 @@
 
                         @role('Admin|Direksi|Kepala Bagian Kredit|Teller')
                             <x-responsive-nav-link :href="route('applications.index')" :active="request()->routeIs('applications.index')" class="text-msa-blue-700 hover:text-msa-blue-darker">
-                                {{ __('Aplikasi Kredit') }}
+                                {{ __('Kredit') }}
                             </x-responsive-nav-link>
                         @endrole
 

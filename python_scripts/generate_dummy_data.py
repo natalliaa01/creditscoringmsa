@@ -5,7 +5,7 @@ import random
 
 def generate_dummy_data(num_samples=200): # Mengurangi jumlah sampel untuk awal
     """
-    Menghasilkan data dummy untuk aplikasi kredit UMKM/Pengusaha dan Pegawai.
+    Menghasilkan data dummy untuk Kredit UMKM/Pengusaha dan Pegawai.
     Mencakup berbagai kemungkinan untuk keputusan kredit.
     """
     data = []

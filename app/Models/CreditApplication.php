@@ -17,10 +17,14 @@ class CreditApplication extends Model
     protected $fillable = [
         'user_id',
         'applicant_name',
+        'nik', // Tambahkan NIK
+        'tanggal_lahir', // Tambahkan tanggal_lahir
+        'nama_kantor_usaha', // Tambahkan nama_kantor_usaha
         'application_type',
         'status',
         'scoring_result',
         'recommendation',
+        'collateral_details', // Tambahkan collateral_details
     ];
 
     /**
@@ -31,6 +35,7 @@ class CreditApplication extends Model
     protected $casts = [
         'scoring_result' => 'array', // Cast sebagai array/JSON
         'recommendation' => 'array', // Cast sebagai array/JSON
+        'collateral_details' => 'array', // Cast sebagai array/JSON untuk detail jaminan
     ];
 
     /**

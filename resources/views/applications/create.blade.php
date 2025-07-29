@@ -1,15 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Ajukan Aplikasi Kredit Baru') }}
+            {{ __('Ajukan Ajukan Kredit') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 bg-gray-100">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <div class="p-6 text-gray-900">
-                    <h3 class="text-lg font-medium text-gray-900 mb-4">Informasi Pemohon</h3>
+                    <h3 class="font-semibold text-2xl text-msa-blue mb-4">Informasi Pemohon</h3>
 
                     @if ($errors->any())
                         <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
@@ -31,11 +31,32 @@
                             <x-input-error :messages="$errors->get('applicant_name')" class="mt-2" />
                         </div>
 
-                        <!-- Tipe Aplikasi -->
+                        <!-- NIK -->
                         <div class="mb-4">
-                            <x-input-label for="application_type" :value="__('Tipe Aplikasi')" />
+                            <x-input-label for="nik" :value="__('NIK')" />
+                            <x-text-input id="nik" class="block mt-1 w-full" type="text" name="nik" :value="old('nik')" required />
+                            <x-input-error :messages="$errors->get('nik')" class="mt-2" />
+                        </div>
+
+                        <!-- Tanggal Lahir -->
+                        <div class="mb-4">
+                            <x-input-label for="tanggal_lahir" :value="__('Tanggal Lahir')" />
+                            <x-text-input id="tanggal_lahir" class="block mt-1 w-full" type="date" name="tanggal_lahir" :value="old('tanggal_lahir')" required />
+                            <x-input-error :messages="$errors->get('tanggal_lahir')" class="mt-2" />
+                        </div>
+
+                        <!-- Nama Kantor/Usaha -->
+                        <div class="mb-4">
+                            <x-input-label for="nama_kantor_usaha" :value="__('Nama Kantor/Usaha')" />
+                            <x-text-input id="nama_kantor_usaha" class="block mt-1 w-full" type="text" name="nama_kantor_usaha" :value="old('nama_kantor_usaha')" />
+                            <x-input-error :messages="$errors->get('nama_kantor_usaha')" class="mt-2" />
+                        </div>
+
+                        <!-- Jenis Pemohon -->
+                        <div class="mb-4">
+                            <x-input-label for="application_type" :value="__('Jenis Pemohon')" />
                             <select id="application_type" name="application_type" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>
-                                <option value="">Pilih Tipe Aplikasi</option>
+                                <option value="">Pilih Jenis Pemohon</option>
                                 <option value="UMKM/Pengusaha" {{ old('application_type') == 'UMKM/Pengusaha' ? 'selected' : '' }}>UMKM/Pengusaha</option>
                                 <option value="Pegawai" {{ old('application_type') == 'Pegawai' ? 'selected' : '' }}>Pegawai</option>
                             </select>
@@ -44,7 +65,7 @@
 
                         <!-- Form UMKM/Pengusaha (akan ditampilkan secara dinamis) -->
                         <div id="umkm_form" class="hidden">
-                            <h3 class="text-lg font-medium text-gray-900 mb-4 mt-6">Data Aplikasi UMKM/Pengusaha</h3>
+                            <h3 class="font-semibold text-xl text-msa-blue mb-4 mt-6">Data Aplikasi UMKM/Pengusaha</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="mb-4">
                                     <x-input-label for="omzet_usaha" :value="__('Omzet Usaha Bulanan (Rp)')" />
@@ -76,10 +97,6 @@
                                     <x-text-input id="jenis_penggunaan_kredit" class="block mt-1 w-full" type="text" name="jenis_penggunaan_kredit" :value="old('jenis_penggunaan_kredit')" required />
                                 </div>
                                 <div class="mb-4">
-                                    <x-input-label for="jenis_jaminan" :value="__('Jenis Jaminan')" />
-                                    <x-text-input id="jenis_jaminan" class="block mt-1 w-full" type="text" name="jenis_jaminan" :value="old('jenis_jaminan')" required />
-                                </div>
-                                <div class="mb-4">
                                     <x-input-label for="sumber_dana_pengembalian" :value="__('Sumber Dana Pengembalian')" />
                                     <x-text-input id="sumber_dana_pengembalian" class="block mt-1 w-full" type="text" name="sumber_dana_pengembalian" :value="old('sumber_dana_pengembalian')" required />
                                 </div>
@@ -96,7 +113,7 @@
 
                         <!-- Form Pegawai (akan ditampilkan secara dinamis) -->
                         <div id="pegawai_form" class="hidden">
-                            <h3 class="text-lg font-medium text-gray-900 mb-4 mt-6">Data Aplikasi Pegawai</h3>
+                            <h3 class="font-semibold text-xl text-msa-blue mb-4 mt-6">Data Aplikasi Pegawai</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="mb-4">
                                     <x-input-label for="usia" :value="__('Usia (Tahun)')" />
@@ -136,14 +153,10 @@
                                         <option value="Pernah Macet" {{ old('riwayat_kredit') == 'Pernah Macet' ? 'selected' : '' }}>Pernah Macet</option>
                                     </select>
                                 </div>
-                                {{-- Tambahkan detail pinjaman untuk Pegawai --}}
+                                {{-- Detail pinjaman untuk Pegawai (sama seperti UMKM) --}}
                                 <div class="mb-4">
                                     <x-input-label for="jenis_penggunaan_kredit" :value="__('Jenis Penggunaan Kredit')" />
                                     <x-text-input id="jenis_penggunaan_kredit" class="block mt-1 w-full" type="text" name="jenis_penggunaan_kredit" :value="old('jenis_penggunaan_kredit')" required />
-                                </div>
-                                <div class="mb-4">
-                                    <x-input-label for="jenis_jaminan" :value="__('Jenis Jaminan')" />
-                                    <x-text-input id="jenis_jaminan" class="block mt-1 w-full" type="text" name="jenis_jaminan" :value="old('jenis_jaminan')" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="sumber_dana_pengembalian" :value="__('Sumber Dana Pengembalian')" />
@@ -160,10 +173,51 @@
                             </div>
                         </div>
 
-                        <div class="flex items-center justify-end mt-4">
-                            {{-- Tombol Ajukan Aplikasi --}}
+                        {{-- Bagian Jaminan Dinamis --}}
+                        <h3 class="font-semibold text-xl text-msa-blue mb-4 mt-6">Informasi Jaminan</h3>
+                        <div class="mb-4">
+                            <x-input-label for="jenis_jaminan_utama" :value="__('Jenis Jaminan Utama')" />
+                            <select id="jenis_jaminan_utama" name="jenis_jaminan" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                <option value="">Pilih Jenis Jaminan</option>
+                                <option value="Tidak Ada" {{ old('jenis_jaminan') == 'Tidak Ada' ? 'selected' : '' }}>Tidak Ada</option>
+                                <option value="Bangunan" {{ old('jenis_jaminan') == 'Bangunan' ? 'selected' : '' }}>Bangunan</option>
+                                <option value="Kendaraan Bermotor" {{ old('jenis_jaminan') == 'Kendaraan Bermotor' ? 'selected' : '' }}>Kendaraan Bermotor</option>
+                                {{-- Tambahkan jenis jaminan lain sesuai kebutuhan (misal: Deposito, Emas, dll.) --}}
+                            </select>
+                            <x-input-error :messages="$errors->get('jenis_jaminan')" class="mt-2" />
+                        </div>
+
+                        <div id="jaminan_bangunan_fields" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="mb-4">
+                                <x-input-label for="luas_bangunan" :value="__('Luas Bangunan (m²)')" />
+                                <x-text-input id="luas_bangunan" class="block mt-1 w-full" type="number" name="luas_bangunan" :value="old('luas_bangunan')" min="0" step="0.01" />
+                            </div>
+                            <div class="mb-4">
+                                <x-input-label for="alamat_jaminan_bangunan" :value="__('Alamat Jaminan Bangunan')" />
+                                <x-text-input id="alamat_jaminan_bangunan" class="block mt-1 w-full" type="text" name="alamat_jaminan_bangunan" :value="old('alamat_jaminan_bangunan')" />
+                            </div>
+                        </div>
+
+                        <div id="jaminan_kendaraan_fields" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="mb-4">
+                                <x-input-label for="merk_kendaraan" :value="__('Merk Kendaraan')" />
+                                <x-text-input id="merk_kendaraan" class="block mt-1 w-full" type="text" name="merk_kendaraan" :value="old('merk_kendaraan')" />
+                            </div>
+                            <div class="mb-4">
+                                <x-input-label for="tahun_kendaraan" :value="__('Tahun Kendaraan')" />
+                                <x-text-input id="tahun_kendaraan" class="block mt-1 w-full" type="number" name="tahun_kendaraan" :value="old('tahun_kendaraan')" min="1900" max="{{ date('Y') }}" />
+                            </div>
+                            <div class="mb-4">
+                                <x-input-label for="atas_nama_kendaraan" :value="__('Atas Nama Kendaraan')" />
+                                <x-text-input id="atas_nama_kendaraan" class="block mt-1 w-full" type="text" name="atas_nama_kendaraan" :value="old('atas_nama_kendaraan')" />
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-center justify-end mt-4">                
+                            {{-- Tombol Kredit --}}
                             <x-primary-button class="ml-3" type="submit" name="action" value="submit">
-                                {{ __('Ajukan Aplikasi') }}
+                                {{ __('Kredit') }}
                             </x-primary-button>
                         </div>
                     </form>
@@ -177,6 +231,10 @@
             const applicationTypeSelect = document.getElementById('application_type');
             const umkmForm = document.getElementById('umkm_form');
             const pegawaiForm = document.getElementById('pegawai_form');
+
+            const jenisJaminanUtamaSelect = document.getElementById('jenis_jaminan_utama');
+            const jaminanBangunanFields = document.getElementById('jaminan_bangunan_fields');
+            const jaminanKendaraanFields = document.getElementById('jaminan_kendaraan_fields');
 
             function toggleForms() {
                 const selectedType = applicationTypeSelect.value;
@@ -201,11 +259,32 @@
                 }
             }
 
+            function toggleJaminanFields() {
+                const selectedJaminan = jenisJaminanUtamaSelect.value;
+                // Sembunyikan semua dan hapus required
+                jaminanBangunanFields.classList.add('hidden');
+                jaminanBangunanFields.querySelectorAll('input, select').forEach(el => el.removeAttribute('required'));
+                jaminanKendaraanFields.classList.add('hidden');
+                jaminanKendaraanFields.querySelectorAll('input, select').forEach(el => el.removeAttribute('required'));
+
+                // Tampilkan dan set required yang relevan
+                if (selectedJaminan === 'Bangunan') {
+                    jaminanBangunanFields.classList.remove('hidden');
+                    jaminanBangunanFields.querySelectorAll('input, select').forEach(el => el.setAttribute('required', 'required'));
+                } else if (selectedJaminan === 'Kendaraan Bermotor') {
+                    jaminanKendaraanFields.classList.remove('hidden');
+                    jaminanKendaraanFields.querySelectorAll('input, select').forEach(el => el.setAttribute('required', 'required'));
+                }
+            }
+
+
             // Initial call to set form visibility based on old input or default
             toggleForms();
+            toggleJaminanFields(); // Panggil juga untuk jaminan
 
             // Listen for changes
             applicationTypeSelect.addEventListener('change', toggleForms);
+            jenisJaminanUtamaSelect.addEventListener('change', toggleJaminanFields); // Listener untuk jaminan
 
             // Handle validation errors on page load to show correct form
             const oldApplicationType = "{{ old('application_type', '') }}";
@@ -215,6 +294,13 @@
             } else if (oldApplicationType === 'Pegawai') {
                 umkmForm.classList.add('hidden');
                 pegawaiForm.classList.remove('hidden');
+            }
+
+            const oldJenisJaminan = "{{ old('jenis_jaminan', '') }}";
+            if (oldJenisJaminan === 'Bangunan') {
+                jaminanBangunanFields.classList.remove('hidden');
+            } else if (oldJenisJaminan === 'Kendaraan Bermotor') {
+                jaminanKendaraanFields.classList.remove('hidden');
             }
         });
     </script>

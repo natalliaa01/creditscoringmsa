@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Rute untuk Aplikasi Kredit
+    // Rute untuk Kredit
     Route::resource('applications', CreditApplicationController::class);
     // Rute baru untuk melihat draft aplikasi
     Route::get('/applications/drafts', [CreditApplicationController::class, 'drafts'])->name('applications.drafts');
