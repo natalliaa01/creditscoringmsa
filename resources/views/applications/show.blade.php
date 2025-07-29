@@ -1,20 +1,32 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Detail Kredit') }}
+            {{ __('Detail Aplikasi Kredit') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 bg-gray-100">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <div class="p-6 text-gray-900">
-                    <h3 class="text-lg font-medium text-gray-900 mb-4">Informasi Kredit #{{ $application->id }}</h3>
+                    <h3 class="font-semibold text-2xl text-msa-blue mb-4">Informasi Aplikasi Kredit #{{ $application->id }}</h3>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                         <div>
                             <p class="text-sm text-gray-600">Nama Pemohon:</p>
                             <p class="font-semibold text-gray-900">{{ $application->applicant_name }}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">NIK:</p>
+                            <p class="font-semibold text-gray-900">{{ $application->nik }}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Tanggal Lahir:</p>
+                            <p class="font-semibold text-gray-900">{{ \Carbon\Carbon::parse($application->tanggal_lahir)->format('d M Y') }}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Nama Kantor/Usaha:</p>
+                            <p class="font-semibold text-gray-900">{{ $application->nama_kantor_usaha ?? '-' }}</p>
                         </div>
                         <div>
                             <p class="text-sm text-gray-600">Tipe Aplikasi:</p>
@@ -43,7 +55,7 @@
                     </div>
 
                     @if ($application->application_type === 'UMKM/Pengusaha' && $application->umkmApplication)
-                        <h4 class="text-md font-medium text-gray-900 mb-3 mt-6">Data UMKM/Pengusaha</h4>
+                        <h4 class="font-semibold text-xl text-msa-blue mb-4 mt-6">Data UMKM/Pengusaha</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div><p class="text-sm text-gray-600">Omzet Usaha Bulanan:</p><p class="font-semibold text-gray-900">Rp {{ number_format($application->umkmApplication->omzet_usaha, 2, ',', '.') }}</p></div>
                             <div><p class="text-sm text-gray-600">Lama Usaha:</p><p class="font-semibold text-gray-900">{{ $application->umkmApplication->lama_usaha }} Tahun</p></div>
@@ -51,13 +63,12 @@
                             <div><p class="text-sm text-gray-600">Lokasi Usaha:</p><p class="font-semibold text-gray-900">{{ $application->umkmApplication->lokasi_usaha }}</p></div>
                             <div><p class="text-sm text-gray-600">Riwayat Pinjaman Sebelumnya:</p><p class="font-semibold text-gray-900">{{ $application->umkmApplication->riwayat_pinjaman }}</p></div>
                             <div><p class="text-sm text-gray-600">Jenis Penggunaan Kredit:</p><p class="font-semibold text-gray-900">{{ $application->umkmApplication->jenis_penggunaan_kredit }}</p></div>
-                            <div><p class="text-sm text-gray-600">Jenis Jaminan:</p><p class="font-semibold text-gray-900">{{ $application->umkmApplication->jenis_jaminan }}</p></div>
                             <div><p class="text-sm text-gray-600">Sumber Dana Pengembalian:</p><p class="font-semibold text-gray-900">{{ $application->umkmApplication->sumber_dana_pengembalian }}</p></div>
                             <div><p class="text-sm text-gray-600">Plafond Pengajuan:</p><p class="font-semibold text-gray-900">Rp {{ number_format($application->umkmApplication->plafond_pengajuan, 2, ',', '.') }}</p></div>
                             <div><p class="text-sm text-gray-600">Jangka Waktu Kredit:</p><p class="font-semibold text-gray-900">{{ $application->umkmApplication->jangka_waktu_kredit }} Bulan</p></div>
                         </div>
                     @elseif ($application->application_type === 'Pegawai' && $application->employeeApplication)
-                        <h4 class="text-md font-medium text-gray-900 mb-3 mt-6">Data Pegawai</h4>
+                        <h4 class="font-semibold text-xl text-msa-blue mb-4 mt-6">Data Pegawai</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div><p class="text-sm text-gray-600">Usia:</p><p class="font-semibold text-gray-900">{{ $application->employeeApplication->usia }} Tahun</p></div>
                             <div><p class="text-sm text-gray-600">Masa Kerja:</p><p class="font-semibold text-gray-900">{{ $application->employeeApplication->masa_kerja }} Tahun</p></div>
@@ -75,8 +86,32 @@
                         </div>
                     @endif
 
+                    {{-- Informasi Jaminan Dinamis --}}
+                    @if ($application->jenis_jaminan)
+                        <h4 class="font-semibold text-xl text-msa-blue mb-4 mt-6">Informasi Jaminan ({{ $application->jenis_jaminan }})</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            @if ($application->jenis_jaminan === 'Bangunan' && $application->collateral_details)
+                                <div><p class="text-sm text-gray-600">Luas Bangunan:</p><p class="font-semibold text-gray-900">{{ $application->collateral_details['luas_bangunan'] ?? '-' }} m²</p></div>
+                                <div><p class="text-sm text-gray-600">Alamat Jaminan:</p><p class="font-semibold text-gray-900">{{ $application->collateral_details['alamat_jaminan_bangunan'] ?? '-' }}</p></div>
+                            @elseif ($application->jenis_jaminan === 'Kendaraan Bermotor' && $application->collateral_details)
+                                <div><p class="text-sm text-gray-600">Merk Kendaraan:</p><p class="font-semibold text-gray-900">{{ $application->collateral_details['merk_kendaraan'] ?? '-' }}</p></div>
+                                <div><p class="text-sm text-gray-600">Tahun Kendaraan:</p><p class="font-semibold text-gray-900">{{ $application->collateral_details['tahun_kendaraan'] ?? '-' }}</p></div>
+                                <div><p class="text-sm text-gray-600">Atas Nama:</p><p class="font-semibold text-gray-900">{{ $application->collateral_details['atas_nama_kendaraan'] ?? '-' }}</p></div>
+                            @else
+                                <div><p class="text-sm text-gray-600">Jenis Jaminan:</p><p class="font-semibold text-gray-900">{{ $application->jenis_jaminan }}</p></div>
+                                @if ($application->jenis_jaminan !== 'Tidak Ada')
+                                    <div><p class="text-sm text-gray-600">Detail Jaminan:</p><p class="font-semibold text-gray-900">Tidak ada detail spesifik yang tersimpan.</p></div>
+                                @endif
+                            @endif
+                        </div>
+                    @else
+                        <h4 class="font-semibold text-xl text-msa-blue mb-4 mt-6">Informasi Jaminan</h4>
+                        <p class="text-gray-600">Tidak ada informasi jaminan yang dicatat.</p>
+                    @endif
+
+
                     @if ($canViewScoring && ($application->scoring_result || $application->recommendation))
-                        <h4 class="text-md font-medium text-gray-900 mb-3 mt-6">Hasil Scoring & Rekomendasi</h4>
+                        <h4 class="font-semibold text-xl text-msa-blue mb-4 mt-6">Hasil Scoring & Rekomendasi</h4>
                         <div class="border border-gray-200 rounded-md p-4 bg-gray-50">
                             @if ($application->scoring_result)
                                 <p class="text-sm text-gray-600">Skor Kredit:</p>
@@ -114,24 +149,13 @@
                     @role('Direksi')
                         @if ($application->status === 'Submitted' || $application->status === 'Pending')
                             <div class="mt-6 flex justify-end">
-                                <form action="{{ route('applications.update-status', $application->id) }}" method="POST" class="inline-block" onsubmit="return confirm('Apakah Anda yakin ingin MENYETUJUI aplikasi ini?');">
-                                    @csrf
-                                    @method('PUT')
-                                    <input type="hidden" name="status" value="Approved">
-                                    <x-primary-button class="bg-green-600 hover:bg-green-700">
-                                        {{ __('Setujui Aplikasi') }}
-                                    </x-primary-button>
-                                </form>
+                                <button type="button" id="approveButton" class="inline-flex items-center px-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-green-700 focus:bg-green-700 active:bg-green-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                    {{ __('Setujui Aplikasi') }}
+                                </button>
 
-                                {{-- Menggunakan x-primary-button untuk warna merah solid --}}
-                                <form action="{{ route('applications.update-status', $application->id) }}" method="POST" class="inline-block ml-3" onsubmit="return confirm('Apakah Anda yakin ingin MENOLAK aplikasi ini?');">
-                                    @csrf
-                                    @method('PUT')
-                                    <input type="hidden" name="status" value="Rejected">
-                                    <x-primary-button class="bg-red-600 hover:bg-red-700">
-                                        {{ __('Tolak Aplikasi') }}
-                                    </x-primary-button>
-                                </form>
+                                <button type="button" id="rejectButton" class="inline-flex items-center ml-3 px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 focus:bg-red-700 active:bg-red-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                    {{ __('Tolak Aplikasi') }}
+                                </button>
                             </div>
                         @endif
                     @endrole
@@ -154,4 +178,97 @@
             </div>
         </div>
     </div>
+
+    {{-- Custom Confirmation Modal --}}
+    <div id="confirmationModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modalTitle"></h3>
+                <div class="mt-2 px-7 py-3">
+                    <p class="text-sm text-gray-500" id="modalMessage"></p>
+                </div>
+                <div class="items-center px-4 py-3">
+                    <button id="confirmAction" class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        OK
+                    </button>
+                    <button id="cancelAction" class="mt-3 px-4 py-2 bg-gray-200 text-gray-800 text-base font-medium rounded-md w-full shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                        Batal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const approveButton = document.getElementById('approveButton');
+            const rejectButton = document.getElementById('rejectButton');
+            const confirmationModal = document.getElementById('confirmationModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+            const confirmAction = document.getElementById('confirmAction');
+            const cancelAction = document.getElementById('cancelAction');
+
+            let currentForm = null;
+
+            if (approveButton) {
+                approveButton.addEventListener('click', function() {
+                    modalTitle.textContent = 'Konfirmasi Persetujuan Aplikasi';
+                    modalMessage.textContent = 'Apakah Anda yakin ingin MENYETUJUI aplikasi ini?';
+                    confirmationModal.classList.remove('hidden');
+                    currentForm = this.closest('form') || createTemporaryForm('Approved'); // Dapatkan form atau buat sementara
+                });
+            }
+
+            if (rejectButton) {
+                rejectButton.addEventListener('click', function() {
+                    modalTitle.textContent = 'Konfirmasi Penolakan Aplikasi';
+                    modalMessage.textContent = 'Apakah Anda yakin ingin MENOLAK aplikasi ini?';
+                    confirmationModal.classList.remove('hidden');
+                    currentForm = this.closest('form') || createTemporaryForm('Rejected'); // Dapatkan form atau buat sementara
+                });
+            }
+
+            confirmAction.addEventListener('click', function() {
+                confirmationModal.classList.add('hidden');
+                if (currentForm) {
+                    currentForm.submit();
+                }
+            });
+
+            cancelAction.addEventListener('click', function() {
+                confirmationModal.classList.add('hidden');
+                currentForm = null; // Reset form
+            });
+
+            // Fungsi untuk membuat form sementara jika tombol tidak berada di dalam form langsung
+            function createTemporaryForm(status) {
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '{{ route('applications.update-status', $application->id) }}';
+                form.style.display = 'none'; // Sembunyikan form
+
+                const csrfInput = document.createElement('input');
+                csrfInput.type = 'hidden';
+                csrfInput.name = '_token';
+                csrfInput.value = '{{ csrf_token() }}';
+                form.appendChild(csrfInput);
+
+                const methodInput = document.createElement('input');
+                methodInput.type = 'hidden';
+                methodInput.name = '_method';
+                methodInput.value = 'PUT';
+                form.appendChild(methodInput);
+
+                const statusInput = document.createElement('input');
+                statusInput.type = 'hidden';
+                statusInput.name = 'status';
+                statusInput.value = status;
+                form.appendChild(statusInput);
+
+                document.body.appendChild(form); // Tambahkan form ke body
+                return form;
+            }
+        });
+    </script>
 </x-app-layout>

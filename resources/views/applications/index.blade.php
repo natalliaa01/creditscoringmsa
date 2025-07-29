@@ -1,19 +1,19 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Daftar Kredit') }}
+            {{ __('Daftar Aplikasi Kredit') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 bg-gray-100"> {{-- Latar belakang halaman menjadi abu-abu --}}
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <div class="p-6 text-gray-900">
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-lg font-medium text-gray-900">Daftar Kredit</h3>
+                        <h3 class="text-lg font-medium text-gray-900">Daftar Aplikasi Kredit</h3>
                         @can('create credit application')
                             <a href="{{ route('applications.create') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                                {{ __('Ajukan Kredit') }}
+                                {{ __('Ajukan Aplikasi Baru') }}
                             </a>
                         @endcan
                     </div>
@@ -25,7 +25,7 @@
                     @endif
 
                     @if ($applications->isEmpty())
-                        <p class="text-gray-600">Belum ada Kredit yang tersedia.</p>
+                        <p class="text-gray-600">Belum ada aplikasi kredit yang tersedia.</p>
                     @else
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200">
@@ -95,10 +95,10 @@
                                                 {{-- Tombol Hapus --}}
                                                 @can('delete credit application')
                                                     @if ($application->status !== 'Approved' && $application->status !== 'Rejected')
-                                                        <form action="{{ route('applications.destroy', $application->id) }}" method="POST" class="inline-block" onsubmit="return confirm('Apakah Anda yakin ingin menghapus aplikasi ini?');">
+                                                        <form id="delete-form-{{ $application->id }}" action="{{ route('applications.destroy', $application->id) }}" method="POST" class="inline-block">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <button type="submit" class="text-red-600 hover:text-red-900" title="Hapus Aplikasi">
+                                                            <button type="button" onclick="showConfirmationModal('deleteModal', 'Konfirmasi Hapus Aplikasi', 'Apakah Anda yakin ingin menghapus aplikasi ini?', document.getElementById('delete-form-{{ $application->id }}'))" class="text-red-600 hover:text-red-900" title="Hapus Aplikasi">
                                                                 <i class="fa fa-trash"></i> {{-- Ikon Hapus --}}
                                                             </button>
                                                         </form>
@@ -115,4 +115,7 @@
             </div>
         </div>
     </div>
+
+    {{-- Include the custom confirmation modal component for delete --}}
+    <x-confirmation-modal id="deleteModal" />
 </x-app-layout>
