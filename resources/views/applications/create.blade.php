@@ -161,11 +161,6 @@
                         </div>
 
                         <div class="flex items-center justify-end mt-4">
-                            {{-- Tombol Simpan Draft --}}
-                            <x-secondary-button type="submit" name="action" value="draft">
-                                {{ __('Simpan Draft') }}
-                            </x-secondary-button>
-
                             {{-- Tombol Ajukan Aplikasi --}}
                             <x-primary-button class="ml-3" type="submit" name="action" value="submit">
                                 {{ __('Ajukan Aplikasi') }}
