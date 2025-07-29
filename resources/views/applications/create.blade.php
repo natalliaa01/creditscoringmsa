@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Ajukan Ajukan Kredit') }}
+            {{ __('Ajukan Aplikasi Kredit Baru') }}
         </h2>
     </x-slot>
 
@@ -52,11 +52,11 @@
                             <x-input-error :messages="$errors->get('nama_kantor_usaha')" class="mt-2" />
                         </div>
 
-                        <!-- Jenis Pemohon -->
+                        <!-- Tipe Aplikasi -->
                         <div class="mb-4">
-                            <x-input-label for="application_type" :value="__('Jenis Pemohon')" />
+                            <x-input-label for="application_type" :value="__('Tipe Aplikasi')" />
                             <select id="application_type" name="application_type" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>
-                                <option value="">Pilih Jenis Pemohon</option>
+                                <option value="">Pilih Tipe Aplikasi</option>
                                 <option value="UMKM/Pengusaha" {{ old('application_type') == 'UMKM/Pengusaha' ? 'selected' : '' }}>UMKM/Pengusaha</option>
                                 <option value="Pegawai" {{ old('application_type') == 'Pegawai' ? 'selected' : '' }}>Pegawai</option>
                             </select>
@@ -96,6 +96,11 @@
                                     <x-input-label for="jenis_penggunaan_kredit" :value="__('Jenis Penggunaan Kredit')" />
                                     <x-text-input id="jenis_penggunaan_kredit" class="block mt-1 w-full" type="text" name="jenis_penggunaan_kredit" :value="old('jenis_penggunaan_kredit')" required />
                                 </div>
+                                {{-- Menghapus jenis_jaminan dari form UMKM/Pengusaha karena sudah ada di bagian Jaminan Dinamis --}}
+                                {{-- <div class="mb-4">
+                                    <x-input-label for="jenis_jaminan" :value="__('Jenis Jaminan')" />
+                                    <x-text-input id="jenis_jaminan" class="block mt-1 w-full" type="text" name="jenis_jaminan" :value="old('jenis_jaminan')" required />
+                                </div> --}}
                                 <div class="mb-4">
                                     <x-input-label for="sumber_dana_pengembalian" :value="__('Sumber Dana Pengembalian')" />
                                     <x-text-input id="sumber_dana_pengembalian" class="block mt-1 w-full" type="text" name="sumber_dana_pengembalian" :value="old('sumber_dana_pengembalian')" required />
@@ -158,6 +163,11 @@
                                     <x-input-label for="jenis_penggunaan_kredit" :value="__('Jenis Penggunaan Kredit')" />
                                     <x-text-input id="jenis_penggunaan_kredit" class="block mt-1 w-full" type="text" name="jenis_penggunaan_kredit" :value="old('jenis_penggunaan_kredit')" required />
                                 </div>
+                                {{-- Menghapus jenis_jaminan dari form Pegawai karena sudah ada di bagian Jaminan Dinamis --}}
+                                {{-- <div class="mb-4">
+                                    <x-input-label for="jenis_jaminan" :value="__('Jenis Jaminan')" />
+                                    <x-text-input id="jenis_jaminan" class="block mt-1 w-full" type="text" name="jenis_jaminan" :value="old('jenis_jaminan')" required />
+                                </div> --}}
                                 <div class="mb-4">
                                     <x-input-label for="sumber_dana_pengembalian" :value="__('Sumber Dana Pengembalian')" />
                                     <x-text-input id="sumber_dana_pengembalian" class="block mt-1 w-full" type="text" name="sumber_dana_pengembalian" :value="old('sumber_dana_pengembalian')" required />
@@ -214,10 +224,10 @@
                         </div>
 
 
-                        <div class="flex items-center justify-end mt-4">                
-                            {{-- Tombol Kredit --}}
-                            <x-primary-button class="ml-3" type="submit" name="action" value="submit">
-                                {{ __('Kredit') }}
+                        <div class="flex items-center justify-end mt-4">
+                            {{-- Tombol Ajukan Aplikasi --}}
+                            <x-primary-button type="submit" name="action" value="submit">
+                                {{ __('Ajukan Aplikasi') }}
                             </x-primary-button>
                         </div>
                     </form>
