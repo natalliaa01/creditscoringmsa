@@ -108,7 +108,7 @@
 
         .form-control:focus {
             outline: none;
-            border-color: #4CAF50;
+            border-color: #2196F3;
             background: white;
             box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
         }
@@ -201,7 +201,7 @@
         }
 
         .social-btn:hover {
-            border-color: #8BC34A;
+            border-color: #2196F3;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
@@ -215,7 +215,7 @@
         }
 
         .terms-text a {
-            color: #8BC34A;
+            color: #2196F3;
             text-decoration: none;
         }
 
@@ -230,7 +230,7 @@
         }
 
         .register-link a {
-            color: #8BC34A;
+            color: #2196F3;
             text-decoration: none;
             font-weight: 600;
         }
