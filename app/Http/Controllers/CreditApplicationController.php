@@ -79,11 +79,13 @@ class CreditApplicationController extends Controller
         $action = $request->input('action');
         $initialStatus = ($action === 'draft') ? 'Draft' : 'Submitted';
 
+        // Validasi dasar yang selalu diperlukan
         $request->validate([
             'applicant_name' => 'required|string|max:255',
             'application_type' => 'required|in:UMKM/Pengusaha,Pegawai',
         ]);
 
+        // Simpan data ke tabel credit_applications
         $creditApplication = CreditApplication::create([
             'user_id' => Auth::id(),
             'applicant_name' => $request->applicant_name,
@@ -91,6 +93,7 @@ class CreditApplicationController extends Controller
             'status' => $initialStatus,
         ]);
 
+        // Validasi dan penyimpanan data ke tabel spesifik berdasarkan application_type
         if ($request->application_type === 'UMKM/Pengusaha') {
             $request->validate([
                 'omzet_usaha' => 'required|numeric|min:0',
@@ -114,6 +117,7 @@ class CreditApplicationController extends Controller
                 ])
             ));
         } elseif ($request->application_type === 'Pegawai') {
+            // Pastikan validasi di sini sesuai dengan nama bidang di form Pegawai
             $request->validate([
                 'usia' => 'required|integer|min:18|max:100',
                 'masa_kerja' => 'required|integer|min:0',
@@ -122,6 +126,7 @@ class CreditApplicationController extends Controller
                 'gaji_bulanan' => 'required|numeric|min:0',
                 'jumlah_tanggungan' => 'required|integer|min:0',
                 'riwayat_kredit' => 'required|string|max:255',
+                // Validasi untuk detail pinjaman pegawai
                 'jenis_penggunaan_kredit' => 'required|string|max:255',
                 'jenis_jaminan' => 'required|string|max:255',
                 'sumber_dana_pengembalian' => 'required|string|max:255',
@@ -157,7 +162,7 @@ class CreditApplicationController extends Controller
             ];
 
             try {
-                $result = Process::run('python ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython)));
+                $result = Process::run('py ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython)));
 
                 if ($result->successful()) {
                     $pythonOutput = json_decode($result->output(), true);
@@ -187,6 +192,10 @@ class CreditApplicationController extends Controller
      */
     public function show(CreditApplication $application)
     {
+        // Logika otorisasi untuk melihat detail aplikasi
+        // Admin, Direksi, Kepala Bagian Kredit bisa melihat semua.
+        // Teller hanya bisa melihat miliknya sendiri.
+        // Jika Teller tapi bukan miliknya, maka abort.
         if (Auth::user()->hasRole('Teller') && $application->user_id !== Auth::id()) {
             abort(403, 'Unauthorized action.');
         }
@@ -281,7 +290,7 @@ class CreditApplicationController extends Controller
                 ];
 
                 try {
-                    $result = Process::run('python ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython)));
+                    $result = Process::run('py ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython)));
                     if ($result->successful()) {
                         $pythonOutput = json_decode($result->output(), true);
                         if (json_last_error() === JSON_ERROR_NONE) {
