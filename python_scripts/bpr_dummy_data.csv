@@ -1,0 +1,201 @@
+application_type,omzet_usaha,lama_usaha,sektor_ekonomi,lokasi_usaha,riwayat_pinjaman,jenis_penggunaan_kredit,jenis_jaminan,sumber_dana_pengembalian,plafond_pengajuan,jangka_waktu_kredit,keputusan_kredit,usia,masa_kerja,golongan_jabatan,status_kepegawaian,gaji_bulanan,jumlah_tanggungan,riwayat_kredit
+UMKM/Pengusaha,27276395.31,5.0,Perdagangan,Pinggir Kota,Tidak Ada,Pembelian Aset,Tanah/Bangunan,Tambahan Modal,442656487.88,69.0,Layak,,,,,,,
+UMKM/Pengusaha,86711152.44,6.0,Manufaktur,Pedesaan,Pernah Macet,Investasi,Kendaraan,Penjualan Aset,151393056.04,24.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,60.0,37.0,Kepala Bagian,Tetap,46905273.37,5.0,Pernah Macet
+UMKM/Pengusaha,89855085.75,8.0,Lainnya,Pinggir Kota,Tidak Ada,Renovasi,Tidak Ada,Usaha Sendiri,463278309.56,25.0,Layak,,,,,,,
+UMKM/Pengusaha,196231336.41,8.0,Lainnya,Pinggir Kota,Pernah Macet,Konsumsi,Kendaraan,Penjualan Aset,315199464.2,18.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,22.0,39.0,Manajer,Tetap,6900278.38,5.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,31.0,31.0,Kepala Bagian,Kontrak,22278781.73,6.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,52.0,24.0,Manajer,Tetap,21281088.82,6.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,24.0,22.0,Direktur,Outsource,5759566.04,6.0,Pernah Macet
+UMKM/Pengusaha,128219736.0,5.0,Pertanian,Pedesaan,Tidak Ada,Pembelian Aset,Tidak Ada,Tambahan Modal,216761531.95,34.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,35.0,28.0,Kepala Bagian,Kontrak,36998706.43,2.0,Pernah Macet
+UMKM/Pengusaha,83377715.63,2.0,Transportasi,Online,Tidak Ada,Renovasi,Tanah/Bangunan,Tambahan Modal,286895562.62,56.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,52.0,18.0,Manajer,Outsource,11770988.17,7.0,Tidak Ada
+Pegawai,,,,,,,,,,,Layak,24.0,21.0,Supervisor,Kontrak,10218982.95,2.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,30.0,4.0,Direktur,Tetap,30427566.65,5.0,Pernah Macet
+UMKM/Pengusaha,46090892.46,10.0,Jasa,Online,Pernah Macet,Modal Kerja,Tanah/Bangunan,Penjualan Aset,82791825.52,6.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,135606353.39,7.0,Pertanian,Pinggir Kota,Ada,Modal Kerja,Persediaan,Lain-lain,110242194.0,8.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,29.0,29.0,Staf Pelaksana,Outsource,10737181.74,6.0,Ada
+UMKM/Pengusaha,24651496.31,6.0,Manufaktur,Pedesaan,Ada,Konsumsi,Kendaraan,Tambahan Modal,115103193.19,40.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,172931490.66,6.0,Lainnya,Online,Ada,Modal Kerja,Tidak Ada,Lain-lain,497274601.37,39.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,34.0,18.0,Manajer,Tetap,11796405.27,7.0,Pernah Macet
+UMKM/Pengusaha,154097170.61,8.0,Manufaktur,Online,Ada,Investasi,Persediaan,Lain-lain,304147262.78,9.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,7116632.75,0.0,Transportasi,Online,Pernah Macet,Konsumsi,Kendaraan,Usaha Sendiri,175387491.96,38.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,133927376.93,6.0,Jasa,Online,Pernah Macet,Renovasi,Piutang,Usaha Sendiri,205406236.58,9.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,177000239.97,2.0,Kuliner,Pedesaan,Tidak Ada,Investasi,Kendaraan,Penjualan Aset,359718267.81,60.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,67062676.59,8.0,Manufaktur,Pusat Kota,Ada,Konsumsi,Piutang,Penjualan Aset,411346919.34,20.0,Layak,,,,,,,
+UMKM/Pengusaha,159448602.62,1.0,IT,Pinggir Kota,Ada,Pembelian Aset,Kendaraan,Penjualan Aset,236846671.87,6.0,Layak,,,,,,,
+UMKM/Pengusaha,85066339.07,0.0,IT,Pinggir Kota,Tidak Ada,Modal Kerja,Kendaraan,Usaha Sendiri,181878376.2,70.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,122287442.76,5.0,IT,Online,Tidak Ada,Investasi,Persediaan,Tambahan Modal,370540943.67,17.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,64.0,3.0,Supervisor,Tetap,44625633.2,0.0,Pernah Macet
+UMKM/Pengusaha,96773057.53,10.0,Perdagangan,Pusat Kota,Pernah Macet,Modal Kerja,Tidak Ada,Tambahan Modal,229728112.66,67.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,160060380.63,3.0,Lainnya,Pusat Kota,Pernah Macet,Modal Kerja,Tidak Ada,Usaha Sendiri,38812532.25,72.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,25.0,13.0,Supervisor,Kontrak,32415718.58,5.0,Pernah Macet
+UMKM/Pengusaha,91156654.49,6.0,Kuliner,Pusat Kota,Ada,Investasi,Tidak Ada,Lain-lain,480099411.8,36.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,108431940.83,0.0,Jasa,Online,Ada,Investasi,Tanah/Bangunan,Penjualan Aset,214039927.44,8.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,47.0,30.0,Kepala Bagian,Outsource,44532061.17,0.0,Tidak Ada
+Pegawai,,,,,,,,,,,Pertimbangkan,52.0,40.0,Staf Pelaksana,Outsource,9631217.54,4.0,Ada
+Pegawai,,,,,,,,,,,Tidak Layak,23.0,37.0,Direktur,Outsource,35284524.27,3.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,35.0,19.0,Kepala Bagian,Kontrak,28943077.53,2.0,Tidak Ada
+UMKM/Pengusaha,2900688.51,6.0,Pertanian,Pedesaan,Tidak Ada,Pembelian Aset,Tanah/Bangunan,Lain-lain,441792572.28,59.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,147746293.75,10.0,Pertanian,Online,Tidak Ada,Konsumsi,Tanah/Bangunan,Penjualan Aset,17498541.57,26.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,39.0,4.0,Kepala Bagian,Kontrak,37655555.96,4.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,44.0,0.0,Manajer,Kontrak,28285720.98,4.0,Pernah Macet
+UMKM/Pengusaha,129013598.76,6.0,Pertanian,Pedesaan,Tidak Ada,Pembelian Aset,Tidak Ada,Penjualan Aset,270902777.75,35.0,Layak,,,,,,,
+UMKM/Pengusaha,81679570.19,7.0,Jasa,Pusat Kota,Pernah Macet,Renovasi,Piutang,Usaha Sendiri,355259678.45,21.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,117237116.52,2.0,IT,Pedesaan,Ada,Pembelian Aset,Persediaan,Usaha Sendiri,72164980.22,65.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Pertimbangkan,49.0,10.0,Supervisor,Tetap,7840962.93,1.0,Tidak Ada
+UMKM/Pengusaha,52290208.91,8.0,IT,Pedesaan,Tidak Ada,Investasi,Tidak Ada,Penjualan Aset,179573419.6,21.0,Layak,,,,,,,
+UMKM/Pengusaha,39297603.74,7.0,IT,Pinggir Kota,Ada,Konsumsi,Persediaan,Penjualan Aset,339242996.37,58.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Pertimbangkan,23.0,20.0,Direktur,Kontrak,25809723.28,1.0,Ada
+UMKM/Pengusaha,35333787.47,9.0,Manufaktur,Online,Pernah Macet,Investasi,Piutang,Usaha Sendiri,243705279.67,35.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,81622062.87,10.0,Kuliner,Pedesaan,Tidak Ada,Investasi,Piutang,Penjualan Aset,396116419.25,32.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,25.0,33.0,Supervisor,Tetap,21212177.63,7.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,48.0,12.0,Staf Pelaksana,Tetap,19685984.86,7.0,Pernah Macet
+UMKM/Pengusaha,78803695.61,0.0,Kuliner,Pusat Kota,Pernah Macet,Konsumsi,Piutang,Penjualan Aset,167534633.16,34.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,52.0,9.0,Supervisor,Tetap,47056998.76,0.0,Tidak Ada
+Pegawai,,,,,,,,,,,Layak,33.0,29.0,Staf Pelaksana,Kontrak,31018684.32,3.0,Ada
+UMKM/Pengusaha,60076119.21,9.0,Transportasi,Pinggir Kota,Ada,Renovasi,Tanah/Bangunan,Penjualan Aset,365871670.09,40.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,73914884.77,9.0,Perdagangan,Pusat Kota,Tidak Ada,Modal Kerja,Tanah/Bangunan,Usaha Sendiri,311594753.11,33.0,Layak,,,,,,,
+UMKM/Pengusaha,81259368.46,4.0,Jasa,Pedesaan,Tidak Ada,Pembelian Aset,Tidak Ada,Penjualan Aset,420277795.57,11.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,39.0,0.0,Staf Pelaksana,Outsource,28812596.29,6.0,Pernah Macet
+UMKM/Pengusaha,14162672.95,8.0,IT,Pedesaan,Ada,Renovasi,Kendaraan,Penjualan Aset,187227934.54,66.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,116829563.69,0.0,Lainnya,Online,Pernah Macet,Konsumsi,Kendaraan,Tambahan Modal,258127159.07,62.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,97688225.77,7.0,Jasa,Pedesaan,Tidak Ada,Renovasi,Tanah/Bangunan,Usaha Sendiri,37068952.91,52.0,Layak,,,,,,,
+UMKM/Pengusaha,16629086.17,7.0,Lainnya,Pedesaan,Tidak Ada,Investasi,Piutang,Tambahan Modal,169478451.61,18.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,54.0,23.0,Direktur,Tetap,32837407.3,6.0,Tidak Ada
+UMKM/Pengusaha,101033288.67,2.0,Transportasi,Pinggir Kota,Tidak Ada,Modal Kerja,Piutang,Usaha Sendiri,270984507.18,15.0,Layak,,,,,,,
+UMKM/Pengusaha,40147295.45,5.0,Pertanian,Pedesaan,Pernah Macet,Investasi,Kendaraan,Usaha Sendiri,152692228.99,65.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,20.0,5.0,Staf Senior,Kontrak,15355754.47,7.0,Ada
+UMKM/Pengusaha,181180536.48,7.0,Jasa,Pusat Kota,Pernah Macet,Modal Kerja,Kendaraan,Lain-lain,360885031.25,55.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,155370062.51,1.0,Kuliner,Pinggir Kota,Pernah Macet,Renovasi,Piutang,Tambahan Modal,224572200.56,16.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,35.0,16.0,Staf Senior,Tetap,21922673.5,3.0,Tidak Ada
+UMKM/Pengusaha,160852374.24,5.0,Perdagangan,Pedesaan,Tidak Ada,Pembelian Aset,Tidak Ada,Usaha Sendiri,128923087.26,49.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,54.0,9.0,Staf Pelaksana,Kontrak,19784301.5,6.0,Ada
+UMKM/Pengusaha,149237301.42,4.0,IT,Pedesaan,Tidak Ada,Pembelian Aset,Kendaraan,Penjualan Aset,204170746.84,26.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Pertimbangkan,53.0,15.0,Direktur,Outsource,47891109.31,0.0,Tidak Ada
+UMKM/Pengusaha,74886372.43,6.0,IT,Online,Pernah Macet,Investasi,Kendaraan,Penjualan Aset,250624384.54,8.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,111927550.13,6.0,Manufaktur,Online,Tidak Ada,Konsumsi,Piutang,Lain-lain,440165268.25,68.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,20.0,1.0,Supervisor,Tetap,10653143.25,4.0,Ada
+Pegawai,,,,,,,,,,,Tidak Layak,29.0,38.0,Kepala Bagian,Outsource,6696341.65,7.0,Tidak Ada
+UMKM/Pengusaha,97007662.59,9.0,Perdagangan,Pedesaan,Tidak Ada,Renovasi,Tanah/Bangunan,Tambahan Modal,365770752.59,18.0,Layak,,,,,,,
+UMKM/Pengusaha,139520674.02,4.0,Manufaktur,Pusat Kota,Tidak Ada,Renovasi,Tidak Ada,Lain-lain,136324136.27,36.0,Layak,,,,,,,
+UMKM/Pengusaha,103590903.81,9.0,Jasa,Pinggir Kota,Ada,Konsumsi,Persediaan,Usaha Sendiri,485211088.25,55.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,109787983.24,0.0,IT,Pinggir Kota,Tidak Ada,Modal Kerja,Piutang,Usaha Sendiri,186014127.15,41.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,57724161.5,8.0,Perdagangan,Online,Pernah Macet,Pembelian Aset,Piutang,Tambahan Modal,293254847.71,30.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,23.0,21.0,Supervisor,Outsource,26179348.54,5.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,49.0,0.0,Staf Senior,Kontrak,36695296.1,4.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,46.0,26.0,Staf Pelaksana,Kontrak,45070159.11,1.0,Pernah Macet
+UMKM/Pengusaha,110652413.49,10.0,Kuliner,Pusat Kota,Ada,Renovasi,Tanah/Bangunan,Usaha Sendiri,90372689.63,48.0,Pertimbangkan,,,,,,,
+Pegawai,,,,,,,,,,,Layak,49.0,22.0,Manajer,Tetap,49148306.76,4.0,Ada
+Pegawai,,,,,,,,,,,Tidak Layak,47.0,10.0,Direktur,Tetap,14705989.17,4.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,33.0,19.0,Direktur,Outsource,3969861.31,5.0,Tidak Ada
+UMKM/Pengusaha,185180244.94,2.0,Pertanian,Online,Pernah Macet,Konsumsi,Persediaan,Usaha Sendiri,262802863.33,5.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,59.0,1.0,Supervisor,Tetap,25617727.98,2.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,38.0,25.0,Staf Senior,Kontrak,22156251.7,1.0,Pernah Macet
+UMKM/Pengusaha,132796898.11,3.0,Transportasi,Online,Tidak Ada,Renovasi,Piutang,Tambahan Modal,290881077.28,52.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,56.0,29.0,Manajer,Kontrak,40737410.78,1.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,44.0,23.0,Supervisor,Outsource,24165496.13,3.0,Tidak Ada
+UMKM/Pengusaha,27509271.85,1.0,Kuliner,Pedesaan,Tidak Ada,Pembelian Aset,Persediaan,Tambahan Modal,296566819.45,11.0,Pertimbangkan,,,,,,,
+Pegawai,,,,,,,,,,,Layak,35.0,1.0,Manajer,Kontrak,35731363.02,2.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,27.0,12.0,Kepala Bagian,Kontrak,47479828.74,6.0,Tidak Ada
+UMKM/Pengusaha,194745931.75,10.0,Manufaktur,Pedesaan,Ada,Pembelian Aset,Piutang,Penjualan Aset,286450071.79,19.0,Layak,,,,,,,
+UMKM/Pengusaha,101498713.22,1.0,Pertanian,Pinggir Kota,Tidak Ada,Renovasi,Tidak Ada,Penjualan Aset,326951825.36,42.0,Layak,,,,,,,
+UMKM/Pengusaha,65509457.73,7.0,Jasa,Pedesaan,Tidak Ada,Renovasi,Piutang,Lain-lain,432800451.73,37.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,136547659.59,7.0,Manufaktur,Pusat Kota,Tidak Ada,Modal Kerja,Kendaraan,Usaha Sendiri,413936530.07,55.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,36.0,26.0,Manajer,Outsource,8312201.32,7.0,Ada
+UMKM/Pengusaha,74385892.82,5.0,Jasa,Pusat Kota,Ada,Investasi,Kendaraan,Penjualan Aset,238298752.56,26.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,162591590.55,7.0,Lainnya,Pusat Kota,Pernah Macet,Modal Kerja,Tanah/Bangunan,Lain-lain,434680499.21,33.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,55.0,0.0,Supervisor,Tetap,26674390.73,2.0,Ada
+UMKM/Pengusaha,190683343.74,0.0,IT,Pedesaan,Pernah Macet,Pembelian Aset,Kendaraan,Penjualan Aset,202635849.8,48.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,56.0,6.0,Staf Pelaksana,Kontrak,11216432.76,2.0,Ada
+Pegawai,,,,,,,,,,,Layak,45.0,5.0,Kepala Bagian,Tetap,37948096.55,0.0,Ada
+Pegawai,,,,,,,,,,,Tidak Layak,49.0,0.0,Supervisor,Tetap,11116004.92,7.0,Pernah Macet
+UMKM/Pengusaha,168615659.62,0.0,Perdagangan,Pedesaan,Tidak Ada,Renovasi,Tidak Ada,Tambahan Modal,410923084.17,54.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,62.0,17.0,Staf Senior,Tetap,3252910.79,0.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,45.0,12.0,Staf Senior,Outsource,42925940.25,0.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,45.0,37.0,Manajer,Tetap,16240876.75,6.0,Ada
+UMKM/Pengusaha,84033473.17,3.0,Kuliner,Pedesaan,Pernah Macet,Pembelian Aset,Persediaan,Lain-lain,147300747.82,72.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,149295983.57,0.0,Jasa,Online,Pernah Macet,Renovasi,Tanah/Bangunan,Usaha Sendiri,28432466.96,71.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,37572297.34,4.0,IT,Pedesaan,Ada,Investasi,Tidak Ada,Usaha Sendiri,52111195.6,33.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,47.0,25.0,Staf Senior,Outsource,31099171.13,3.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,56.0,24.0,Direktur,Tetap,26958330.88,7.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,38.0,21.0,Manajer,Kontrak,8382480.73,4.0,Tidak Ada
+Pegawai,,,,,,,,,,,Pertimbangkan,34.0,3.0,Supervisor,Outsource,48185944.57,3.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,32.0,30.0,Kepala Bagian,Outsource,47020191.76,0.0,Pernah Macet
+UMKM/Pengusaha,183352294.54,9.0,Kuliner,Online,Tidak Ada,Renovasi,Tidak Ada,Tambahan Modal,349913075.78,56.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,35.0,36.0,Direktur,Kontrak,32101849.3,7.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,31.0,12.0,Staf Senior,Outsource,41843761.26,2.0,Pernah Macet
+UMKM/Pengusaha,87456044.92,8.0,Transportasi,Pusat Kota,Tidak Ada,Modal Kerja,Piutang,Penjualan Aset,150983287.69,45.0,Layak,,,,,,,
+UMKM/Pengusaha,136492563.03,5.0,Kuliner,Pusat Kota,Pernah Macet,Investasi,Tanah/Bangunan,Penjualan Aset,241851158.1,37.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,67142088.68,0.0,Jasa,Pinggir Kota,Tidak Ada,Modal Kerja,Tanah/Bangunan,Penjualan Aset,449870507.96,5.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,53.0,23.0,Manajer,Tetap,25477845.39,3.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,43.0,14.0,Staf Senior,Outsource,32792443.57,7.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,29.0,2.0,Staf Pelaksana,Outsource,37770145.99,5.0,Ada
+Pegawai,,,,,,,,,,,Tidak Layak,40.0,20.0,Supervisor,Outsource,16120482.25,0.0,Pernah Macet
+Pegawai,,,,,,,,,,,Tidak Layak,44.0,20.0,Direktur,Kontrak,8213737.36,7.0,Pernah Macet
+Pegawai,,,,,,,,,,,Layak,34.0,7.0,Direktur,Outsource,28302904.83,0.0,Ada
+UMKM/Pengusaha,34584663.21,1.0,Transportasi,Pedesaan,Tidak Ada,Konsumsi,Kendaraan,Usaha Sendiri,34844826.89,11.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,42.0,35.0,Kepala Bagian,Kontrak,46567005.67,5.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,59.0,4.0,Direktur,Kontrak,29141637.77,2.0,Tidak Ada
+Pegawai,,,,,,,,,,,Layak,25.0,30.0,Direktur,Kontrak,22704378.24,3.0,Tidak Ada
+UMKM/Pengusaha,77010883.81,1.0,Pertanian,Pinggir Kota,Pernah Macet,Renovasi,Tanah/Bangunan,Usaha Sendiri,99986094.93,4.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,26192899.53,6.0,Pertanian,Online,Ada,Konsumsi,Kendaraan,Usaha Sendiri,336412125.22,10.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,24577252.64,4.0,Transportasi,Pinggir Kota,Ada,Renovasi,Persediaan,Usaha Sendiri,289093885.47,55.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,68004614.44,7.0,Jasa,Pinggir Kota,Tidak Ada,Pembelian Aset,Persediaan,Usaha Sendiri,283004865.59,38.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,61.0,14.0,Staf Pelaksana,Kontrak,37502343.94,7.0,Ada
+UMKM/Pengusaha,142696729.32,2.0,Jasa,Pusat Kota,Ada,Renovasi,Kendaraan,Tambahan Modal,255999785.71,7.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,109140484.97,2.0,Manufaktur,Pusat Kota,Tidak Ada,Konsumsi,Tanah/Bangunan,Lain-lain,157714501.15,42.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,52259682.45,2.0,Kuliner,Pinggir Kota,Ada,Investasi,Tanah/Bangunan,Penjualan Aset,303396745.58,72.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,24682459.77,8.0,Kuliner,Pinggir Kota,Ada,Investasi,Kendaraan,Lain-lain,27802431.58,56.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Pertimbangkan,58.0,23.0,Manajer,Tetap,48026862.49,2.0,Ada
+UMKM/Pengusaha,96616754.62,1.0,Transportasi,Pedesaan,Ada,Konsumsi,Piutang,Usaha Sendiri,297841198.25,41.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,32058907.07,9.0,Manufaktur,Pinggir Kota,Pernah Macet,Investasi,Kendaraan,Usaha Sendiri,8094009.43,66.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,193173798.64,4.0,Lainnya,Pusat Kota,Tidak Ada,Pembelian Aset,Tidak Ada,Tambahan Modal,107283670.3,18.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,55.0,32.0,Supervisor,Outsource,5950378.66,3.0,Tidak Ada
+UMKM/Pengusaha,58939035.09,2.0,Manufaktur,Pusat Kota,Pernah Macet,Pembelian Aset,Tanah/Bangunan,Usaha Sendiri,320176194.74,52.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,139419296.93,2.0,Manufaktur,Pinggir Kota,Ada,Modal Kerja,Tidak Ada,Lain-lain,355955617.05,55.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,23.0,13.0,Kepala Bagian,Tetap,6264017.68,4.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,24.0,6.0,Manajer,Outsource,20159420.98,1.0,Pernah Macet
+Pegawai,,,,,,,,,,,Layak,55.0,10.0,Kepala Bagian,Kontrak,45917766.93,2.0,Ada
+UMKM/Pengusaha,144168166.38,4.0,Pertanian,Pinggir Kota,Ada,Renovasi,Kendaraan,Lain-lain,111361757.99,55.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,44.0,13.0,Manajer,Tetap,17406491.03,2.0,Tidak Ada
+UMKM/Pengusaha,92389405.36,4.0,Pertanian,Pusat Kota,Pernah Macet,Konsumsi,Piutang,Lain-lain,417706498.32,20.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,23.0,10.0,Manajer,Kontrak,43595788.38,4.0,Pernah Macet
+Pegawai,,,,,,,,,,,Pertimbangkan,63.0,14.0,Staf Pelaksana,Outsource,23960484.23,4.0,Tidak Ada
+UMKM/Pengusaha,161640523.65,2.0,IT,Pedesaan,Tidak Ada,Modal Kerja,Tanah/Bangunan,Lain-lain,38829471.52,19.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,31.0,1.0,Staf Senior,Tetap,14865896.78,7.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,35.0,25.0,Direktur,Tetap,6349075.62,2.0,Pernah Macet
+Pegawai,,,,,,,,,,,Layak,45.0,17.0,Direktur,Tetap,10775085.5,0.0,Tidak Ada
+UMKM/Pengusaha,169223990.2,8.0,Jasa,Pinggir Kota,Tidak Ada,Konsumsi,Kendaraan,Usaha Sendiri,214778778.72,42.0,Layak,,,,,,,
+UMKM/Pengusaha,60919005.65,5.0,Lainnya,Pusat Kota,Ada,Modal Kerja,Persediaan,Lain-lain,178524527.8,33.0,Pertimbangkan,,,,,,,
+UMKM/Pengusaha,14760655.5,8.0,Manufaktur,Pinggir Kota,Tidak Ada,Konsumsi,Kendaraan,Usaha Sendiri,418659779.83,70.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,193973115.49,6.0,Lainnya,Pusat Kota,Pernah Macet,Konsumsi,Piutang,Lain-lain,159505440.74,5.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,31.0,40.0,Staf Senior,Outsource,45472752.53,3.0,Tidak Ada
+Pegawai,,,,,,,,,,,Tidak Layak,54.0,10.0,Supervisor,Outsource,47608755.93,1.0,Ada
+UMKM/Pengusaha,109923715.77,0.0,Kuliner,Online,Ada,Konsumsi,Tidak Ada,Penjualan Aset,290994716.81,35.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,26.0,0.0,Manajer,Kontrak,21012858.49,4.0,Tidak Ada
+UMKM/Pengusaha,7744832.67,10.0,Jasa,Pusat Kota,Tidak Ada,Konsumsi,Tidak Ada,Penjualan Aset,14560204.88,37.0,Tidak Layak,,,,,,,
+UMKM/Pengusaha,165524378.59,7.0,Transportasi,Pedesaan,Ada,Pembelian Aset,Persediaan,Penjualan Aset,107467115.81,40.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,27.0,3.0,Kepala Bagian,Kontrak,34861166.87,3.0,Ada
+UMKM/Pengusaha,120768127.93,0.0,Jasa,Online,Pernah Macet,Modal Kerja,Tidak Ada,Tambahan Modal,101837039.23,21.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,62.0,32.0,Supervisor,Outsource,19181144.09,7.0,Tidak Ada
+Pegawai,,,,,,,,,,,Layak,23.0,32.0,Supervisor,Kontrak,49808336.36,4.0,Tidak Ada
+UMKM/Pengusaha,191803678.01,10.0,Perdagangan,Pedesaan,Tidak Ada,Renovasi,Tidak Ada,Usaha Sendiri,344939472.36,66.0,Layak,,,,,,,
+UMKM/Pengusaha,190004907.54,5.0,Manufaktur,Pusat Kota,Pernah Macet,Konsumsi,Persediaan,Usaha Sendiri,392525819.84,64.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Pertimbangkan,64.0,9.0,Kepala Bagian,Outsource,46844674.88,0.0,Tidak Ada
+Pegawai,,,,,,,,,,,Pertimbangkan,35.0,30.0,Direktur,Kontrak,45674110.67,3.0,Ada
+UMKM/Pengusaha,25832241.32,1.0,Transportasi,Pedesaan,Tidak Ada,Renovasi,Tidak Ada,Usaha Sendiri,451333414.66,58.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,37.0,26.0,Direktur,Kontrak,26891674.37,7.0,Ada
+Pegawai,,,,,,,,,,,Tidak Layak,50.0,15.0,Staf Pelaksana,Tetap,44520463.05,6.0,Ada
+UMKM/Pengusaha,86348447.61,0.0,Manufaktur,Online,Tidak Ada,Investasi,Persediaan,Penjualan Aset,204973291.24,17.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,40.0,8.0,Staf Senior,Tetap,47952036.8,4.0,Ada
+UMKM/Pengusaha,55719214.81,1.0,Kuliner,Pinggir Kota,Pernah Macet,Investasi,Persediaan,Penjualan Aset,158058775.39,49.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,48.0,40.0,Supervisor,Kontrak,34884964.79,0.0,Ada
+Pegawai,,,,,,,,,,,Pertimbangkan,23.0,30.0,Supervisor,Kontrak,31129547.16,4.0,Ada
+Pegawai,,,,,,,,,,,Tidak Layak,60.0,36.0,Supervisor,Kontrak,6466353.47,3.0,Tidak Ada
+UMKM/Pengusaha,105074018.29,5.0,Perdagangan,Online,Pernah Macet,Pembelian Aset,Piutang,Penjualan Aset,352918509.02,31.0,Tidak Layak,,,,,,,
+Pegawai,,,,,,,,,,,Layak,52.0,40.0,Staf Senior,Kontrak,34600587.45,2.0,Ada
+UMKM/Pengusaha,101204016.8,10.0,Perdagangan,Pedesaan,Tidak Ada,Pembelian Aset,Persediaan,Lain-lain,365300527.45,57.0,Layak,,,,,,,
+Pegawai,,,,,,,,,,,Tidak Layak,63.0,28.0,Supervisor,Outsource,30585734.8,7.0,Tidak Ada
