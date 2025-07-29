@@ -288,8 +288,8 @@
         <nav class="nav-menu">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">Tentang Kami</a></li>
-                <li><a href="#contact">Kontak</a></li>
+                <li><a href="{{ route('About') }}" class="auth-btn">Tentang Kami</a></li>
+                <li><a href="{{ route('contact us') }}" class="auth-btn">Kontak</a></li>
             </ul>
         </nav>
         <div class="auth-buttons">
@@ -302,12 +302,6 @@
         <h2>Optimalkan Keuangan Anda dengan Credit Scoring</h2>
         <p>Dapatkan analisis kredit yang akurat dan cepat untuk membantu Anda mengambil keputusan finansial yang lebih baik dengan teknologi terdepan.</p>
         <a href="#about" class="cta-button">Pelajari Lebih Lanjut</a>
-    </section>
-
-    <section id="about" class="content-section">
-        <h2>Tentang Kami</h2>
-        <p>Credit Scoring System adalah platform inovatif yang dirancang untuk menyediakan layanan penilaian kredit yang komprehensif dan terpercaya. Kami membantu individu dan bisnis memahami profil risiko kredit mereka dengan akurat, membuka peluang untuk akses ke berbagai produk keuangan yang sesuai dengan kebutuhan Anda.</p>
-        <p>Dengan teknologi canggih dan data yang terpercaya, kami berkomitmen untuk mendukung pertumbuhan finansial Anda. Kami bekerja sama dengan BPR Madani Sejahtera Abadi untuk memastikan Anda mendapatkan solusi keuangan terbaik yang dapat diandalkan.</p>
     </section>
 
     <footer id="contact" class="footer">

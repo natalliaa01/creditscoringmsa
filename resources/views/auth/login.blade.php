@@ -25,7 +25,7 @@
 
         .login-illustration {
             flex: 1;
-            background: linear-gradient(135deg, #b8e6b8 0%, #a8d8a8 100%);
+            background: linear-gradient(135deg, #87CEEB 0%, #5DADE2 100%);
             padding: 40px;
             display: flex;
             align-items: center;
@@ -142,7 +142,7 @@
         .btn-primary {
             width: 100%;
             padding: 16px;
-            background: #8BC34A;
+            background: #2196F3;
             color: white;
             border: none;
             border-radius: 12px;
@@ -155,7 +155,7 @@
         }
 
         .btn-primary:hover {
-            background: #7CB342;
+            background: #1976D2;
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(139, 195, 74, 0.3);
         }

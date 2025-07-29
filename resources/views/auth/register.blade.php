@@ -25,7 +25,7 @@
 
         .register-illustration {
             flex: 1;
-            background: linear-gradient(135deg, #b8e6b8 0%, #a8d8a8 100%);
+            background: linear-gradient(135deg, #87CEEB 0%, #5DADE2 100%);
             padding: 40px;
             display: flex;
             align-items: center;
@@ -58,9 +58,9 @@
         }
 
         .brand-icon {
-            width: 32px;
-            height: 32px;
-            margin-right: 12px;
+            width: 48px;
+            height: 48px;
+            margin-right: 16px;
             border-radius: 4px;
             overflow: hidden;
         }
@@ -72,7 +72,7 @@
         }
 
         .brand-name {
-            font-size: 14px;
+            font-size: 18px;
             font-weight: 600;
             color: #333;
         }
@@ -87,6 +87,7 @@
 
         .form-group {
             margin-bottom: 20px;
+            position: relative;
         }
 
         .form-control {
@@ -101,6 +102,10 @@
             box-sizing: border-box;
         }
 
+        .form-control.has-toggle {
+            padding-right: 50px;
+        }
+
         .form-control::placeholder {
             color: #999;
             font-size: 14px;
@@ -108,13 +113,31 @@
 
         .form-control:focus {
             outline: none;
-            border-color: #4CAF50;
+            border-color: #2196F3;
             background: white;
-            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
         }
 
         .form-control.is-invalid {
             border-color: #e74c3c;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            color: #999;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .password-toggle:hover {
+            color: #666;
         }
 
         .invalid-feedback {
@@ -142,7 +165,7 @@
         }
 
         .form-check-label a {
-            color: #8BC34A;
+            color: #2196F3;
             text-decoration: none;
         }
 
@@ -153,7 +176,7 @@
         .btn-primary {
             width: 100%;
             padding: 16px;
-            background: #8BC34A;
+            background: #2196F3;
             color: white;
             border: none;
             border-radius: 12px;
@@ -166,9 +189,9 @@
         }
 
         .btn-primary:hover {
-            background: #7CB342;
+            background: #1976D2;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(139, 195, 74, 0.3);
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
         }
 
         .social-login {
@@ -212,7 +235,7 @@
         }
 
         .social-btn:hover {
-            border-color: #8BC34A;
+            border-color: #2196F3;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
@@ -226,7 +249,7 @@
         }
 
         .terms-text a {
-            color: #8BC34A;
+            color: #2196F3;
             text-decoration: none;
         }
 
@@ -241,7 +264,7 @@
         }
 
         .login-link a {
-            color: #8BC34A;
+            color: #2196F3;
             text-decoration: none;
             font-weight: 600;
         }
@@ -281,6 +304,16 @@
 
             .form-title {
                 font-size: 28px;
+            }
+
+            .brand-icon {
+                width: 40px;
+                height: 40px;
+                margin-right: 12px;
+            }
+
+            .brand-name {
+                font-size: 16px;
             }
         }
     </style>
@@ -353,13 +386,16 @@
                 <div class="form-group">
                     <input 
                         id="password" 
-                        class="form-control @error('password') is-invalid @enderror" 
+                        class="form-control has-toggle @error('password') is-invalid @enderror" 
                         type="password" 
                         name="password" 
                         required 
                         autocomplete="new-password"
                         placeholder="Password"
                     >
+                    <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                        👁️
+                    </button>
                     @error('password')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -371,13 +407,16 @@
                 <div class="form-group">
                     <input 
                         id="password_confirmation" 
-                        class="form-control @error('password_confirmation') is-invalid @enderror" 
+                        class="form-control has-toggle @error('password_confirmation') is-invalid @enderror" 
                         type="password" 
                         name="password_confirmation" 
                         required 
                         autocomplete="new-password"
                         placeholder="Konfirmasi password"
                     >
+                    <button type="button" class="password-toggle" onclick="togglePassword('password_confirmation')">
+                        👁️
+                    </button>
                     @error('password_confirmation')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -407,7 +446,7 @@
                 <div class="social-login">
                     <p class="social-login-text">atau daftar dengan</p>
                     <div class="social-buttons">
-                        <a href="#" class="social-btn">
+                        <a href="{{ route('auth.google') }}" class="social-btn">
                             <svg class="google-icon" viewBox="0 0 24 24">
                                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -431,4 +470,19 @@
             </form>
         </div>
     </div>
+
+    <script>
+        function togglePassword(fieldId) {
+            const field = document.getElementById(fieldId);
+            const toggle = field.nextElementSibling;
+            
+            if (field.type === 'password') {
+                field.type = 'text';
+                toggle.textContent = '🙈';
+            } else {
+                field.type = 'password';
+                toggle.textContent = '👁️';
+            }
+        }
+    </script>
 </x-guest-layout>
