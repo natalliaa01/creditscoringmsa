@@ -39,10 +39,11 @@
                                     <p class="text-sm text-msa-blue-700">Manajemen Data Master</p>
                                     <a href="{{ route('economic-sectors.index') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Kelola Sektor Ekonomi &rarr;</a>
                                 </div>
-                                <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
+                                {{-- Menghapus card Aplikasi Draft untuk Admin --}}
+                                {{-- <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
                                     <p class="text-sm text-msa-blue-700">Aplikasi Draft</p>
                                     <a href="{{ route('applications.drafts') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Lihat Semua Draft &rarr;</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     @endrole
@@ -60,10 +61,11 @@
                                     <p class="text-sm text-msa-blue-700">Akses Laporan Strategis</p>
                                     <a href="{{ route('reports.index') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Lihat Laporan & Analisis &rarr;</a>
                                 </div>
-                                <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
+                                {{-- Menghapus card Aplikasi Draft untuk Direksi --}}
+                                {{-- <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
                                     <p class="text-sm text-msa-blue-700">Aplikasi Draft</p>
                                     <a href="{{ route('applications.drafts') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Lihat Semua Draft &rarr;</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     @endrole
@@ -81,10 +83,11 @@
                                     <p class="text-sm text-msa-blue-700">Kelola Aplikasi Tim</p>
                                     <a href="{{ route('applications.index') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Lihat & Edit Aplikasi &rarr;</a>
                                 </div>
-                                <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
+                                {{-- Menghapus card Aplikasi Draft untuk Kepala Bagian Kredit --}}
+                                {{-- <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
                                     <p class="text-sm text-msa-blue-700">Aplikasi Draft</p>
                                     <a href="{{ route('applications.drafts') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Lihat Aplikasi Draft &rarr;</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     @endrole
@@ -102,10 +105,11 @@
                                     <p class="text-sm text-msa-blue-700">Lihat Aplikasi Saya</p>
                                     <a href="{{ route('applications.index') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Tinjau Aplikasi yang Diajukan &rarr;</a>
                                 </div>
-                                <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
+                                {{-- Menghapus card Aplikasi Draft untuk Teller --}}
+                                {{-- <div class="bg-msa-blue-100 p-4 rounded-lg shadow-md border border-msa-blue-200">
                                     <p class="text-sm text-msa-blue-700">Aplikasi Draft</p>
                                     <a href="{{ route('applications.drafts') }}" class="text-msa-blue-700 hover:text-msa-blue-darker font-semibold text-lg">Lihat Aplikasi Draft &rarr;</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     @endrole

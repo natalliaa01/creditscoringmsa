@@ -12,13 +12,26 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         
+        {{-- Link untuk font Poppins --}}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> {{-- Font Awesome untuk ikon --}}
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <style>
+            /* Menyesuaikan font-sans untuk menggunakan Poppins */
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+
             /* Custom CSS untuk warna biru logo */
+            /* Menggunakan warna biru dari logo MSA: #202060 */
             .text-msa-blue {
-                color: #202060; /* Warna biru gelap dari logo MSA */
+                color: #202060;
             }
             .bg-msa-blue-50 {
                 background-color: #e0e0f0; /* Biru muda yang disesuaikan */
@@ -43,7 +56,7 @@
             }
         </style>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased"> {{-- Kelas font-sans akan menggunakan Poppins karena CSS di atas --}}
         <div class="min-h-screen bg-gray-100">
             <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
@@ -71,7 +84,7 @@
                                         {{ __('Manajemen Pengguna') }}
                                     </x-nav-link>
                                     <x-nav-link :href="route('economic-sectors.index')" :active="request()->routeIs('economic-sectors.index')" class="text-msa-blue-700 hover:text-msa-blue-darker">
-                                        {{ __('Data Master') }}
+                                        {{ __('Sektor Ekonomi') }}
                                     </x-nav-link>
                                 @endrole
 
@@ -81,11 +94,12 @@
                                     </x-nav-link>
                                 @endrole
 
-                                @role('Admin|Direksi|Kepala Bagian Kredit|Teller') {{-- Hanya peran yang bisa melihat draft --}}
+                                {{-- Menghapus tautan Draft Aplikasi dari navigasi utama --}}
+                                {{-- @role('Admin|Direksi|Kepala Bagian Kredit|Teller')
                                     <x-nav-link :href="route('applications.drafts')" :active="request()->routeIs('applications.drafts')" class="text-msa-blue-700 hover:text-msa-blue-darker">
                                         {{ __('Draft Aplikasi') }}
                                     </x-nav-link>
-                                @endrole
+                                @endrole --}}
 
                                 @role('Admin|Direksi')
                                     <x-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.index')" class="text-msa-blue-700 hover:text-msa-blue-darker">
@@ -164,11 +178,12 @@
                             </x-responsive-nav-link>
                         @endrole
 
-                        @role('Admin|Direksi|Kepala Bagian Kredit|Teller')
+                        {{-- Menghapus tautan Draft Aplikasi dari navigasi responsif --}}
+                        {{-- @role('Admin|Direksi|Kepala Bagian Kredit|Teller')
                             <x-responsive-nav-link :href="route('applications.drafts')" :active="request()->routeIs('applications.drafts')" class="text-msa-blue-700 hover:text-msa-blue-darker">
                                 {{ __('Draft Aplikasi') }}
                             </x-responsive-nav-link>
-                        @endrole
+                        @endrole --}}
 
                         @role('Admin|Direksi')
                             <x-responsive-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.index')" class="text-msa-blue-700 hover:text-msa-blue-darker">
