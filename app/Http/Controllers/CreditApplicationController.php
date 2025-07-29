@@ -162,7 +162,7 @@ class CreditApplicationController extends Controller
             try {
                 // Ganti 'py' dengan jalur lengkap ke py.exe yang Anda temukan
                 // Contoh: 'C:\Windows\py.exe' atau 'C:\Users\YourUsername\AppData\Local\Programs\Python\Launcher\py.exe'
-                $pythonExecutablePath = 'YOUR_FULL_PATH_TO_PY.EXE'; // GANTI INI DENGAN JALUR ASLI ANDA
+                $pythonExecutablePath = 'C:\Windows\py.exe'; // GANTI INI DENGAN JALUR ASLI ANDA
                 $command = $pythonExecutablePath . ' ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython));
                 $result = Process::run($command);
 
