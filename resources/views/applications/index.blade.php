@@ -24,6 +24,23 @@
                         </div>
                     @endif
 
+                    {{-- Search Bar --}}
+                    <div class="mb-4">
+                        <form method="GET" action="{{ route('applications.index') }}">
+                            <div class="flex items-center">
+                                <x-text-input type="text" name="search" placeholder="Cari nama pemohon atau NIK..." class="w-full mr-2" value="{{ request('search') }}" />
+                                <x-primary-button type="submit">
+                                    {{ __('Cari') }}
+                                </x-primary-button>
+                                @if(request('search'))
+                                    <a href="{{ route('applications.index') }}" class="ml-2 px-4 py-2 bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                        {{ __('Reset') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </form>
+                    </div>
+
                     @if ($applications->isEmpty())
                         <p class="text-gray-600">Belum ada aplikasi kredit yang tersedia.</p>
                     @else
@@ -32,7 +49,7 @@
                                 <thead class="bg-gray-50">
                                     <tr>
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            ID
+                                            No.
                                         </th>
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Nama Pemohon
@@ -58,7 +75,7 @@
                                     @foreach ($applications as $application)
                                         <tr>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                                {{ $application->id }}
+                                                {{ $loop->iteration }} {{-- Menggunakan nomor urut --}}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                                 {{ $application->applicant_name }}
@@ -82,24 +99,22 @@
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                 <a href="{{ route('applications.show', $application->id) }}" class="text-indigo-600 hover:text-indigo-900 mr-2" title="Lihat Detail">
-                                                    <i class="fa fa-eye"></i> {{-- Ikon Lihat --}}
+                                                    <i class="fa fa-eye"></i>
                                                 </a>
-                                                {{-- Tombol Edit --}}
                                                 @can('edit credit application')
                                                     @if ($application->status !== 'Approved' && $application->status !== 'Rejected')
                                                         <a href="{{ route('applications.edit', $application->id) }}" class="text-blue-600 hover:text-blue-900 mr-2" title="Edit Aplikasi">
-                                                            <i class="fa fa-pencil-alt"></i> {{-- Ikon Edit --}}
+                                                            <i class="fa fa-pencil-alt"></i>
                                                         </a>
                                                     @endif
                                                 @endcan
-                                                {{-- Tombol Hapus --}}
                                                 @can('delete credit application')
                                                     @if ($application->status !== 'Approved' && $application->status !== 'Rejected')
                                                         <form id="delete-form-{{ $application->id }}" action="{{ route('applications.destroy', $application->id) }}" method="POST" class="inline-block">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="button" onclick="showConfirmationModal('deleteModal', 'Konfirmasi Hapus Aplikasi', 'Apakah Anda yakin ingin menghapus aplikasi ini?', document.getElementById('delete-form-{{ $application->id }}'))" class="text-red-600 hover:text-red-900" title="Hapus Aplikasi">
-                                                                <i class="fa fa-trash"></i> {{-- Ikon Hapus --}}
+                                                                <i class="fa fa-trash"></i>
                                                             </button>
                                                         </form>
                                                     @endif
