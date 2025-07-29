@@ -62,6 +62,8 @@ class RolesAndPermissionsSeeder extends Seeder
             'access full reports',
             'access strategic reports',
             'approve/reject application',
+            'edit credit application',   // Tambahkan izin ini untuk Direksi
+            'delete credit application', // Tambahkan izin ini untuk Direksi
         ]);
 
         // Kepala Bagian Kredit Role
@@ -74,8 +76,8 @@ class RolesAndPermissionsSeeder extends Seeder
             'view scoring result',
             'view recommendation',
             'access team reports',
-            'edit credit application', // Tambahkan izin ini
-            'delete credit application', // Tambahkan izin ini
+            'edit credit application',
+            'delete credit application',
         ]);
 
         // Teller Role
@@ -83,8 +85,8 @@ class RolesAndPermissionsSeeder extends Seeder
         $tellerRole->givePermissionTo([
             'create credit application',
             'view own applications',
-            'edit credit application', // Tambahkan izin ini
-            'delete credit application', // Tambahkan izin ini
+            'edit credit application',
+            'delete credit application',
         ]);
 
         // Opsional: Buat user admin pertama
