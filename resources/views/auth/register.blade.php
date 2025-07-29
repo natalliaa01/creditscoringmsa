@@ -1,122 +1,434 @@
 <x-guest-layout>
-    {{-- Kontainer utama untuk halaman register dengan desain split-panel yang lebih profesional --}}
-    <div class="flex flex-col md:flex-row w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden my-6 transform transition-all duration-300 hover:shadow-2xl">
-        <div class="w-full md:w-1/2 p-5 md:p-7 lg:p-9 flex flex-col justify-center rounded-l-2xl">
-            <div class="mb-6 flex justify-center">
-                {{-- Menggunakan komponen logo aplikasi jika tersedia, atau gambar statis --}}
-                <a href="/">
-                    <img src="{{ asset('img/cod.png') }}" alt="Logo Credit Scoring" class="h-20 w-auto">
-                </a>
-            </div>
-            <h2 class="text-2xl lg:text-3xl font-extrabold text-center mb-3 text-gray-800 leading-tight">Buat Akun Baru</h2>
-            <p class="text-center text-gray-600 mb-6 text-sm">Bergabunglah dengan sistem credit scoring terdepan.</p>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-            {{-- Status sesi (misal: setelah registrasi berhasil) --}}
-            @if (session('status'))
-                <div class="mb-4 font-medium text-sm text-green-600 bg-green-100 p-3 rounded-lg text-center">
-                    {{ session('status') }}
-                </div>
-            @endif
+        .register-container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+            min-height: 600px;
+        }
 
-            {{-- Error validasi --}}
-            @if ($errors->any())
-                <div class="mb-4 font-medium text-sm text-red-600 bg-red-100 p-3 rounded-lg">
-                    <ul class="mt-3 list-disc list-inside text-sm text-red-600">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+        .register-illustration {
+            flex: 1;
+            background: linear-gradient(135deg, #b8e6b8 0%, #a8d8a8 100%);
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
 
-            <form method="POST" action="{{ route('register') }}" class="space-y-4">
-                @csrf
+        .illustration-content {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-                {{-- Name --}}
-                <div>
-                    <x-input-label for="name" :value="__('Nama Lengkap')" class="mb-2 text-gray-700 font-medium" />
-                    <div class="relative">
-                        <x-text-input id="name" class="block w-full pl-12 pr-4 py-3 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-blue-500 transition duration-200" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Masukkan nama lengkap Anda" />
-                        <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-                            <i class='bx bx-user text-xl'></i>
-                        </span>
-                    </div>
-                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                </div>
+        .register-form {
+            flex: 0.8;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: white;
+        }
 
-                {{-- Email Address --}}
-                <div>
-                    <x-input-label for="email" :value="__('Alamat Email')" class="mb-2 text-gray-700 font-medium" />
-                    <div class="relative">
-                        <x-text-input id="email" class="block w-full pl-12 pr-4 py-3 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-blue-500 transition duration-200" type="email" name="email" :value="old('email')" required autocomplete="username" placeholder="contoh@email.com" />
-                        <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-                            <i class='bx bx-envelope text-xl'></i>
-                        </span>
-                    </div>
-                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                </div>
+        .brand {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
 
-                {{-- Password --}}
-                <div>
-                    <x-input-label for="password" :value="__('Kata Sandi')" class="mb-2 text-gray-700 font-medium" />
-                    <div class="relative">
-                        <x-text-input id="password" class="block w-full pl-12 pr-12 py-3 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-blue-500 transition duration-200" type="password" name="password" required autocomplete="new-password" placeholder="Minimal 8 karakter" />
-                        <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-                            <i class='bx bx-lock-alt text-xl'></i>
-                        </span>
-                        <button type="button" onclick="togglePassword('password', this)" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 focus:outline-none">
-                            <i class='bx bx-show text-xl'></i>
-                        </button>
-                    </div>
-                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                </div>
+        .brand-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
 
-                {{-- Confirm Password --}}
-                <div>
-                    <x-input-label for="password_confirmation" :value="__('Konfirmasi Kata Sandi')" class="mb-2 text-gray-700 font-medium" />
-                    <div class="relative">
-                        <x-text-input id="password_confirmation" class="block w-full pl-12 pr-12 py-3 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-blue-500 transition duration-200" type="password" name="password_confirmation" required autocomplete="new-password" placeholder="Ulangi kata sandi" />
-                        <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-                            <i class='bx bx-lock-alt text-xl'></i>
-                        </span>
-                        <button type="button" onclick="togglePassword('password_confirmation', this)" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 focus:outline-none">
-                            <i class='bx bx-show text-xl'></i>
-                        </button>
-                    </div>
-                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-                </div>
+        .brand-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-                <div class="flex items-center justify-center mt-6">
-                    <x-primary-button class="w-full py-3 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 focus:ring-blue-500 text-white font-semibold rounded-xl text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition duration-200">
-                        {{ __('Daftar') }}
-                    </x-primary-button>
-                </div>
-            </form>
+        .brand-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
 
-            <div class="mt-6 text-center text-sm text-gray-600">
-                Sudah punya akun? <a href="{{ route('login') }}" class="text-blue-600 hover:text-blue-800 font-semibold underline transition duration-200">Masuk di sini</a>
+        .form-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+            box-sizing: border-box;
+        }
+
+        .form-control::placeholder {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #4CAF50;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
+        .form-control.is-invalid {
+            border-color: #e74c3c;
+        }
+
+        .invalid-feedback {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .form-check-input {
+            margin-right: 12px;
+            margin-top: 4px;
+            transform: scale(1.1);
+        }
+
+        .form-check-label {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .form-check-label a {
+            color: #8BC34A;
+            text-decoration: none;
+        }
+
+        .form-check-label a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 16px;
+            background: #8BC34A;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 24px;
+        }
+
+        .btn-primary:hover {
+            background: #7CB342;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(139, 195, 74, 0.3);
+        }
+
+        .social-login {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .social-login-text {
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .social-btn {
+            width: 100%;
+            max-width: 200px;
+            height: 44px;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: white;
+            color: #333;
+            gap: 8px;
+        }
+
+        .google-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .social-btn:hover {
+            border-color: #8BC34A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .terms-text {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .terms-text a {
+            color: #8BC34A;
+            text-decoration: none;
+        }
+
+        .terms-text a:hover {
+            text-decoration: underline;
+        }
+
+        .login-link {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #8BC34A;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .alert {
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: none;
+            font-size: 14px;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        @media (max-width: 768px) {
+            .register-container {
+                flex-direction: column;
+                margin: 10px;
+                min-height: auto;
+            }
+
+            .register-illustration {
+                padding: 30px 20px;
+                min-height: 250px;
+            }
+
+            .register-form {
+                padding: 30px 25px;
+            }
+
+            .form-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+    <div class="register-container">
+        <!-- Left Side - Illustration -->
+        <div class="register-illustration">
+            <div class="illustration-content">
+                <!-- GANTI dengan path gambar ilustrasi -->
+                <img src="{{ asset('img/shaka_utama.png') }}" alt="Register Illustration" style="max-width: 100%; max-height: 100%; object-fit: contain;">
             </div>
         </div>
 
-        <div class="hidden md:flex w-1/2 items-center justify-center p-8 bg-green-50 rounded-r-2xl relative">
-            <img src="{{ asset('img/shaka_utama.png') }}" alt="Ilustrasi Credit Scoring System" class="w-full max-w-md h-auto object-contain transform scale-95 transition-transform duration-300 hover:scale-100">
-            <div class="absolute bottom-10 text-green-900 text-center px-4">
-                <h3 class="text-2xl font-bold mb-2">Bergabung Sekarang</h3>
-                <p class="text-sm opacity-90">Dapatkan akses ke sistem analisis kredit terdepan untuk keputusan finansial yang tepat.</p>
+        <!-- Right Side - Register Form -->
+        <div class="register-form">
+            <!-- Brand -->
+            <div class="brand">
+                <div class="brand-icon">
+                    <!-- GANTI dengan path logo Anda -->
+                    <img src="{{ asset('img/msa.png') }}" alt="Logo BPR MSA">
+                </div>
+                <div class="brand-name">Credit Scoring PT BPR MSA</div>
             </div>
+
+            <h1 class="form-title">Daftar<br>akun baru</h1>
+
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
+                
+                <!-- Name -->
+                <div class="form-group">
+                    <input 
+                        id="name" 
+                        class="form-control @error('name') is-invalid @enderror" 
+                        type="text" 
+                        name="name" 
+                        value="{{ old('name') }}" 
+                        required 
+                        autofocus 
+                        autocomplete="name"
+                        placeholder="Nama lengkap"
+                    >
+                    @error('name')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                    <input 
+                        id="email" 
+                        class="form-control @error('email') is-invalid @enderror" 
+                        type="email" 
+                        name="email" 
+                        value="{{ old('email') }}" 
+                        required 
+                        autocomplete="username"
+                        placeholder="Email address"
+                    >
+                    @error('email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <input 
+                        id="password" 
+                        class="form-control @error('password') is-invalid @enderror" 
+                        type="password" 
+                        name="password" 
+                        required 
+                        autocomplete="new-password"
+                        placeholder="Password"
+                    >
+                    @error('password')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <input 
+                        id="password_confirmation" 
+                        class="form-control @error('password_confirmation') is-invalid @enderror" 
+                        type="password" 
+                        name="password_confirmation" 
+                        required 
+                        autocomplete="new-password"
+                        placeholder="Konfirmasi password"
+                    >
+                    @error('password_confirmation')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+
+                <!-- Terms and Privacy Policy -->
+                @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
+                    <div class="form-check">
+                        <input type="checkbox" name="terms" id="terms" required class="form-check-input">
+                        <label class="form-check-label" for="terms">
+                            {!! __('Saya setuju dengan :terms_of_service dan :privacy_policy', [
+                                    'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'">'.__('Ketentuan Layanan').'</a>',
+                                    'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'">'.__('Kebijakan Privasi').'</a>',
+                            ]) !!}
+                        </label>
+                    </div>
+                @endif
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary">
+                    Daftar akun
+                </button>
+
+                <!-- Social Login -->
+                <div class="social-login">
+                    <p class="social-login-text">atau daftar dengan</p>
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn">
+                            <svg class="google-icon" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                            </svg>
+                            Daftar dengan Google
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Terms -->
+                <div class="terms-text">
+                    Dengan mendaftar Anda setuju dengan <a href="#">Terms of Services</a> dan <a href="#">Privacy Policy</a> BPR MSA
+                </div>
+
+                <!-- Login Link -->
+                <div class="login-link">
+                    Sudah punya akun? <a href="{{ route('login') }}">Login Sekarang</a>
+                </div>
+            </form>
         </div>
     </div>
 </x-guest-layout>
-
-<script>
-function togglePassword(id, btn) {
-    const input = document.getElementById(id);
-    if (input.type === 'password') {
-        input.type = 'text';
-        btn.innerHTML = "<i class='bx bx-hide text-xl'></i>";
-    } else {
-        input.type = 'password';
-        btn.innerHTML = "<i class='bx bx-show text-xl'></i>";
-    }
-}
-</script>
