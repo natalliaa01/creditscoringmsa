@@ -79,11 +79,13 @@ class CreditApplicationController extends Controller
         $action = $request->input('action');
         $initialStatus = ($action === 'draft') ? 'Draft' : 'Submitted';
 
+        // Validasi dasar yang selalu diperlukan
         $request->validate([
             'applicant_name' => 'required|string|max:255',
             'application_type' => 'required|in:UMKM/Pengusaha,Pegawai',
         ]);
 
+        // Simpan data ke tabel credit_applications
         $creditApplication = CreditApplication::create([
             'user_id' => Auth::id(),
             'applicant_name' => $request->applicant_name,
@@ -91,6 +93,7 @@ class CreditApplicationController extends Controller
             'status' => $initialStatus,
         ]);
 
+        // Validasi dan penyimpanan data ke tabel spesifik berdasarkan application_type
         if ($request->application_type === 'UMKM/Pengusaha') {
             $request->validate([
                 'omzet_usaha' => 'required|numeric|min:0',
@@ -157,7 +160,11 @@ class CreditApplicationController extends Controller
             ];
 
             try {
-                $result = Process::run('python ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython)));
+                // Ganti 'py' dengan jalur lengkap ke py.exe yang Anda temukan
+                // Contoh: 'C:\Windows\py.exe' atau 'C:\Users\YourUsername\AppData\Local\Programs\Python\Launcher\py.exe'
+                $pythonExecutablePath = 'YOUR_FULL_PATH_TO_PY.EXE'; // GANTI INI DENGAN JALUR ASLI ANDA
+                $command = $pythonExecutablePath . ' ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython));
+                $result = Process::run($command);
 
                 if ($result->successful()) {
                     $pythonOutput = json_decode($result->output(), true);
@@ -187,6 +194,10 @@ class CreditApplicationController extends Controller
      */
     public function show(CreditApplication $application)
     {
+        // Logika otorisasi untuk melihat detail aplikasi
+        // Admin, Direksi, Kepala Bagian Kredit bisa melihat semua.
+        // Teller hanya bisa melihat miliknya sendiri.
+        // Jika Teller tapi bukan miliknya, maka abort.
         if (Auth::user()->hasRole('Teller') && $application->user_id !== Auth::id()) {
             abort(403, 'Unauthorized action.');
         }
@@ -200,11 +211,16 @@ class CreditApplicationController extends Controller
 
     /**
      * Menampilkan form untuk mengedit aplikasi kredit.
-     * Hak akses: Admin, Kepala Bagian Kredit (terbatas)
+     * Hak akses: Admin, Kepala Bagian Kredit (terbatas), Teller (terbatas pada miliknya)
      */
     public function edit(CreditApplication $application)
     {
-        if (Auth::user()->hasRole('Admin') || (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('edit credit application'))) {
+        // Admin bisa edit semua.
+        // Kepala Bagian Kredit bisa edit jika punya 'edit credit application'.
+        // Teller bisa edit aplikasi yang dia input sendiri DAN punya 'edit credit application'.
+        if (Auth::user()->hasRole('Admin') ||
+            (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('edit credit application')) ||
+            (Auth::user()->hasRole('Teller') && Auth::user()->can('edit credit application') && $application->user_id === Auth::id())) {
             $application->load(['umkmApplication', 'employeeApplication']);
             return view('applications.edit', compact('application'));
         }
@@ -214,11 +230,16 @@ class CreditApplicationController extends Controller
 
     /**
      * Memperbarui aplikasi kredit di database.
-     * Hak akses: Admin, Kepala Bagian Kredit (terbatas)
+     * Hak akses: Admin, Kepala Bagian Kredit (terbatas), Teller (terbatas pada miliknya)
      */
     public function update(Request $request, CreditApplication $application)
     {
-        if (Auth::user()->hasRole('Admin') || (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('edit credit application'))) {
+        // Admin bisa update semua.
+        // Kepala Bagian Kredit bisa update jika punya 'edit credit application'.
+        // Teller bisa update aplikasi yang dia input sendiri DAN punya 'edit credit application'.
+        if (Auth::user()->hasRole('Admin') ||
+            (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('edit credit application')) ||
+            (Auth::user()->hasRole('Teller') && Auth::user()->can('edit credit application') && $application->user_id === Auth::id())) {
             $request->validate([
                 'applicant_name' => 'required|string|max:255',
                 'application_type' => 'required|in:UMKM/Pengusaha,Pegawai',
@@ -281,7 +302,11 @@ class CreditApplicationController extends Controller
                 ];
 
                 try {
-                    $result = Process::run('python ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython)));
+                    // Ganti 'py' dengan jalur lengkap ke py.exe yang Anda temukan
+                    $pythonExecutablePath = 'YOUR_FULL_PATH_TO_PY.EXE'; // GANTI INI DENGAN JALUR ASLI ANDA
+                    $command = $pythonExecutablePath . ' ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython));
+                    $result = Process::run($command);
+
                     if ($result->successful()) {
                         $pythonOutput = json_decode($result->output(), true);
                         if (json_last_error() === JSON_ERROR_NONE) {
@@ -308,11 +333,16 @@ class CreditApplicationController extends Controller
 
     /**
      * Menghapus aplikasi kredit.
-     * Hak akses: Admin, Kepala Bagian Kredit (terbatas)
+     * Hak akses: Admin, Kepala Bagian Kredit (terbatas), Teller (terbatas pada miliknya)
      */
     public function destroy(CreditApplication $application)
     {
-        if (Auth::user()->hasRole('Admin') || (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('delete credit application'))) {
+        // Admin bisa hapus semua.
+        // Kepala Bagian Kredit bisa hapus jika punya 'delete credit application'.
+        // Teller bisa hapus aplikasi yang dia input sendiri DAN punya 'delete credit application'.
+        if (Auth::user()->hasRole('Admin') ||
+            (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('delete credit application')) ||
+            (Auth::user()->hasRole('Teller') && Auth::user()->can('delete credit application') && $application->user_id === Auth::id())) {
             $application->delete();
             return redirect()->route('applications.index')->with('success', 'Aplikasi kredit berhasil dihapus!');
         }

@@ -48,23 +48,23 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="mb-4">
                                     <x-input-label for="omzet_usaha" :value="__('Omzet Usaha Bulanan (Rp)')" />
-                                    <x-text-input id="omzet_usaha" class="block mt-1 w-full" type="number" name="omzet_usaha" :value="old('omzet_usaha')" min="0" step="0.01" />
+                                    <x-text-input id="omzet_usaha" class="block mt-1 w-full" type="number" name="omzet_usaha" :value="old('omzet_usaha')" min="0" step="0.01" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="lama_usaha" :value="__('Lama Usaha (Tahun)')" />
-                                    <x-text-input id="lama_usaha" class="block mt-1 w-full" type="number" name="lama_usaha" :value="old('lama_usaha')" min="0" />
+                                    <x-text-input id="lama_usaha" class="block mt-1 w-full" type="number" name="lama_usaha" :value="old('lama_usaha')" min="0" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="sektor_ekonomi" :value="__('Sektor Ekonomi')" />
-                                    <x-text-input id="sektor_ekonomi" class="block mt-1 w-full" type="text" name="sektor_ekonomi" :value="old('sektor_ekonomi')" />
+                                    <x-text-input id="sektor_ekonomi" class="block mt-1 w-full" type="text" name="sektor_ekonomi" :value="old('sektor_ekonomi')" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="lokasi_usaha" :value="__('Lokasi Usaha')" />
-                                    <x-text-input id="lokasi_usaha" class="block mt-1 w-full" type="text" name="lokasi_usaha" :value="old('lokasi_usaha')" />
+                                    <x-text-input id="lokasi_usaha" class="block mt-1 w-full" type="text" name="lokasi_usaha" :value="old('lokasi_usaha')" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="riwayat_pinjaman_umkm" :value="__('Riwayat Pinjaman Sebelumnya (UMKM)')" />
-                                    <select id="riwayat_pinjaman_umkm" name="riwayat_pinjaman" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                    <select id="riwayat_pinjaman_umkm" name="riwayat_pinjaman" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>
                                         <option value="">Pilih</option>
                                         <option value="Ada" {{ old('riwayat_pinjaman') == 'Ada' ? 'selected' : '' }}>Ada</option>
                                         <option value="Tidak Ada" {{ old('riwayat_pinjaman') == 'Tidak Ada' ? 'selected' : '' }}>Tidak Ada</option>
@@ -73,23 +73,23 @@
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="jenis_penggunaan_kredit" :value="__('Jenis Penggunaan Kredit')" />
-                                    <x-text-input id="jenis_penggunaan_kredit" class="block mt-1 w-full" type="text" name="jenis_penggunaan_kredit" :value="old('jenis_penggunaan_kredit')" />
+                                    <x-text-input id="jenis_penggunaan_kredit" class="block mt-1 w-full" type="text" name="jenis_penggunaan_kredit" :value="old('jenis_penggunaan_kredit')" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="jenis_jaminan" :value="__('Jenis Jaminan')" />
-                                    <x-text-input id="jenis_jaminan" class="block mt-1 w-full" type="text" name="jenis_jaminan" :value="old('jenis_jaminan')" />
+                                    <x-text-input id="jenis_jaminan" class="block mt-1 w-full" type="text" name="jenis_jaminan" :value="old('jenis_jaminan')" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="sumber_dana_pengembalian" :value="__('Sumber Dana Pengembalian')" />
-                                    <x-text-input id="sumber_dana_pengembalian" class="block mt-1 w-full" type="text" name="sumber_dana_pengembalian" :value="old('sumber_dana_pengembalian')" />
+                                    <x-text-input id="sumber_dana_pengembalian" class="block mt-1 w-full" type="text" name="sumber_dana_pengembalian" :value="old('sumber_dana_pengembalian')" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="plafond_pengajuan" :value="__('Plafond Pengajuan (Rp)')" />
-                                    <x-text-input id="plafond_pengajuan" class="block mt-1 w-full" type="number" name="plafond_pengajuan" :value="old('plafond_pengajuan')" min="0" step="0.01" />
+                                    <x-text-input id="plafond_pengajuan" class="block mt-1 w-full" type="number" name="plafond_pengajuan" :value="old('plafond_pengajuan')" min="0" step="0.01" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="jangka_waktu_kredit" :value="__('Jangka Waktu Kredit (Bulan)')" />
-                                    <x-text-input id="jangka_waktu_kredit" class="block mt-1 w-full" type="number" name="jangka_waktu_kredit" :value="old('jangka_waktu_kredit')" min="1" />
+                                    <x-text-input id="jangka_waktu_kredit" class="block mt-1 w-full" type="number" name="jangka_waktu_kredit" :value="old('jangka_waktu_kredit')" min="1" required />
                                 </div>
                             </div>
                         </div>
@@ -100,19 +100,19 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="mb-4">
                                     <x-input-label for="usia" :value="__('Usia (Tahun)')" />
-                                    <x-text-input id="usia" class="block mt-1 w-full" type="number" name="usia" :value="old('usia')" min="18" max="100" />
+                                    <x-text-input id="usia" class="block mt-1 w-full" type="number" name="usia" :value="old('usia')" min="18" max="100" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="masa_kerja" :value="__('Masa Kerja (Tahun)')" />
-                                    <x-text-input id="masa_kerja" class="block mt-1 w-full" type="number" name="masa_kerja" :value="old('masa_kerja')" min="0" />
+                                    <x-text-input id="masa_kerja" class="block mt-1 w-full" type="number" name="masa_kerja" :value="old('masa_kerja')" min="0" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="golongan_jabatan" :value="__('Golongan/Jabatan')" />
-                                    <x-text-input id="golongan_jabatan" class="block mt-1 w-full" type="text" name="golongan_jabatan" :value="old('golongan_jabatan')" />
+                                    <x-text-input id="golongan_jabatan" class="block mt-1 w-full" type="text" name="golongan_jabatan" :value="old('golongan_jabatan')" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="status_kepegawaian" :value="__('Status Kepegawaian')" />
-                                    <select id="status_kepegawaian" name="status_kepegawaian" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                    <select id="status_kepegawaian" name="status_kepegawaian" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>
                                         <option value="">Pilih</option>
                                         <option value="Tetap" {{ old('status_kepegawaian') == 'Tetap' ? 'selected' : '' }}>Tetap</option>
                                         <option value="Kontrak" {{ old('status_kepegawaian') == 'Kontrak' ? 'selected' : '' }}>Kontrak</option>
@@ -121,20 +121,41 @@
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="gaji_bulanan" :value="__('Gaji Bulanan (Rp)')" />
-                                    <x-text-input id="gaji_bulanan" class="block mt-1 w-full" type="number" name="gaji_bulanan" :value="old('gaji_bulanan')" min="0" step="0.01" />
+                                    <x-text-input id="gaji_bulanan" class="block mt-1 w-full" type="number" name="gaji_bulanan" :value="old('gaji_bulanan')" min="0" step="0.01" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="jumlah_tanggungan" :value="__('Jumlah Tanggungan')" />
-                                    <x-text-input id="jumlah_tanggungan" class="block mt-1 w-full" type="number" name="jumlah_tanggungan" :value="old('jumlah_tanggungan')" min="0" />
+                                    <x-text-input id="jumlah_tanggungan" class="block mt-1 w-full" type="number" name="jumlah_tanggungan" :value="old('jumlah_tanggungan')" min="0" required />
                                 </div>
                                 <div class="mb-4">
                                     <x-input-label for="riwayat_kredit_pegawai" :value="__('Riwayat Kredit Sebelumnya (Pegawai)')" />
-                                    <select id="riwayat_kredit_pegawai" name="riwayat_kredit" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                                    <select id="riwayat_kredit_pegawai" name="riwayat_kredit" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>
                                         <option value="">Pilih</option>
                                         <option value="Ada" {{ old('riwayat_kredit') == 'Ada' ? 'selected' : '' }}>Ada</option>
                                         <option value="Tidak Ada" {{ old('riwayat_kredit') == 'Tidak Ada' ? 'selected' : '' }}>Tidak Ada</option>
                                         <option value="Pernah Macet" {{ old('riwayat_kredit') == 'Pernah Macet' ? 'selected' : '' }}>Pernah Macet</option>
                                     </select>
+                                </div>
+                                {{-- Tambahkan detail pinjaman untuk Pegawai --}}
+                                <div class="mb-4">
+                                    <x-input-label for="jenis_penggunaan_kredit" :value="__('Jenis Penggunaan Kredit')" />
+                                    <x-text-input id="jenis_penggunaan_kredit" class="block mt-1 w-full" type="text" name="jenis_penggunaan_kredit" :value="old('jenis_penggunaan_kredit')" required />
+                                </div>
+                                <div class="mb-4">
+                                    <x-input-label for="jenis_jaminan" :value="__('Jenis Jaminan')" />
+                                    <x-text-input id="jenis_jaminan" class="block mt-1 w-full" type="text" name="jenis_jaminan" :value="old('jenis_jaminan')" required />
+                                </div>
+                                <div class="mb-4">
+                                    <x-input-label for="sumber_dana_pengembalian" :value="__('Sumber Dana Pengembalian')" />
+                                    <x-text-input id="sumber_dana_pengembalian" class="block mt-1 w-full" type="text" name="sumber_dana_pengembalian" :value="old('sumber_dana_pengembalian')" required />
+                                </div>
+                                <div class="mb-4">
+                                    <x-input-label for="plafond_pengajuan" :value="__('Plafond Pengajuan (Rp)')" />
+                                    <x-text-input id="plafond_pengajuan" class="block mt-1 w-full" type="number" name="plafond_pengajuan" :value="old('plafond_pengajuan')" min="0" step="0.01" required />
+                                </div>
+                                <div class="mb-4">
+                                    <x-input-label for="jangka_waktu_kredit" :value="__('Jangka Waktu Kredit (Bulan)')" />
+                                    <x-text-input id="jangka_waktu_kredit" class="block mt-1 w-full" type="number" name="jangka_waktu_kredit" :value="old('jangka_waktu_kredit')" min="1" required />
                                 </div>
                             </div>
                         </div>

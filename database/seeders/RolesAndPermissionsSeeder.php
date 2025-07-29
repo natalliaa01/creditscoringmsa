@@ -27,7 +27,7 @@ class RolesAndPermissionsSeeder extends Seeder
         Permission::firstOrCreate(['name' => 'delete credit application']);
         Permission::firstOrCreate(['name' => 'view scoring result']);
         Permission::firstOrCreate(['name' => 'view recommendation']);
-        Permission::firstOrCreate(['name' => 'approve/reject application']); // Izin baru
+        Permission::firstOrCreate(['name' => 'approve/reject application']);
 
         // Permissions khusus Admin
         Permission::firstOrCreate(['name' => 'manage users']);
@@ -61,7 +61,7 @@ class RolesAndPermissionsSeeder extends Seeder
             'view recommendation',
             'access full reports',
             'access strategic reports',
-            'approve/reject application', // Berikan izin baru kepada Direksi
+            'approve/reject application',
         ]);
 
         // Kepala Bagian Kredit Role
@@ -74,6 +74,8 @@ class RolesAndPermissionsSeeder extends Seeder
             'view scoring result',
             'view recommendation',
             'access team reports',
+            'edit credit application', // Tambahkan izin ini
+            'delete credit application', // Tambahkan izin ini
         ]);
 
         // Teller Role
@@ -81,6 +83,8 @@ class RolesAndPermissionsSeeder extends Seeder
         $tellerRole->givePermissionTo([
             'create credit application',
             'view own applications',
+            'edit credit application', // Tambahkan izin ini
+            'delete credit application', // Tambahkan izin ini
         ]);
 
         // Opsional: Buat user admin pertama
