@@ -117,7 +117,7 @@ class CreditApplicationController extends Controller
                 ])
             ));
         } elseif ($request->application_type === 'Pegawai') {
-            // Pastikan validasi di sini sesuai dengan nama bidang di form Pegawai
+            // Validasi untuk semua bidang di form Pegawai
             $request->validate([
                 'usia' => 'required|integer|min:18|max:100',
                 'masa_kerja' => 'required|integer|min:0',
@@ -162,7 +162,11 @@ class CreditApplicationController extends Controller
             ];
 
             try {
-                $result = Process::run('py ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython)));
+                // Ganti 'py' dengan jalur lengkap ke py.exe yang Anda temukan
+                // Contoh: 'C:\Windows\py.exe' atau 'C:\Users\YourUsername\AppData\Local\Programs\Python\Launcher\py.exe'
+                $pythonExecutablePath = 'C:\Windows\py.exe'; // GANTI INI DENGAN JALUR ASLI ANDA
+                $command = $pythonExecutablePath . ' ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython));
+                $result = Process::run($command);
 
                 if ($result->successful()) {
                     $pythonOutput = json_decode($result->output(), true);
@@ -290,7 +294,11 @@ class CreditApplicationController extends Controller
                 ];
 
                 try {
-                    $result = Process::run('py ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython)));
+                    // Ganti 'py' dengan jalur lengkap ke py.exe yang Anda temukan
+                    $pythonExecutablePath = 'YOUR_FULL_PATH_TO_PY.EXE'; // GANTI INI
+                    $command = $pythonExecutablePath . ' ' . base_path('python_scripts/scoring.py') . ' ' . escapeshellarg(json_encode($dataToPython));
+                    $result = Process::run($command);
+
                     if ($result->successful()) {
                         $pythonOutput = json_decode($result->output(), true);
                         if (json_last_error() === JSON_ERROR_NONE) {

@@ -81,16 +81,28 @@
                                                 {{ $application->created_at->format('d M Y H:i') }}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="{{ route('applications.show', $application->id) }}" class="text-indigo-600 hover:text-indigo-900 mr-2">Lihat</a>
+                                                <a href="{{ route('applications.show', $application->id) }}" class="text-indigo-600 hover:text-indigo-900 mr-2" title="Lihat Detail">
+                                                    <i class="fa fa-eye"></i> {{-- Ikon Lihat --}}
+                                                </a>
+                                                {{-- Tombol Edit --}}
                                                 @can('edit credit application')
-                                                    <a href="{{ route('applications.edit', $application->id) }}" class="text-blue-600 hover:text-blue-900 mr-2">Edit</a>
+                                                    @if ($application->status !== 'Approved' && $application->status !== 'Rejected')
+                                                        <a href="{{ route('applications.edit', $application->id) }}" class="text-blue-600 hover:text-blue-900 mr-2" title="Edit Aplikasi">
+                                                            <i class="fa fa-pencil-alt"></i> {{-- Ikon Edit --}}
+                                                        </a>
+                                                    @endif
                                                 @endcan
+                                                {{-- Tombol Hapus --}}
                                                 @can('delete credit application')
-                                                    <form action="{{ route('applications.destroy', $application->id) }}" method="POST" class="inline-block" onsubmit="return confirm('Apakah Anda yakin ingin menghapus aplikasi ini?');">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="text-red-600 hover:text-red-900">Hapus</button>
-                                                    </form>
+                                                    @if ($application->status !== 'Approved' && $application->status !== 'Rejected')
+                                                        <form action="{{ route('applications.destroy', $application->id) }}" method="POST" class="inline-block" onsubmit="return confirm('Apakah Anda yakin ingin menghapus aplikasi ini?');">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="text-red-600 hover:text-red-900" title="Hapus Aplikasi">
+                                                                <i class="fa fa-trash"></i> {{-- Ikon Hapus --}}
+                                                            </button>
+                                                        </form>
+                                                    @endif
                                                 @endcan
                                             </td>
                                         </tr>
