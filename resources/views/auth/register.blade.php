@@ -1,360 +1,59 @@
-<x-guest-layout>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{{ config('app.name', 'Laravel') }} - Register</title>
     
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #f8f9fa;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .register-container {
-            display: flex;
-            max-width: 1200px;
-            width: 100%;
-            background: white;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            overflow: hidden;
-            min-height: 600px;
-        }
-
-        .register-illustration {
-            flex: 1;
-            background: linear-gradient(135deg, #87CEEB 0%, #5DADE2 100%);
-            padding: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .illustration-content {
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .register-form {
-            flex: 0.8;
-            padding: 50px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: white;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .brand-icon {
-            width: 48px;
-            height: 48px;
-            margin-right: 16px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .brand-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .brand-name {
-            font-size: 18px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .form-title {
-            font-size: 36px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 40px;
-            line-height: 1.2;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 16px 20px;
-            border: 2px solid #e8e8e8;
-            border-radius: 12px;
-            font-size: 15px;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s ease;
-            background: #f8f9fa;
-            box-sizing: border-box;
-        }
-
-        .form-control.has-toggle {
-            padding-right: 50px;
-        }
-
-        .form-control::placeholder {
-            color: #999;
-            font-size: 14px;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: #2196F3;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
-        }
-
-        .form-control.is-invalid {
-            border-color: #e74c3c;
-        }
-
-        .password-toggle {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-            color: #999;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-
-        .password-toggle:hover {
-            color: #666;
-        }
-
-        .invalid-feedback {
-            color: #e74c3c;
-            font-size: 13px;
-            margin-top: 5px;
-        }
-
-        .form-check {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 24px;
-        }
-
-        .form-check-input {
-            margin-right: 12px;
-            margin-top: 4px;
-            transform: scale(1.1);
-        }
-
-        .form-check-label {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        .form-check-label a {
-            color: #2196F3;
-            text-decoration: none;
-        }
-
-        .form-check-label a:hover {
-            text-decoration: underline;
-        }
-
-        .btn-primary {
-            width: 100%;
-            padding: 16px;
-            background: #2196F3;
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            font-family: 'Poppins', sans-serif;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-bottom: 24px;
-        }
-
-        .btn-primary:hover {
-            background: #1976D2;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
-        }
-
-        .social-login {
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        .social-login-text {
-            color: #999;
-            font-size: 13px;
-            margin-bottom: 16px;
-        }
-
-        .social-buttons {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .social-btn {
-            width: 100%;
-            max-width: 200px;
-            height: 44px;
-            border: 1px solid #e8e8e8;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            background: white;
-            color: #333;
-            gap: 8px;
-        }
-
-        .google-icon {
-            width: 18px;
-            height: 18px;
-        }
-
-        .social-btn:hover {
-            border-color: #2196F3;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .terms-text {
-            font-size: 12px;
-            color: #999;
-            text-align: center;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .terms-text a {
-            color: #2196F3;
-            text-decoration: none;
-        }
-
-        .terms-text a:hover {
-            text-decoration: underline;
-        }
-
-        .login-link {
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .login-link a {
-            color: #2196F3;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .login-link a:hover {
-            text-decoration: underline;
-        }
-
-        .alert {
-            padding: 12px 16px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: none;
-            font-size: 14px;
-        }
-
-        .alert-success {
-            background: #d4edda;
-            color: #155724;
-        }
-
-        @media (max-width: 768px) {
-            .register-container {
-                flex-direction: column;
-                margin: 10px;
-                min-height: auto;
-            }
-
-            .register-illustration {
-                padding: 30px 20px;
-                min-height: 250px;
-            }
-
-            .register-form {
-                padding: 30px 25px;
-            }
-
-            .form-title {
-                font-size: 28px;
-            }
-
-            .brand-icon {
-                width: 40px;
-                height: 40px;
-                margin-right: 12px;
-            }
-
-            .brand-name {
-                font-size: 16px;
-            }
-        }
-    </style>
-
-    <div class="register-container">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="{{ asset('css/auth-pages.css') }}" rel="stylesheet">
+    
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body>
+    <div class="auth-container">
         <!-- Left Side - Illustration -->
-        <div class="register-illustration">
+        <div class="auth-illustration">
             <div class="illustration-content">
-                <!-- GANTI dengan path gambar ilustrasi -->
-                <img src="{{ asset('img/shaka_utama.png') }}" alt="Register Illustration" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                <img src="{{ asset('img/shaka_utama.png') }}" alt="Register Illustration">
             </div>
         </div>
 
         <!-- Right Side - Register Form -->
-        <div class="register-form">
+        <div class="auth-form">
             <!-- Brand -->
-            <div class="brand">
-                <div class="brand-icon">
-                    <!-- GANTI dengan path logo Anda -->
+            <div class="auth-brand">
+                <div class="auth-brand-icon">
                     <img src="{{ asset('img/msa.png') }}" alt="Logo BPR MSA">
                 </div>
-                <div class="brand-name">Credit Scoring PT BPR MSA</div>
+                <div class="auth-brand-name">Credit Scoring PT BPR MSA</div>
             </div>
 
-            <h1 class="form-title">Daftar<br>akun baru</h1>
+            <h1 class="auth-form-title">Bergabung dengan kami</h1>
+            <p class="auth-form-subtitle">Buat akun baru untuk memulai perjalanan Anda</p>
 
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('register') }}" id="registerForm">
                 @csrf
                 
                 <!-- Name -->
-                <div class="form-group">
+                <div class="auth-form-group">
+                    <label for="name" class="auth-form-label">Nama Lengkap</label>
                     <input 
                         id="name" 
-                        class="form-control @error('name') is-invalid @enderror" 
+                        class="auth-form-control @error('name') is-invalid @enderror" 
                         type="text" 
                         name="name" 
                         value="{{ old('name') }}" 
                         required 
                         autofocus 
                         autocomplete="name"
-                        placeholder="Nama lengkap"
+                        placeholder="Masukkan nama lengkap Anda"
                     >
                     @error('name')
                         <div class="invalid-feedback">
@@ -364,16 +63,17 @@
                 </div>
 
                 <!-- Email Address -->
-                <div class="form-group">
+                <div class="auth-form-group">
+                    <label for="email" class="auth-form-label">Email</label>
                     <input 
                         id="email" 
-                        class="form-control @error('email') is-invalid @enderror" 
+                        class="auth-form-control @error('email') is-invalid @enderror" 
                         type="email" 
                         name="email" 
                         value="{{ old('email') }}" 
                         required 
                         autocomplete="username"
-                        placeholder="Email address"
+                        placeholder="Masukkan alamat email Anda"
                     >
                     @error('email')
                         <div class="invalid-feedback">
@@ -383,18 +83,22 @@
                 </div>
 
                 <!-- Password -->
-                <div class="form-group">
+                <div class="auth-form-group">
+                    <label for="password" class="auth-form-label">Password</label>
                     <input 
                         id="password" 
-                        class="form-control has-toggle @error('password') is-invalid @enderror" 
+                        class="auth-form-control has-toggle @error('password') is-invalid @enderror" 
                         type="password" 
                         name="password" 
                         required 
                         autocomplete="new-password"
-                        placeholder="Password"
+                        placeholder="Buat password yang kuat"
                     >
-                    <button type="button" class="password-toggle" onclick="togglePassword('password')">
-                        👁️
+                    <button type="button" class="password-toggle" onclick="togglePassword('password')" aria-label="Toggle password visibility">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </button>
                     @error('password')
                         <div class="invalid-feedback">
@@ -404,18 +108,22 @@
                 </div>
 
                 <!-- Confirm Password -->
-                <div class="form-group">
+                <div class="auth-form-group">
+                    <label for="password_confirmation" class="auth-form-label">Konfirmasi Password</label>
                     <input 
                         id="password_confirmation" 
-                        class="form-control has-toggle @error('password_confirmation') is-invalid @enderror" 
+                        class="auth-form-control has-toggle @error('password_confirmation') is-invalid @enderror" 
                         type="password" 
                         name="password_confirmation" 
                         required 
                         autocomplete="new-password"
-                        placeholder="Konfirmasi password"
+                        placeholder="Ulangi password Anda"
                     >
-                    <button type="button" class="password-toggle" onclick="togglePassword('password_confirmation')">
-                        👁️
+                    <button type="button" class="password-toggle" onclick="togglePassword('password_confirmation')" aria-label="Toggle password confirmation visibility">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </button>
                     @error('password_confirmation')
                         <div class="invalid-feedback">
@@ -425,26 +133,23 @@
                 </div>
 
                 <!-- Terms and Privacy Policy -->
-                @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                    <div class="form-check">
-                        <input type="checkbox" name="terms" id="terms" required class="form-check-input">
-                        <label class="form-check-label" for="terms">
-                            {!! __('Saya setuju dengan :terms_of_service dan :privacy_policy', [
-                                    'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'">'.__('Ketentuan Layanan').'</a>',
-                                    'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'">'.__('Kebijakan Privasi').'</a>',
-                            ]) !!}
-                        </label>
-                    </div>
-                @endif
+                <div class="auth-form-check">
+                    <input type="checkbox" name="terms" id="terms" required class="auth-form-check-input">
+                    <label class="auth-form-check-label" for="terms">
+                        Saya menyetujui <a href="#" target="_blank">Syarat & Ketentuan</a> dan <a href="#" target="_blank">Kebijakan Privasi</a>
+                    </label>
+                </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn-primary">
-                    Daftar akun
+                <button type="submit" class="auth-btn-primary" id="registerBtn">
+                    Buat Akun
                 </button>
+
+                <!-- Divider -->
+                <div class="divider">atau</div>
 
                 <!-- Social Login -->
                 <div class="social-login">
-                    <p class="social-login-text">atau daftar dengan</p>
                     <div class="social-buttons">
                         <a href="{{ route('auth.google') }}" class="social-btn">
                             <svg class="google-icon" viewBox="0 0 24 24">
@@ -459,30 +164,77 @@
                 </div>
 
                 <!-- Terms -->
-                <div class="terms-text">
-                    Dengan mendaftar Anda setuju dengan <a href="#">Terms of Services</a> dan <a href="#">Privacy Policy</a> BPR MSA
+                <div class="auth-terms-text">
+                    Dengan mendaftar, Anda menyetujui <a href="#" target="_blank">Syarat & Ketentuan</a> dan <a href="#" target="_blank">Kebijakan Privasi</a> kami
                 </div>
 
                 <!-- Login Link -->
-                <div class="login-link">
-                    Sudah punya akun? <a href="{{ route('login') }}">Login Sekarang</a>
+                <div class="auth-link">
+                    Sudah punya akun? <a href="{{ route('login') }}">Masuk sekarang</a>
                 </div>
             </form>
         </div>
     </div>
 
     <script>
+        // Password toggle functionality
         function togglePassword(fieldId) {
             const field = document.getElementById(fieldId);
             const toggle = field.nextElementSibling;
+            const svg = toggle.querySelector('svg');
             
             if (field.type === 'password') {
                 field.type = 'text';
-                toggle.textContent = '🙈';
+                svg.innerHTML = `
+                    <path d="17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="1" y1="1" x2="23" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                `;
             } else {
                 field.type = 'password';
-                toggle.textContent = '👁️';
+                svg.innerHTML = `
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                `;
             }
         }
+
+        // Add loading state to register button
+        document.getElementById('registerForm').addEventListener('submit', function() {
+            const btn = document.getElementById('registerBtn');
+            btn.classList.add('loading');
+            btn.textContent = 'Membuat akun...';
+        });
+
+        // Add focus animations
+        document.querySelectorAll('.auth-form-control').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+
+        // Password strength indicator
+        const passwordField = document.getElementById('password');
+        passwordField.addEventListener('input', function() {
+            const password = this.value;
+            const strength = calculatePasswordStrength(password);
+            // You can add visual feedback here
+        });
+
+        function calculatePasswordStrength(password) {
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            return strength;
+        }
     </script>
-</x-guest-layout>
+</body>
+</html>
