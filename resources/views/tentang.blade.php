@@ -5,13 +5,16 @@
         </h2>
     </x-slot>
 
+    <!-- Boxicons CSS for icons (added for consistency, assuming it's used elsewhere) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Custom Styles to Match Landing Page -->
     <style>
         .hero-about {
             background: linear-gradient(135deg, #4a90e2, #357abd);
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px; /* Disesuaikan untuk lebih ringkas */
             position: relative;
         }
         .hero-about::before {
@@ -28,13 +31,13 @@
             z-index: 1;
         }
         .hero-about h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
+            font-size: 38px; /* Disesuaikan */
+            margin-bottom: 15px; /* Disesuaikan */
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         .hero-about p {
-            font-size: 18px;
+            font-size: 17px; /* Disesuaikan */
             max-width: 800px;
             margin: 0 auto;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -42,28 +45,28 @@
         }
 
         .content-section {
-            padding: 80px 5%;
+            padding: 60px 5%; /* Disesuaikan */
             background-color: white;
         }
         .content-section.alt {
             background-color: #f8f9fa;
         }
-        
+
         .section-container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 40px; /* Disesuaikan */
             align-items: center;
         }
         .section-container.reverse {
             grid-template-columns: 1fr 1fr;
         }
-        
+
         .content-text h3 {
-            font-size: 32px;
-            margin-bottom: 25px;
+            font-size: 28px; /* Disesuaikan */
+            margin-bottom: 20px; /* Disesuaikan */
             color: #2c3e50;
             font-weight: 600;
         }
@@ -73,25 +76,25 @@
         .content-text h3.misi {
             color: #28a745;
         }
-        
+
         .content-text p {
             color: #666;
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 20px;
+            font-size: 17px; /* Disesuaikan */
+            line-height: 1.6; /* Disesuaikan */
+            margin-bottom: 15px; /* Disesuaikan */
         }
-        
+
         .content-text ol {
             color: #666;
-            font-size: 16px;
-            line-height: 1.7;
+            font-size: 15px; /* Disesuaikan */
+            line-height: 1.6; /* Disesuaikan */
             padding-left: 20px;
         }
         .content-text ol li {
-            margin-bottom: 12px;
+            margin-bottom: 8px; /* Disesuaikan */
             padding-left: 10px;
         }
-        
+
         .content-image {
             text-align: center;
         }
@@ -108,13 +111,13 @@
         }
 
         .logo-section {
-            padding: 80px 5%;
+            padding: 60px 5%; /* Disesuaikan */
             background-color: white;
             text-align: center;
         }
         .logo-section h3 {
-            font-size: 36px;
-            margin-bottom: 40px;
+            font-size: 32px; /* Disesuaikan */
+            margin-bottom: 30px; /* Disesuaikan */
             color: #2c3e50;
             font-weight: 600;
         }
@@ -127,19 +130,19 @@
         }
 
         .contact-section {
-            background: linear-gradient(135deg, #28a745, #20c997);
+            background: linear-gradient(135deg, #4a90e2, black);
             color: white;
-            padding: 80px 5%;
+            padding: 60px 5%; /* Disesuaikan */
             text-align: center;
         }
         .contact-section h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
+            font-size: 32px; /* Disesuaikan */
+            margin-bottom: 25px; /* Disesuaikan */
             font-weight: 600;
         }
         .contact-section p {
-            font-size: 18px;
-            margin-bottom: 40px;
+            font-size: 17px; /* Disesuaikan */
+            margin-bottom: 30px; /* Disesuaikan */
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -147,14 +150,15 @@
         }
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 800px;
+            /* Mengubah menjadi 3 kolom agar sejajar di satu baris pada layar lebar */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* Mengurangi jarak antar item */
+            max-width: 900px; /* Sedikit dilebarkan untuk menampung 3 kolom */
             margin: 0 auto;
         }
         .contact-item {
             background: rgba(255,255,255,0.1);
-            padding: 30px;
+            padding: 20px; /* Disesuaikan */
             border-radius: 12px;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
@@ -164,19 +168,19 @@
             transform: translateY(-5px);
         }
         .contact-item i {
-            font-size: 32px;
-            margin-bottom: 15px;
+            font-size: 28px; /* Disesuaikan */
+            margin-bottom: 10px; /* Disesuaikan */
             display: block;
         }
         .contact-item h4 {
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 18px; /* Disesuaikan */
+            margin-bottom: 8px; /* Disesuaikan */
             font-weight: 600;
         }
         .contact-item a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px; /* Disesuaikan */
             font-weight: 500;
         }
         .contact-item a:hover {
@@ -186,28 +190,28 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-about {
-                padding: 60px 20px;
+                padding: 50px 20px; /* Lebih kecil untuk mobile */
             }
             .hero-about h1 {
-                font-size: 28px;
+                font-size: 26px; /* Lebih kecil untuk mobile */
             }
             .hero-about p {
-                font-size: 16px;
+                font-size: 15px; /* Lebih kecil untuk mobile */
             }
-            
+
             .content-section {
-                padding: 60px 5%;
+                padding: 50px 5%; /* Lebih kecil untuk mobile */
             }
             .section-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
+                grid-template-columns: 1fr; /* Kembali ke satu kolom untuk mobile */
+                gap: 30px; /* Disesuaikan */
                 text-align: center;
             }
             .section-container.reverse {
                 grid-template-columns: 1fr;
             }
             .content-text {
-                order: 2;
+                order: 2; /* Memastikan teks di bawah gambar di mobile */
             }
             .content-image {
                 order: 1;
@@ -218,37 +222,49 @@
             .section-container.reverse .content-image {
                 order: 1;
             }
-            
+
             .content-text h3 {
-                font-size: 26px;
+                font-size: 24px; /* Lebih kecil untuk mobile */
             }
             .content-text p {
-                font-size: 16px;
+                font-size: 15px; /* Lebih kecil untuk mobile */
             }
             .content-text ol {
-                font-size: 15px;
+                font-size: 14px; /* Lebih kecil untuk mobile */
                 text-align: left;
             }
-            
+
             .logo-section {
-                padding: 60px 5%;
+                padding: 50px 5%; /* Lebih kecil untuk mobile */
             }
             .logo-section h3 {
-                font-size: 28px;
+                font-size: 26px; /* Lebih kecil untuk mobile */
             }
-            
+
             .contact-section {
-                padding: 60px 5%;
+                padding: 50px 5%; /* Lebih kecil untuk mobile */
             }
             .contact-section h2 {
-                font-size: 28px;
+                font-size: 26px; /* Lebih kecil untuk mobile */
             }
             .contact-section p {
-                font-size: 16px;
+                font-size: 15px; /* Lebih kecil untuk mobile */
             }
             .contact-info {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                grid-template-columns: 1fr; /* Kembali ke satu kolom untuk mobile */
+                gap: 15px; /* Disesuaikan */
+            }
+            .contact-item {
+                padding: 15px; /* Lebih kecil untuk mobile */
+            }
+            .contact-item i {
+                font-size: 24px; /* Lebih kecil untuk mobile */
+            }
+            .contact-item h4 {
+                font-size: 16px; /* Lebih kecil untuk mobile */
+            }
+            .contact-item a {
+                font-size: 15px; /* Lebih kecil untuk mobile */
             }
         }
     </style>
@@ -302,7 +318,7 @@
         <section class="contact-section">
             <h2>Hubungi Kami</h2>
             <p>Jika Anda memiliki pertanyaan lebih lanjut atau ingin menjadi bagian dari UMKM binaan kami, jangan ragu untuk menghubungi tim kami. Kami siap melayani Anda dengan profesional.</p>
-            
+
             <div class="contact-info">
                 <div class="contact-item">
                     <i class='bx bx-envelope'></i>
