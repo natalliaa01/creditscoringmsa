@@ -1,100 +1,113 @@
-# python_scripts/train_model.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
-import joblib
-import warnings
-import sys
-import os # Import os module
-import numpy as np # Import numpy for np.nan
+import pickle
+import os
 
-# Suppress warnings for cleaner output during training
-warnings.filterwarnings("ignore")
+def train_and_save_model(data_df, model_type, features, categorical_features, target_col):
+    print(f"Starting training for {model_type} model...")
 
-def train_and_save_model(df, model_type, model_filename, encoder_filename):
-    """
-    Melatih model ML untuk tipe aplikasi tertentu dan menyimpannya.
-    """
-    print(f"--- Training {model_type} Model ---")
+    df_filtered = data_df[data_df['application_type'] == model_type].copy()
 
-    if 'keputusan_kredit' not in df.columns or df['keputusan_kredit'].isnull().all():
-        print(f"Error: 'keputusan_kredit' column missing or empty in {model_type} data.")
-        return
+    # Pre-fill NaN/empty strings in features before dropping rows to ensure all features are processed
+    # This also ensures consistent types before training/encoding
+    for feature in features:
+        if feature not in df_filtered.columns:
+            # If a feature column is entirely missing in the filtered data, add it with default
+            if feature in categorical_features:
+                df_filtered[feature] = ''
+            else:
+                df_filtered[feature] = 0.0
+        else:
+            # For existing columns, ensure correct type and fill NaNs
+            if feature in categorical_features:
+                df_filtered[feature] = df_filtered[feature].astype(str).fillna('')
+            else:
+                df_filtered[feature] = pd.to_numeric(df_filtered[feature], errors='coerce').fillna(0.0)
 
-    df.dropna(subset=['keputusan_kredit'], inplace=True)
-    if df.empty:
-        print(f"No data after dropping missing target values for {model_type}.")
-        return
+    # Drop rows where the TARGET COLUMN is NaN (i.e., no 'keputusan_kredit')
+    df_filtered.dropna(subset=[target_col], inplace=True)
 
-    X = df.drop('keputusan_kredit', axis=1)
-    y = df['keputusan_kredit']
+    X = df_filtered[features]
+    y = df_filtered[target_col]
 
-    label_encoder = LabelEncoder()
-    y_encoded = label_encoder.fit_transform(y)
-    # Gunakan os.path.join untuk membuat jalur yang benar dan eksplisit
-    joblib.dump(label_encoder, os.path.join('python_scripts', encoder_filename))
-    print(f"Label Encoder saved to {os.path.join('python_scripts', encoder_filename)}")
+    target_mapping = {'Tidak Layak': 0, 'Pertimbangkan': 1, 'Layak': 2}
+    y_encoded = y.map(target_mapping)
 
-    if model_type == 'UMKM/Pengusaha':
-        numerical_features = ['omzet_usaha', 'lama_usaha', 'plafond_pengajuan', 'jangka_waktu_kredit']
-        categorical_features = ['sektor_ekonomi', 'lokasi_usaha', 'riwayat_pinjaman', 'jenis_penggunaan_kredit', 'jenis_jaminan', 'sumber_dana_pengembalian']
-    elif model_type == 'Pegawai':
-        numerical_features = ['usia', 'masa_kerja', 'gaji_bulanan', 'jumlah_tanggungan', 'plafond_pengajuan', 'jangka_waktu_kredit']
-        categorical_features = ['golongan_jabatan', 'status_kepegawaian', 'riwayat_kredit', 'jenis_penggunaan_kredit', 'jenis_jaminan', 'sumber_dana_pengembalian']
-    else:
-        print(f"Unknown model type: {model_type}")
-        return
+    label_encoders = {}
+    for col in categorical_features:
+        if col in X.columns:
+            le = LabelEncoder()
+            # Fit LabelEncoder on unique values including empty string if present
+            X[col] = le.fit_transform(X[col]) # X[col] should already be string type from previous step
+            le_filename = os.path.join(os.path.dirname(__file__), f"{model_type.lower().replace('/', '_')}_label_encoder_{col}.pkl")
+            with open(le_filename, 'wb') as f:
+                pickle.dump(le, f)
+            label_encoders[col] = le
+            print(f"Saved label encoder for '{col}' ({model_type}) to {le_filename}")
+        else:
+            print(f"Warning: Categorical feature '{col}' not found in DataFrame for {model_type} model during training. Skipping LabelEncoder for this feature.", file=sys.stderr)
 
-    # Inisialisasi X_selected dengan semua fitur yang relevan dari X
-    # Pastikan semua fitur yang diharapkan ada di DataFrame, isi dengan NaN jika tidak ada
-    all_expected_features = numerical_features + categorical_features
-    for feature in all_expected_features:
-        if feature not in X.columns:
-            X[feature] = np.nan # Isi dengan NaN jika fitur tidak ada di data asli
 
-    X_selected = X[all_expected_features] # Buat X_selected di sini
+    X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.2, random_state=42)
 
-    preprocessor = ColumnTransformer(
-        transformers=[
-            ('num', StandardScaler(), numerical_features),
-            ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_features)
-        ],
-        remainder='drop'
-    )
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X_train, y_train)
 
-    model_pipeline = Pipeline(steps=[('preprocessor', preprocessor),
-                                       ('classifier', RandomForestClassifier(random_state=42))])
+    y_pred = model.predict(X_test)
+    print(f"\nAccuracy Score ({model_type}): {accuracy_score(y_test, y_pred)}")
+    print(f"Classification Report ({model_type}):\n{classification_report(y_test, y_pred, target_names=['Tidak Layak', 'Pertimbangkan', 'Layak'])}")
 
-    X_train, X_test, y_train, y_test = train_test_split(X_selected, y_encoded, test_size=0.2, random_state=42, stratify=y_encoded)
+    model_filename = os.path.join(os.path.dirname(__file__), f"{model_type.lower().replace('/', '_')}_model.pkl")
+    with open(model_filename, 'wb') as f:
+        pickle.dump(model, f)
+    print(f"\nModel for {model_type} saved successfully to {model_filename}")
 
-    model_pipeline.fit(X_train, y_train)
+if __name__ == "__main__":
+    data_file = os.path.join(os.path.dirname(__file__), 'bpr_dummy_data.csv')
+    df = pd.read_csv(data_file)
 
-    y_pred = model_pipeline.predict(X_test)
-    print(f"{model_type} Model Accuracy: {accuracy_score(y_test, y_pred):.2f}")
-    print(f"{model_type} Classification Report:\n{classification_report(y_test, y_pred, target_names=label_encoder.classes_)}")
+    # --- Data Cleaning (Penting!) ---
+    df['riwayat_kredit'] = df['riwayat_kredit'].replace('Pernak Macet', 'Pernah Macet')
+    df['riwayat_pinjaman'] = df['riwayat_pinjaman'].replace('Pernak Macet', 'Pernah Macet')
 
-    # Gunakan os.path.join untuk membuat jalur yang benar dan eksplisit
-    joblib.dump(model_pipeline, os.path.join('python_scripts', model_filename))
-    print(f"Model saved to {os.path.join('python_scripts', model_filename)}")
+    # --- Definisi Fitur untuk Model Pegawai ---
+    employee_features = [
+        'usia', 'masa_kerja', 'golongan_jabatan', 'status_kepegawaian',
+        'gaji_bulanan', 'jumlah_tanggungan', 'riwayat_kredit',
+        'jenis_penggunaan_kredit', 'sumber_dana_pengembalian', # DITAMBAHKAN
+        'plafond_pengajuan', 'jangka_waktu_kredit'
+    ]
+    employee_categorical_features = [
+        'golongan_jabatan', 'status_kepegawaian', 'riwayat_kredit',
+        'jenis_penggunaan_kredit', 'sumber_dana_pengembalian' # DITAMBAHKAN
+    ]
+    employee_target = 'keputusan_kredit'
 
-# --- Main Training Script ---
-if __name__ == '__main__':
-    # Pastikan jalur ini menunjuk ke file CSV dummy Anda
+    # --- Definisi Fitur untuk Model UMKM/Pengusaha ---
+    umkm_features = [
+        'omzet_usaha', 'lama_usaha', 'sektor_ekonomi', 'lokasi_usaha',
+        'riwayat_pinjaman', 'jenis_penggunaan_kredit', 'jenis_jaminan',
+        'sumber_dana_pengembalian', 'plafond_pengajuan', 'jangka_waktu_kredit'
+    ]
+    umkm_categorical_features = [
+        'sektor_ekonomi', 'lokasi_usaha', 'riwayat_pinjaman',
+        'jenis_penggunaan_kredit', 'jenis_jaminan', 'sumber_dana_pengembalian'
+    ]
+    umkm_target = 'keputusan_kredit'
+
     try:
-        df_full = pd.read_csv(os.path.join('python_scripts', 'bpr_dummy_data.csv'))
-    except FileNotFoundError:
-        print("Error: Data file 'python_scripts/bpr_dummy_data.csv' not found.")
-        print("Please ensure you have run generate_dummy_data.py first.")
-        sys.exit(1)
+        train_and_save_model(df.copy(), 'Pegawai', employee_features, employee_categorical_features, employee_target)
+    except Exception as e:
+        print(f"Error training employee model: {e}", file=sys.stderr)
 
-    df_umkm = df_full[df_full['application_type'] == 'UMKM/Pengusaha'].copy()
-    train_and_save_model(df_umkm, 'UMKM/Pengusaha', 'umkm_model.pkl', 'umkm_label_encoder.pkl')
+    print("\n" + "="*50 + "\n")
 
-    df_employee = df_full[df_full['application_type'] == 'Pegawai'].copy()
-    train_and_save_model(df_employee, 'Pegawai', 'employee_model.pkl', 'employee_label_encoder.pkl')
+    try:
+        train_and_save_model(df.copy(), 'UMKM/Pengusaha', umkm_features, umkm_categorical_features, umkm_target)
+    except Exception as e:
+        print(f"Error training UMKM/Pengusaha model: {e}", file=sys.stderr)
 
-    print("\nTraining complete. Models and encoders saved.")
+    print("\nTraining process completed. .pkl files should be generated in the python_scripts directory.")
