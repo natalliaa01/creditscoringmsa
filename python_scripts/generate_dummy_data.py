@@ -1,6 +1,8 @@
 # python_scripts/generate_dummy_data.py
 import pandas as pd
 import numpy as np
+print(pd.__version__)
+print(np.__version__)
 import random
 
 def generate_dummy_data(num_samples=200): # Mengurangi jumlah sampel untuk awal
