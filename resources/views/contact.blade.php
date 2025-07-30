@@ -5,6 +5,9 @@
         </h2>
     </x-slot>
 
+    <!-- Boxicons CSS for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Custom Styles to Match Landing Page -->
     <style>
         .hero-contact {
@@ -45,7 +48,7 @@
             padding: 80px 5%;
             background-color: #f8f9fa;
         }
-        
+
         .contact-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -54,7 +57,7 @@
             gap: 60px;
             align-items: start;
         }
-        
+
         .contact-info-card {
             background: white;
             padding: 50px 40px;
@@ -62,14 +65,14 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             height: fit-content;
         }
-        
+
         .contact-info-card h2 {
             font-size: 32px;
             margin-bottom: 30px;
             color: #2c3e50;
             font-weight: 600;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: flex-start;
@@ -85,7 +88,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transform: translateX(5px);
         }
-        
+
         .contact-icon {
             width: 45px;
             height: 45px;
@@ -99,21 +102,21 @@
             color: white;
             flex-shrink: 0;
         }
-        
+
         .contact-details h4 {
             font-size: 16px;
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 5px;
         }
-        
+
         .contact-details p {
             color: #666;
             font-size: 15px;
             line-height: 1.5;
             margin: 0;
         }
-        
+
         .contact-details a {
             color: #4a90e2;
             text-decoration: none;
@@ -122,7 +125,7 @@
         .contact-details a:hover {
             text-decoration: underline;
         }
-        
+
         .social-media-section {
             margin-top: 40px;
             padding-top: 30px;
@@ -163,7 +166,7 @@
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        
+
         .contact-form-card h2 {
             font-size: 32px;
             margin-bottom: 30px;
@@ -171,11 +174,11 @@
             font-weight: 600;
             text-align: center;
         }
-        
+
         .form-group {
             margin-bottom: 25px;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
@@ -183,7 +186,7 @@
             color: #2c3e50;
             font-size: 16px;
         }
-        
+
         .form-group input,
         .form-group select,
         .form-group textarea {
@@ -195,7 +198,7 @@
             transition: all 0.3s ease;
             background: #fafbfc;
         }
-        
+
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
@@ -204,12 +207,12 @@
             background: white;
             box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
         }
-        
+
         .form-group textarea {
             resize: vertical;
             min-height: 120px;
         }
-        
+
         .submit-btn {
             width: 100%;
             background: linear-gradient(135deg, #28a745, #20c997);
@@ -226,7 +229,7 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
         }
-        
+
         .success-message {
             background: linear-gradient(135deg, #28a745, #20c997);
             color: white;
@@ -237,7 +240,7 @@
             font-weight: 600;
             box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
         }
-        
+
         .error-message {
             color: #dc3545;
             font-size: 14px;
@@ -289,7 +292,7 @@
             .hero-contact p {
                 font-size: 16px;
             }
-            
+
             .contact-main-section {
                 padding: 60px 5%;
             }
@@ -297,17 +300,17 @@
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
+
             .contact-info-card,
             .contact-form-card {
                 padding: 30px 25px;
             }
-            
+
             .contact-info-card h2,
             .contact-form-card h2 {
                 font-size: 26px;
             }
-            
+
             .contact-item {
                 padding: 15px;
             }
@@ -317,13 +320,13 @@
                 margin-right: 15px;
                 font-size: 18px;
             }
-            
+
             .social-links a {
                 width: 45px;
                 height: 45px;
                 font-size: 20px;
             }
-            
+
             .map-section {
                 padding: 60px 5%;
             }
@@ -349,7 +352,7 @@
                 <!-- Contact Information -->
                 <div class="contact-info-card">
                     <h2>Informasi Kontak</h2>
-                    
+
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class='bx bx-map'></i>
@@ -409,9 +412,6 @@
                             <a href="https://facebook.com/bprmsa.official" title="Facebook" target="_blank" rel="noopener noreferrer">
                                 <i class='bx bxl-facebook'></i>
                             </a>
-                            <a href="https://wa.me/6285172024202" title="WhatsApp" target="_blank" rel="noopener noreferrer">
-                                <i class='bx bxl-whatsapp'></i>
-                            </a>
                             <a href="https://twitter.com/bprmsa" title="Twitter" target="_blank" rel="noopener noreferrer">
                                 <i class='bx bxl-twitter'></i>
                             </a>
@@ -428,7 +428,7 @@
                 <!-- Contact Form -->
                 <div class="contact-form-card">
                     <h2>Kirim Pesan Anda</h2>
-                    
+
                     @if(session('success'))
                         <div class="success-message">
                             {{ session('success') }}
@@ -437,7 +437,7 @@
 
                     <form method="POST" action="{{ route('contact') }}">
                         @csrf
-                        
+
                         <div class="form-group">
                             <label for="name">Nama Lengkap</label>
                             <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required value="{{ old('name') }}">
@@ -480,7 +480,7 @@
         <section class="map-section">
             <h2>Lokasi Kami</h2>
             <p>Temukan kantor BPR Madani Sejahtera Abadi dengan mudah melalui peta di bawah ini. Kami siap melayani Anda dengan profesional.</p>
-            
+
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.1895697298647!2d110.37525387431548!3d-7.772591677271008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a582310860549%3A0x6a05d8f6f5b9d3e8!2sJl.+C.+Simanjuntak+No.26%2C+Terban%2C+Kecamatan+Gondokusuman%2C+Kota+Yogyakarta%2C+Daerah+Istimewa+Yogyakarta+55223!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"

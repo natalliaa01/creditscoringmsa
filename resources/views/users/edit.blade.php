@@ -1,29 +1,39 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Edit Kredit') }}
+        <h2 class="font-bold text-3xl text-gray-900 leading-tight">
+            {{ __('Edit Pengguna') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
+    {{-- Mengembalikan lebar dan padding div terluar, hanya mengubah background --}}
+    <div class="py-12 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen"> {{-- Background gradien lembut --}}
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> {{-- Lebar kontainer utama tetap 7xl --}}
+            {{-- Meningkatkan bayangan, sedikit padding dan rounded --}}
+            <div class="bg-white overflow-hidden shadow-2xl sm:rounded-lg p-8"> 
                 <div class="p-6 text-gray-900">
-                    <h3 class="text-lg font-medium text-gray-900 mb-4">Edit Kredit #{{ $application->id }}</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Edit Pengguna #{{ $user->id }}</h3>
 
+                    {{-- Pesan sukses/error/validasi - Ditambahkan shadow dan ikon untuk visual --}}
                     @if (session('success'))
-                        <div class="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
-                            {{ session('success') }}
+                        <div class="mb-6 p-4 bg-green-50 border border-green-400 text-green-800 rounded-lg shadow-sm flex items-center">
+                            <svg class="h-5 w-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <div>{{ session('success') }}</div>
                         </div>
                     @endif
                     @if (session('error'))
-                        <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
-                            {{ session('error') }}
+                        <div class="mb-6 p-4 bg-red-50 border border-red-400 text-red-800 rounded-lg shadow-sm flex items-center">
+                            <svg class="h-5 w-5 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <div>{{ session('error') }}</div>
                         </div>
                     @endif
                     @if ($errors->any())
-                        <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
-                            <ul>
+                        <div class="mb-6 p-4 bg-red-50 border border-red-400 text-red-800 rounded-lg shadow-sm">
+                            <div class="font-bold mb-2">Terjadi kesalahan:</div>
+                            <ul class="list-disc list-inside">
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
                                 @endforeach
@@ -31,165 +41,46 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('applications.update', $application->id) }}">
+                    {{-- Form untuk memperbarui pengguna --}}
+                    <form method="POST" action="{{ route('users.update', $user->id) }}">
                         @csrf
                         @method('PUT')
 
-                        <!-- Nama Pemohon -->
-                        <div class="mb-4">
-                            <x-input-label for="applicant_name" :value="__('Nama Pemohon')" />
-                            <x-text-input id="applicant_name" class="block mt-1 w-full" type="text" name="applicant_name" :value="old('applicant_name', $application->applicant_name)" required autofocus />
-                            <x-input-error :messages="$errors->get('applicant_name')" class="mt-2" />
+                        {{-- Nama Lengkap --}}
+                        <div class="mb-6"> {{-- Margin-bottom lebih baik --}}
+                            <x-input-label for="name" :value="__('Nama Lengkap')" class="mb-2" /> {{-- Jarak label dari input --}}
+                            <x-text-input id="name" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out" type="text" name="name" :value="old('name', $user->name)" required autofocus /> {{-- Padding, shadow, focus biru, transisi --}}
+                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
                         </div>
 
-                        <!-- Tipe Aplikasi (Tidak dapat diubah setelah dibuat) -->
-                        <div class="mb-4">
-                            <x-input-label for="application_type" :value="__('Tipe Aplikasi')" />
-                            <x-text-input id="application_type" class="block mt-1 w-full bg-gray-100" type="text" name="application_type" :value="$application->application_type" readonly />
-                            <p class="text-sm text-gray-500 mt-1">Tipe aplikasi tidak dapat diubah setelah dibuat.</p>
+                        {{-- Email Pengguna --}}
+                        <div class="mb-6">
+                            <x-input-label for="email" :value="__('Email')" class="mb-2" />
+                            <x-text-input id="email" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out" type="email" name="email" :value="old('email', $user->email)" required />
+                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
-                        <!-- Status Aplikasi (Bisa diubah oleh Admin/Kepala Bagian Kredit) -->
-                        @can('edit credit application') {{-- Admin dan Kepala Bagian Kredit --}}
-                            <div class="mb-4">
-                                <x-input-label for="status" :value="__('Status Aplikasi')" />
-                                <select id="status" name="status" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
-                                    <option value="Draft" {{ old('status', $application->status) == 'Draft' ? 'selected' : '' }}>Draft</option>
-                                    <option value="Submitted" {{ old('status', $application->status) == 'Submitted' ? 'selected' : '' }}>Submitted</option>
-                                    <option value="Pending" {{ old('status', $application->status) == 'Pending' ? 'selected' : '' }}>Pending</option>
-                                    <option value="Approved" {{ old('status', $application->status) == 'Approved' ? 'selected' : '' }}>Approved</option>
-                                    <option value="Rejected" {{ old('status', $application->status) == 'Rejected' ? 'selected' : '' }}>Rejected</option>
+                        {{-- Peran Pengguna --}}
+                        @if (isset($roles) && $roles->isNotEmpty())
+                            <div class="mb-8"> {{-- Margin-bottom lebih banyak untuk peran --}}
+                                <x-input-label for="roles" :value="__('Peran')" class="mb-2" />
+                                <select id="roles" name="roles[]" class="block w-full px-4 py-2 border border-gray-300 focus:border-blue-500 focus:ring-blue-500 rounded-md shadow-sm appearance-none bg-white transition duration-150 ease-in-out" multiple>
+                                    @foreach ($roles as $role)
+                                        <option value="{{ $role->name }}" {{ in_array($role->name, old('roles', $user->getRoleNames()->toArray())) ? 'selected' : '' }}>
+                                            {{ $role->name }}
+                                        </option>
+                                    @endforeach
                                 </select>
-                                <x-input-error :messages="$errors->get('status')" class="mt-2" />
-                            </div>
-                        @endcan
-
-
-                        <!-- Form UMKM/Pengusaha -->
-                        @if ($application->application_type === 'UMKM/Pengusaha' && $application->umkmApplication)
-                            <div id="umkm_form">
-                                <h3 class="text-lg font-medium text-gray-900 mb-4 mt-6">Data Aplikasi UMKM/Pengusaha</h3>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="mb-4">
-                                        <x-input-label for="omzet_usaha" :value="__('Omzet Usaha Bulanan (Rp)')" />
-                                        <x-text-input id="omzet_usaha" class="block mt-1 w-full" type="number" name="omzet_usaha" :value="old('omzet_usaha', $application->umkmApplication->omzet_usaha)" min="0" step="0.01" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="lama_usaha" :value="__('Lama Usaha (Tahun)')" />
-                                        <x-text-input id="lama_usaha" class="block mt-1 w-full" type="number" name="lama_usaha" :value="old('lama_usaha', $application->umkmApplication->lama_usaha)" min="0" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="sektor_ekonomi" :value="__('Sektor Ekonomi')" />
-                                        <x-text-input id="sektor_ekonomi" class="block mt-1 w-full" type="text" name="sektor_ekonomi" :value="old('sektor_ekonomi', $application->umkmApplication->sektor_ekonomi)" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="lokasi_usaha" :value="__('Lokasi Usaha')" />
-                                        <x-text-input id="lokasi_usaha" class="block mt-1 w-full" type="text" name="lokasi_usaha" :value="old('lokasi_usaha', $application->umkmApplication->lokasi_usaha)" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="riwayat_pinjaman_umkm" :value="__('Riwayat Pinjaman Sebelumnya (UMKM)')" />
-                                        <select id="riwayat_pinjaman_umkm" name="riwayat_pinjaman" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>
-                                            <option value="">Pilih</option>
-                                            <option value="Ada" {{ old('riwayat_pinjaman', $application->umkmApplication->riwayat_pinjaman) == 'Ada' ? 'selected' : '' }}>Ada</option>
-                                            <option value="Tidak Ada" {{ old('riwayat_pinjaman', $application->umkmApplication->riwayat_pinjaman) == 'Tidak Ada' ? 'selected' : '' }}>Tidak Ada</option>
-                                            <option value="Pernah Macet" {{ old('riwayat_pinjaman', $application->umkmApplication->riwayat_pinjaman) == 'Pernah Macet' ? 'selected' : '' }}>Pernah Macet</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="jenis_penggunaan_kredit" :value="__('Jenis Penggunaan Kredit')" />
-                                        <x-text-input id="jenis_penggunaan_kredit" class="block mt-1 w-full" type="text" name="jenis_penggunaan_kredit" :value="old('jenis_penggunaan_kredit', $application->umkmApplication->jenis_penggunaan_kredit)" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="jenis_jaminan" :value="__('Jenis Jaminan')" />
-                                        <x-text-input id="jenis_jaminan" class="block mt-1 w-full" type="text" name="jenis_jaminan" :value="old('jenis_jaminan', $application->umkmApplication->jenis_jaminan)" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="sumber_dana_pengembalian" :value="__('Sumber Dana Pengembalian')" />
-                                        <x-text-input id="sumber_dana_pengembalian" class="block mt-1 w-full" type="text" name="sumber_dana_pengembalian" :value="old('sumber_dana_pengembalian', $application->umkmApplication->sumber_dana_pengembalian)" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="plafond_pengajuan" :value="__('Plafond Pengajuan (Rp)')" />
-                                        <x-text-input id="plafond_pengajuan" class="block mt-1 w-full" type="number" name="plafond_pengajuan" :value="old('plafond_pengajuan', $application->umkmApplication->plafond_pengajuan)" min="0" step="0.01" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="jangka_waktu_kredit" :value="__('Jangka Waktu Kredit (Bulan)')" />
-                                        <x-text-input id="jangka_waktu_kredit" class="block mt-1 w-full" type="number" name="jangka_waktu_kredit" :value="old('jangka_waktu_kredit', $application->umkmApplication->jangka_waktu_kredit)" min="1" required />
-                                    </div>
-                                </div>
-                            </div>
-                        @elseif ($application->application_type === 'Pegawai' && $application->employeeApplication)
-                            <div id="pegawai_form">
-                                <h3 class="text-lg font-medium text-gray-900 mb-4 mt-6">Data Aplikasi Pegawai</h3>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="mb-4">
-                                        <x-input-label for="usia" :value="__('Usia (Tahun)')" />
-                                        <x-text-input id="usia" class="block mt-1 w-full" type="number" name="usia" :value="old('usia', $application->employeeApplication->usia)" min="18" max="100" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="masa_kerja" :value="__('Masa Kerja (Tahun)')" />
-                                        <x-text-input id="masa_kerja" class="block mt-1 w-full" type="number" name="masa_kerja" :value="old('masa_kerja', $application->employeeApplication->masa_kerja)" min="0" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="golongan_jabatan" :value="__('Golongan/Jabatan')" />
-                                        <x-text-input id="golongan_jabatan" class="block mt-1 w-full" type="text" name="golongan_jabatan" :value="old('golongan_jabatan', $application->employeeApplication->golongan_jabatan)" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="status_kepegawaian" :value="__('Status Kepegawaian')" />
-                                        <select id="status_kepegawaian" name="status_kepegawaian" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>
-                                            <option value="">Pilih</option>
-                                            <option value="Tetap" {{ old('status_kepegawaian', $application->employeeApplication->status_kepegawaian) == 'Tetap' ? 'selected' : '' }}>Tetap</option>
-                                            <option value="Kontrak" {{ old('status_kepegawaian', $application->employeeApplication->status_kepegawaian) == 'Kontrak' ? 'selected' : '' }}>Kontrak</option>
-                                            <option value="Outsource" {{ old('status_kepegawaian', $application->employeeApplication->status_kepegawaian) == 'Outsource' ? 'selected' : '' }}>Outsource</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="gaji_bulanan" :value="__('Gaji Bulanan (Rp)')" />
-                                        <x-text-input id="gaji_bulanan" class="block mt-1 w-full" type="number" name="gaji_bulanan" :value="old('gaji_bulanan', $application->employeeApplication->gaji_bulanan)" min="0" step="0.01" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="jumlah_tanggungan" :value="__('Jumlah Tanggungan')" />
-                                        <x-text-input id="jumlah_tanggungan" class="block mt-1 w-full" type="number" name="jumlah_tanggungan" :value="old('jumlah_tanggungan', $application->employeeApplication->jumlah_tanggungan)" min="0" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="riwayat_kredit_pegawai" :value="__('Riwayat Kredit Sebelumnya (Pegawai)')" />
-                                        <select id="riwayat_kredit_pegawai" name="riwayat_kredit" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>
-                                            <option value="">Pilih</option>
-                                            <option value="Ada" {{ old('riwayat_kredit', $application->employeeApplication->riwayat_kredit) == 'Ada' ? 'selected' : '' }}>Ada</option>
-                                            <option value="Tidak Ada" {{ old('riwayat_kredit', $application->employeeApplication->riwayat_kredit) == 'Tidak Ada' ? 'selected' : '' }}>Tidak Ada</option>
-                                            <option value="Pernah Macet" {{ old('riwayat_kredit', $application->employeeApplication->riwayat_kredit) == 'Pernah Macet' ? 'selected' : '' }}>Pernah Macet</option>
-                                        </select>
-                                    </div>
-                                    {{-- Tambahkan detail pinjaman untuk Pegawai --}}
-                                    <div class="mb-4">
-                                        <x-input-label for="jenis_penggunaan_kredit" :value="__('Jenis Penggunaan Kredit')" />
-                                        <x-text-input id="jenis_penggunaan_kredit" class="block mt-1 w-full" type="text" name="jenis_penggunaan_kredit" :value="old('jenis_penggunaan_kredit', $application->employeeApplication->jenis_penggunaan_kredit)" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="jenis_jaminan" :value="__('Jenis Jaminan')" />
-                                        <x-text-input id="jenis_jaminan" class="block mt-1 w-full" type="text" name="jenis_jaminan" :value="old('jenis_jaminan', $application->employeeApplication->jenis_jaminan)" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="sumber_dana_pengembalian" :value="__('Sumber Dana Pengembalian')" />
-                                        <x-text-input id="sumber_dana_pengembalian" class="block mt-1 w-full" type="text" name="sumber_dana_pengembalian" :value="old('sumber_dana_pengembalian', $application->employeeApplication->sumber_dana_pengembalian)" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="plafond_pengajuan" :value="__('Plafond Pengajuan (Rp)')" />
-                                        <x-text-input id="plafond_pengajuan" class="block mt-1 w-full" type="number" name="plafond_pengajuan" :value="old('plafond_pengajuan', $application->employeeApplication->plafond_pengajuan)" min="0" step="0.01" required />
-                                    </div>
-                                    <div class="mb-4">
-                                        <x-input-label for="jangka_waktu_kredit" :value="__('Jangka Waktu Kredit (Bulan)')" />
-                                        <x-text-input id="jangka_waktu_kredit" class="block mt-1 w-full" type="number" name="jangka_waktu_kredit" :value="old('jangka_waktu_kredit', $application->employeeApplication->jangka_waktu_kredit)" min="1" required />
-                                    </div>
-                                </div>
+                                <x-input-error :messages="$errors->get('roles')" class="mt-2" />
                             </div>
                         @endif
 
-                        <div class="flex items-center justify-end mt-4">
-                            <a href="{{ route('applications.index') }}" class="inline-flex items-center px-4 py-2 bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                        <div class="flex items-center justify-end mt-6 space-x-4"> {{-- Margin-top dan jarak antar tombol --}}
+                            <a href="{{ route('users.index') }}" class="inline-flex items-center px-6 py-3 bg-gray-200 border border-transparent rounded-md font-semibold text-sm text-gray-700 uppercase tracking-widest hover:bg-gray-300 focus:bg-gray-300 active:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition ease-in-out duration-150 shadow-md">
                                 {{ __('Batal') }}
                             </a>
-                            <x-primary-button class="ml-3">
-                                {{ __('Perbarui Aplikasi') }}
+                            <x-primary-button class="px-6 py-3 bg-blue-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition ease-in-out duration-150 shadow-md">
+                                {{ __('Perbarui Pengguna') }}
                             </x-primary-button>
                         </div>
                     </form>

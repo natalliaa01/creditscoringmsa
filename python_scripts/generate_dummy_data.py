@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+print(pd.__version__)
+print(np.__version__)
 import random
 from faker import Faker
 import json # <--- TAMBAHKAN BARIS INI
