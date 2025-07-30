@@ -7,10 +7,10 @@ use App\Models\UmkmApplication;
 use App\Models\EmployeeApplication;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Process;
+use Illuminate\Support\Facades\Http; // Penting: Tambahkan ini untuk memanggil API HTTP
 use Illuminate\Support\Facades\Log;
 use Carbon\Carbon;
-use Illuminate\Validation\Rule; // Tambahkan ini untuk aturan Rule::requiredIf/nullable
+use Illuminate\Validation\Rule; // Tambahkan ini untuk aturan Rule::requiredIf/nullable (meskipun tidak langsung digunakan di sini, baik untuk ada)
 
 
 /**
@@ -98,7 +98,6 @@ class CreditApplicationController extends Controller
             abort(403, 'Unauthorized action.');
         }
 
-        $action = $request->input('action');
         $initialStatus = 'Submitted';
 
         // Definisikan aturan validasi utama
@@ -208,6 +207,7 @@ class CreditApplicationController extends Controller
         }
 
         // Pre-processing data untuk Python: konversi numerik dan tangani null/kosong
+        // Data ini akan dikirim ke API Flask
         foreach ($inputDataForPython as $key => $value) {
             // Jika nilai kosong (null atau string kosong dari input text)
             if ($value === null || $value === '') {
@@ -222,35 +222,47 @@ class CreditApplicationController extends Controller
             }
         }
 
-        $pythonExecutablePath = 'C:\Users\natal\AppData\Local\Programs\Python\Python311\python.exe'; // Pastikan ini jalur yang benar
-        $pythonScriptPath = base_path('python_scripts/scoring.py');
+        // --- Bagian Panggilan API Python ---
+        $pythonApiUrl = 'http://127.0.0.1:5000/score'; // URL API Flask Anda
 
         try {
-            $result = Process::run([
-                $pythonExecutablePath,
-                $pythonScriptPath,
-                json_encode($inputDataForPython),
-                $modelType
+            $response = Http::post($pythonApiUrl, [
+                'data' => $inputDataForPython,
+                'model_type' => $modelType
             ]);
 
-            if ($result->successful()) {
-                $pythonOutput = json_decode($result->output(), true);
-                if (json_last_error() === JSON_ERROR_NONE) {
-                    $creditApplication->scoring_result = $pythonOutput['score'] ?? null;
-                    $creditApplication->recommendation = $pythonOutput['rekomendasi'] ?? null;
-                    $creditApplication->save();
-                    Log::info('Python scoring successful for application ' . $creditApplication->id, ['output' => $pythonOutput]);
-                } else {
-                    Log::error('Failed to decode Python output (JSON error): ' . json_last_error_msg(), ['raw_output' => $result->output()]);
-                    return back()->withErrors(['python_error' => 'Gagal memproses hasil scoring dari Python. Format output tidak valid.']);
+            // Cek apakah request HTTP berhasil (kode status 2xx)
+            if ($response->successful()) {
+                $pythonOutput = $response->json(); // Ambil respons JSON
+                
+                if (isset($pythonOutput['error'])) {
+                    // Jika API Python mengembalikan error dari sisi Python
+                    Log::error('Python API returned error: ' . $pythonOutput['error'], ['api_response' => $pythonOutput]);
+                    return back()->withErrors(['python_error' => 'Terjadi kesalahan dari API scoring: ' . $pythonOutput['error']]);
                 }
+
+                // Simpan hasil scoring ke database
+                $creditApplication->scoring_result = $pythonOutput['score'] ?? null;
+                $creditApplication->recommendation = $pythonOutput['rekomendasi'] ?? null;
+                $creditApplication->save();
+                Log::info('Python scoring successful for application ' . $creditApplication->id, ['output' => $pythonOutput]);
             } else {
-                Log::error('Python script failed for application ' . $creditApplication->id, ['error_output' => $result->errorOutput(), 'exit_code' => $result->exitCode()]);
-                return back()->withErrors(['python_error' => 'Terjadi kesalahan saat menghitung scoring: ' . $result->errorOutput()]);
+                // Jika request HTTP ke API Python gagal (e.g., 404, 500)
+                Log::error('Failed to call Python API for application ' . $creditApplication->id, [
+                    'status' => $response->status(),
+                    'response_body' => $response->body(),
+                    'request_data' => $inputDataForPython,
+                ]);
+                return back()->withErrors(['python_error' => 'Gagal terhubung ke layanan scoring. Status: ' . $response->status() . ' Pesan: ' . $response->body()]);
             }
+        } catch (\Illuminate\Http\Client\RequestException $e) {
+            // Tangkap exception spesifik untuk HTTP client error
+            Log::error('HTTP Client Error calling Python API: ' . $e->getMessage(), ['trace' => $e->getTraceAsString()]);
+            return back()->withErrors(['python_error' => 'Gagal terhubung ke layanan scoring (Request Error): ' . $e->getMessage()]);
         } catch (\Exception $e) {
-            Log::error('Error executing Python script (PHP Exception): ' . $e->getMessage(), ['trace' => $e->getTraceAsString()]);
-            return back()->withErrors(['python_error' => 'Terjadi kesalahan tak terduga saat memanggil script Python: ' . $e->getMessage()]);
+            // Tangkap exception umum
+            Log::error('Unexpected error calling Python API (PHP Exception): ' . $e->getMessage(), ['trace' => $e->getTraceAsString()]);
+            return back()->withErrors(['python_error' => 'Terjadi kesalahan tak terduga saat memanggil layanan scoring: ' . $e->getMessage()]);
         }
 
         $message = 'Aplikasi kredit berhasil diajukan dan sedang diproses!';
@@ -297,9 +309,7 @@ class CreditApplicationController extends Controller
      */
     public function update(Request $request, CreditApplication $application)
     {
-        // --- DEBUGGING: Log semua data request yang masuk ---
         Log::info('Incoming request data for update method (Application ID: ' . $application->id . '):', $request->all());
-        // --- Akhir Debugging ---
 
         if (Auth::user()->hasRole('Admin') ||
             (Auth::user()->hasRole('Kepala Bagian Kredit') && Auth::user()->can('edit credit application')) ||
@@ -341,22 +351,22 @@ class CreditApplicationController extends Controller
                 ]);
             }
 
+            $collateralValidationRules = [];
             $jenisJaminanUtama = $request->input('jenis_jaminan');
             if ($jenisJaminanUtama === 'Bangunan') {
-                $rules = array_merge($rules, [
+                $collateralValidationRules = [
                     'luas_bangunan' => 'required|numeric|min:0',
                     'alamat_jaminan_bangunan' => 'required|string|max:255',
-                ]);
+                ];
             } elseif ($jenisJaminanUtama === 'Kendaraan Bermotor') {
-                $rules = array_merge($rules, [
+                $collateralValidationRules = [
                     'merk_kendaraan' => 'required|string|max:255',
                     'tahun_kendaraan' => 'required|integer|min:1900|max:' . Carbon::now()->year,
                     'atas_nama_kendaraan' => 'required|string|max:255',
-                ]);
+                ];
             }
-            // Jalankan semua validasi
-            $request->validate($rules);
 
+            $request->validate(array_merge($rules, $collateralValidationRules));
 
             $collateralDetails = [];
             if ($jenisJaminanUtama === 'Bangunan') {
@@ -412,36 +422,42 @@ class CreditApplicationController extends Controller
                 }
             }
 
-            $pythonExecutablePath = 'C:\Users\natal\AppData\Local\Programs\Python\Python311\python.exe';
-            $pythonScriptPath = base_path('python_scripts/scoring.py');
+            // --- Bagian Panggilan API Python (untuk update) ---
+            $pythonApiUrl = 'http://127.0.0.1:5000/score'; // URL API Flask Anda
 
             if ($newStatus !== 'Draft' && ($application->isDirty() || $application->status === 'Submitted' || $application->status === 'Pending')) {
                 try {
-                    $result = Process::run([
-                        $pythonExecutablePath,
-                        $pythonScriptPath,
-                        json_encode($inputDataForPython),
-                        $modelType
+                    $response = Http::post($pythonApiUrl, [
+                        'data' => $inputDataForPython,
+                        'model_type' => $modelType
                     ]);
 
-                    if ($result->successful()) {
-                        $pythonOutput = json_decode($result->output(), true);
-                        if (json_last_error() === JSON_ERROR_NONE) {
-                            $application->scoring_result = $pythonOutput['score'] ?? null;
-                            $application->recommendation = $pythonOutput['rekomendasi'] ?? null;
-                            $application->save();
-                            Log::info('Python scoring successful for updated application ' . $application->id, ['output' => $pythonOutput]);
-                        } else {
-                            Log::error('Failed to decode Python output (JSON error) for update: ' . json_last_error_msg(), ['raw_output' => $result->output()]);
-                            return back()->withErrors(['python_error' => 'Gagal memproses hasil scoring dari Python. Format output tidak valid.']);
+                    if ($response->successful()) {
+                        $pythonOutput = $response->json();
+                        
+                        if (isset($pythonOutput['error'])) {
+                            Log::error('Python API returned error on update: ' . $pythonOutput['error'], ['api_response' => $pythonOutput]);
+                            return back()->withErrors(['python_error' => 'Terjadi kesalahan dari API scoring: ' . $pythonOutput['error']]);
                         }
+
+                        $application->scoring_result = $pythonOutput['score'] ?? null;
+                        $application->recommendation = $pythonOutput['rekomendasi'] ?? null;
+                        $application->save();
+                        Log::info('Python scoring successful for updated application ' . $application->id, ['output' => $pythonOutput]);
                     } else {
-                        Log::error('Python script failed for updated application ' . $application->id, ['error_output' => $result->errorOutput(), 'exit_code' => $result->exitCode()]);
-                        return back()->withErrors(['python_error' => 'Terjadi kesalahan saat menghitung scoring: ' . $result->errorOutput()]);
+                        Log::error('Failed to call Python API for updated application ' . $application->id, [
+                            'status' => $response->status(),
+                            'response_body' => $response->body(),
+                            'request_data' => $inputDataForPython,
+                        ]);
+                        return back()->withErrors(['python_error' => 'Gagal terhubung ke layanan scoring. Status: ' . $response->status() . ' Pesan: ' . $response->body()]);
                     }
+                } catch (\Illuminate\Http\Client\RequestException $e) {
+                    Log::error('HTTP Client Error calling Python API on update: ' . $e->getMessage(), ['trace' => $e->getTraceAsString()]);
+                    return back()->withErrors(['python_error' => 'Gagal terhubung ke layanan scoring (Request Error): ' . $e->getMessage()]);
                 } catch (\Exception $e) {
-                    Log::error('Error executing Python script (PHP Exception): ' . $e->getMessage(), ['trace' => $e->getTraceAsString()]);
-                    return back()->withErrors(['python_error' => 'Terjadi kesalahan tak terduga saat memanggil script Python: ' . $e->getMessage()]);
+                    Log::error('Unexpected error calling Python API on update (PHP Exception): ' . $e->getMessage(), ['trace' => $e->getTraceAsString()]);
+                    return back()->withErrors(['python_error' => 'Terjadi kesalahan tak terduga saat memanggil layanan scoring: ' . $e->getMessage()]);
                 }
             }
 

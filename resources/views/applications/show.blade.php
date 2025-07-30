@@ -110,36 +110,37 @@
                     @endif
 
 
-                    @if ($canViewScoring && ($application->scoring_result || $application->recommendation))
+                    @if ($canViewScoring && ($application->scoring_result !== null || $application->recommendation !== null))
                         <h4 class="font-semibold text-xl text-msa-blue mb-4 mt-6">Hasil Scoring & Rekomendasi</h4>
                         <div class="border border-gray-200 rounded-md p-4 bg-gray-50">
-                            @if ($application->scoring_result)
+                            @if ($application->scoring_result !== null)
                                 <p class="text-sm text-gray-600">Skor Kredit:</p>
-                                <p class="font-semibold text-lg text-gray-900 mb-2">{{ $application->scoring_result['score'] ?? 'N/A' }}</p>
+                                <p class="font-semibold text-lg text-gray-900 mb-2">{{ number_format($application->scoring_result, 2) }}</p>
+                            @else
+                                <p class="text-sm text-gray-600">Skor Kredit:</p>
+                                <p class="font-semibold text-lg text-gray-900 mb-2">N/A</p>
+                            @endif
+
+                            @if ($application->recommendation !== null)
                                 <p class="text-sm text-gray-600">Status Rekomendasi:</p>
                                 <p class="font-semibold text-lg text-gray-900 mb-2">
                                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full {{
-                                        ($application->recommendation['status'] ?? '') === 'Layak' ? 'bg-green-100 text-green-800' :
-                                        (($application->recommendation['status'] ?? '') === 'Tidak Layak' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800')
+                                        $application->recommendation === 'Layak' ? 'bg-green-100 text-green-800' :
+                                        ($application->recommendation === 'Tidak Layak' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800')
                                     }}">
-                                        {{ $application->recommendation['status'] ?? 'N/A' }}
+                                        {{ $application->recommendation }}
                                     </span>
                                 </p>
-                            @endif
-                            @if ($application->recommendation && ($application->recommendation['details'] ?? false))
-                                <p class="text-sm text-gray-600 mt-2">Detail Rekomendasi:</p>
-                                <ul class="list-disc list-inside text-gray-900">
-                                    @foreach ($application->recommendation['details'] as $detail)
-                                        <li>{{ $detail }}</li>
-                                    @endforeach
-                                </ul>
+                            @else
+                                <p class="text-sm text-gray-600">Status Rekomendasi:</p>
+                                <p class="font-semibold text-lg text-gray-900 mb-2">N/A</p>
                             @endif
                         </div>
-                    @elseif ($canViewScoring && (!$application->scoring_result && !$application->recommendation))
+                    @elseif ($canViewScoring) {{-- Kondisi ini akan menangani jika canViewScoring true tapi scoring_result/recommendation null --}}
                         <div class="mt-6 p-4 bg-blue-100 border border-blue-400 text-blue-700 rounded-md">
                             <p>Hasil scoring belum tersedia untuk aplikasi ini.</p>
                         </div>
-                    @elseif (!$canViewScoring)
+                    @else {{-- Kondisi ini untuk !canViewScoring --}}
                         <div class="mt-6 p-4 bg-gray-100 border border-gray-400 text-gray-700 rounded-md">
                             <p>Anda tidak memiliki izin untuk melihat hasil scoring dan rekomendasi.</p>
                         </div>

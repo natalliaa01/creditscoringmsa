@@ -1,201 +1,501 @@
-application_type,usia,masa_kerja,golongan_jabatan,status_kepegawaian,gaji_bulanan,jumlah_tanggungan,riwayat_kredit,keputusan_kredit,omzet_usaha,lama_usaha,sektor_ekonomi,lokasi_usaha,riwayat_pinjaman,jenis_penggunaan_kredit,jenis_jaminan,sumber_dana_pengembalian,plafond_pengajuan,jangka_waktu_kredit
-Pegawai,24.0,0.0,Kepala Bagian,Tetap,27069911.8,2.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,117952501.01,7.0,Manufaktur,Pedesaan,Ada,Pembelian Aset,Tanah/Bangunan,Penjualan Aset,305917506.61,29.0
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,109516974.79,1.0,Manufaktur,Pusat Kota,Tidak Ada,Modal Kerja,Tanah/Bangunan,Usaha Sendiri,226755941.85,28.0
-Pegawai,40.0,31.0,Supervisor,Outsource,25052375.03,1.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,5993809.27,4.0,Lainnya,Pedesaan,Ada,Investasi,Tanah/Bangunan,Tambahan Modal,70295694.64,37.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,176458488.09,7.0,Perdagangan,Pusat Kota,Pernah Macet,Pembelian Aset,Kendaraan,Lain-lain,104722403.53,29.0
-UMKM/Pengusaha,,,,,,,,Layak,60700182.98,2.0,Jasa,Pusat Kota,Tidak Ada,Renovasi,Persediaan,Penjualan Aset,167003952.79,72.0
-Pegawai,62.0,9.0,Direktur,Tetap,28973248.25,2.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,27561805.32,10.0,IT,Pedesaan,Ada,Investasi,Piutang,Lain-lain,462762976.66,60.0
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,195686455.1,1.0,Kuliner,Online,Ada,Renovasi,Piutang,Lain-lain,261369519.46,33.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,19742985.21,0.0,Pertanian,Pusat Kota,Pernah Macet,Renovasi,Tidak Ada,Lain-lain,370306657.38,57.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,162291256.25,7.0,Pertanian,Pinggir Kota,Pernah Macet,Konsumsi,Tidak Ada,Lain-lain,41389410.2,52.0
-UMKM/Pengusaha,,,,,,,,Layak,190088537.36,3.0,Jasa,Online,Tidak Ada,Konsumsi,Persediaan,Tambahan Modal,193713153.45,25.0
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,23448687.49,9.0,Perdagangan,Pedesaan,Ada,Renovasi,Tanah/Bangunan,Usaha Sendiri,76075947.75,44.0
-Pegawai,32.0,28.0,Kepala Bagian,Tetap,21837048.27,3.0,Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,78233477.11,2.0,Transportasi,Pusat Kota,Ada,Investasi,Persediaan,Usaha Sendiri,251993199.05,66.0
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,54455249.91,2.0,Lainnya,Online,Ada,Pembelian Aset,Persediaan,Lain-lain,493794498.28,19.0
-Pegawai,44.0,38.0,Manajer,Kontrak,40363660.77,7.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,49.0,0.0,Supervisor,Kontrak,5632404.5,7.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,75640033.83,7.0,IT,Pedesaan,Ada,Konsumsi,Tanah/Bangunan,Lain-lain,417291228.35,10.0
-UMKM/Pengusaha,,,,,,,,Layak,59977884.01,6.0,Pertanian,Pinggir Kota,Tidak Ada,Modal Kerja,Piutang,Penjualan Aset,294601994.26,4.0
-Pegawai,47.0,34.0,Kepala Bagian,Outsource,37697394.46,4.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,120175989.86,1.0,Manufaktur,Pusat Kota,Tidak Ada,Modal Kerja,Tidak Ada,Tambahan Modal,469552185.7,5.0
-UMKM/Pengusaha,,,,,,,,Layak,117117406.55,5.0,Manufaktur,Pusat Kota,Ada,Pembelian Aset,Tanah/Bangunan,Tambahan Modal,288317075.3,57.0
-UMKM/Pengusaha,,,,,,,,Layak,197548021.31,5.0,Pertanian,Pedesaan,Tidak Ada,Konsumsi,Kendaraan,Penjualan Aset,239209362.92,6.0
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,134136377.19,1.0,Manufaktur,Online,Tidak Ada,Konsumsi,Persediaan,Penjualan Aset,28510436.28,38.0
-UMKM/Pengusaha,,,,,,,,Layak,191145738.01,9.0,Transportasi,Pedesaan,Tidak Ada,Pembelian Aset,Kendaraan,Usaha Sendiri,442169381.53,12.0
-Pegawai,59.0,31.0,Supervisor,Outsource,16400746.32,1.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,107950613.55,8.0,IT,Pusat Kota,Pernah Macet,Renovasi,Piutang,Tambahan Modal,179888331.71,69.0
-Pegawai,48.0,20.0,Direktur,Kontrak,6498315.66,5.0,Tidak Ada,Pertimbangkan,,,,,,,,,,
-Pegawai,44.0,33.0,Staf Senior,Tetap,8997654.16,0.0,Ada,Pertimbangkan,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,50562072.55,4.0,Lainnya,Pusat Kota,Ada,Konsumsi,Piutang,Penjualan Aset,248810637.25,27.0
-Pegawai,32.0,32.0,Staf Pelaksana,Kontrak,9830194.19,4.0,Tidak Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,73086766.14,10.0,Jasa,Pusat Kota,Tidak Ada,Pembelian Aset,Tanah/Bangunan,Lain-lain,469456786.28,55.0
-Pegawai,39.0,3.0,Supervisor,Kontrak,26816977.48,0.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,183962774.66,10.0,IT,Online,Pernah Macet,Pembelian Aset,Tanah/Bangunan,Penjualan Aset,366562801.29,27.0
-UMKM/Pengusaha,,,,,,,,Layak,199165348.08,8.0,Pertanian,Pinggir Kota,Tidak Ada,Pembelian Aset,Tidak Ada,Tambahan Modal,449060760.92,56.0
-UMKM/Pengusaha,,,,,,,,Layak,193316589.06,3.0,Perdagangan,Pinggir Kota,Tidak Ada,Investasi,Tanah/Bangunan,Lain-lain,403440817.49,37.0
-Pegawai,44.0,5.0,Staf Senior,Outsource,29721696.71,1.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,197518564.02,6.0,Manufaktur,Pusat Kota,Pernah Macet,Investasi,Tidak Ada,Lain-lain,371132606.0,44.0
-Pegawai,36.0,35.0,Supervisor,Tetap,10736273.88,4.0,Tidak Ada,Layak,,,,,,,,,,
-Pegawai,49.0,11.0,Supervisor,Kontrak,27754561.1,3.0,Tidak Ada,Layak,,,,,,,,,,
-Pegawai,61.0,32.0,Staf Senior,Outsource,36326098.99,7.0,Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,98991669.44,10.0,Kuliner,Pedesaan,Tidak Ada,Modal Kerja,Kendaraan,Lain-lain,90983402.51,65.0
-Pegawai,58.0,22.0,Manajer,Kontrak,33162574.51,6.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,34.0,34.0,Kepala Bagian,Outsource,24342432.09,1.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,46379312.65,6.0,Kuliner,Pinggir Kota,Ada,Konsumsi,Kendaraan,Penjualan Aset,166880066.59,65.0
-Pegawai,60.0,31.0,Supervisor,Tetap,44325651.66,2.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,161480355.49,3.0,Pertanian,Pedesaan,Tidak Ada,Pembelian Aset,Piutang,Usaha Sendiri,467276757.86,55.0
-Pegawai,64.0,14.0,Staf Pelaksana,Kontrak,10347672.29,5.0,Ada,Layak,,,,,,,,,,
-Pegawai,59.0,10.0,Direktur,Kontrak,33664151.05,3.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,88437129.88,7.0,Perdagangan,Online,Ada,Pembelian Aset,Persediaan,Usaha Sendiri,481385370.63,35.0
-Pegawai,41.0,17.0,Staf Senior,Kontrak,43449151.06,3.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,143677561.44,2.0,Perdagangan,Pinggir Kota,Pernah Macet,Konsumsi,Kendaraan,Tambahan Modal,181384270.43,12.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,27422604.11,9.0,Kuliner,Pusat Kota,Pernah Macet,Investasi,Persediaan,Lain-lain,485913015.25,29.0
-Pegawai,43.0,29.0,Staf Pelaksana,Kontrak,46052670.98,0.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,144803026.16,4.0,Pertanian,Pinggir Kota,Pernah Macet,Renovasi,Kendaraan,Penjualan Aset,21432169.81,48.0
-UMKM/Pengusaha,,,,,,,,Layak,61456123.02,7.0,Perdagangan,Online,Ada,Renovasi,Piutang,Lain-lain,327946877.57,31.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,48733290.28,9.0,Manufaktur,Pedesaan,Pernah Macet,Konsumsi,Persediaan,Tambahan Modal,177235909.87,7.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,69135466.32,5.0,Manufaktur,Pusat Kota,Pernah Macet,Renovasi,Tidak Ada,Lain-lain,177381426.59,8.0
-Pegawai,26.0,40.0,Manajer,Outsource,46596098.31,3.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,38.0,11.0,Kepala Bagian,Tetap,15837231.38,1.0,Ada,Pertimbangkan,,,,,,,,,,
-Pegawai,38.0,0.0,Direktur,Tetap,25972367.15,7.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,53.0,28.0,Supervisor,Kontrak,45116091.94,1.0,Ada,Pertimbangkan,,,,,,,,,,
-Pegawai,20.0,6.0,Manajer,Outsource,18342184.49,5.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,22137772.64,8.0,Pertanian,Pusat Kota,Pernah Macet,Konsumsi,Piutang,Tambahan Modal,93296812.03,22.0
-Pegawai,25.0,19.0,Staf Senior,Tetap,46510129.1,4.0,Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,163036615.08,3.0,Pertanian,Pusat Kota,Pernah Macet,Renovasi,Kendaraan,Penjualan Aset,195600554.53,69.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,106101838.42,0.0,Manufaktur,Pinggir Kota,Pernah Macet,Pembelian Aset,Tidak Ada,Usaha Sendiri,394241912.85,57.0
-Pegawai,50.0,14.0,Kepala Bagian,Outsource,8204426.48,5.0,Ada,Tidak Layak,,,,,,,,,,
-Pegawai,26.0,7.0,Direktur,Kontrak,11812511.41,3.0,Tidak Ada,Pertimbangkan,,,,,,,,,,
-Pegawai,34.0,5.0,Staf Senior,Kontrak,27558891.72,5.0,Tidak Ada,Layak,,,,,,,,,,
-Pegawai,43.0,0.0,Staf Senior,Tetap,31320055.82,3.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,101874002.91,2.0,Transportasi,Pinggir Kota,Ada,Renovasi,Tanah/Bangunan,Lain-lain,64875720.52,18.0
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,163199602.82,9.0,Jasa,Pinggir Kota,Ada,Renovasi,Kendaraan,Penjualan Aset,277860839.17,3.0
-Pegawai,25.0,39.0,Manajer,Tetap,21979620.12,3.0,Ada,Layak,,,,,,,,,,
-Pegawai,40.0,10.0,Manajer,Outsource,22907776.45,2.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,54140707.82,0.0,Manufaktur,Online,Ada,Investasi,Kendaraan,Tambahan Modal,31296682.6,5.0
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,179805422.99,4.0,IT,Pinggir Kota,Ada,Konsumsi,Persediaan,Lain-lain,149994041.37,67.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,179642513.63,10.0,Transportasi,Online,Pernah Macet,Pembelian Aset,Piutang,Penjualan Aset,235514414.74,8.0
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,60026571.65,7.0,Pertanian,Pedesaan,Ada,Renovasi,Kendaraan,Tambahan Modal,478598020.11,49.0
-Pegawai,48.0,35.0,Staf Pelaksana,Tetap,19255073.16,7.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-Pegawai,38.0,7.0,Supervisor,Tetap,40080784.74,2.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,33.0,18.0,Staf Pelaksana,Tetap,48667505.59,5.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,110908109.59,5.0,Perdagangan,Pusat Kota,Pernah Macet,Renovasi,Tanah/Bangunan,Tambahan Modal,389431161.93,20.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,172938363.08,1.0,Lainnya,Pinggir Kota,Tidak Ada,Investasi,Piutang,Penjualan Aset,49350303.61,71.0
-Pegawai,40.0,31.0,Manajer,Tetap,47126367.1,6.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,63.0,11.0,Direktur,Outsource,29885684.81,1.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-Pegawai,29.0,39.0,Direktur,Outsource,7081672.94,2.0,Tidak Ada,Pertimbangkan,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,187500548.79,1.0,Transportasi,Pinggir Kota,Tidak Ada,Modal Kerja,Kendaraan,Usaha Sendiri,168490037.51,69.0
-Pegawai,61.0,29.0,Staf Pelaksana,Outsource,42133379.01,7.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,53.0,32.0,Supervisor,Outsource,49952365.04,1.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,23.0,10.0,Manajer,Kontrak,14613928.83,3.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,24.0,0.0,Kepala Bagian,Tetap,22533507.54,1.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-Pegawai,43.0,8.0,Supervisor,Outsource,19405108.47,0.0,Tidak Ada,Pertimbangkan,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,136080734.02,4.0,Transportasi,Pedesaan,Ada,Pembelian Aset,Tanah/Bangunan,Lain-lain,86925676.08,40.0
-Pegawai,60.0,17.0,Direktur,Kontrak,19704251.59,3.0,Ada,Pertimbangkan,,,,,,,,,,
-Pegawai,38.0,39.0,Direktur,Tetap,13127042.53,0.0,Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,5686802.13,10.0,Jasa,Pusat Kota,Ada,Pembelian Aset,Persediaan,Tambahan Modal,431864077.5,56.0
-Pegawai,24.0,5.0,Kepala Bagian,Outsource,24723878.0,7.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,58.0,7.0,Kepala Bagian,Kontrak,8643692.18,7.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,164368290.97,7.0,Lainnya,Pusat Kota,Tidak Ada,Renovasi,Piutang,Lain-lain,207924614.28,69.0
-Pegawai,26.0,32.0,Direktur,Outsource,14780595.55,6.0,Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,32663620.71,4.0,Transportasi,Pinggir Kota,Ada,Konsumsi,Kendaraan,Usaha Sendiri,276551504.41,61.0
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,167435863.74,6.0,IT,Pinggir Kota,Ada,Investasi,Piutang,Tambahan Modal,44205379.16,41.0
-Pegawai,59.0,2.0,Kepala Bagian,Kontrak,20249843.38,4.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,33.0,37.0,Staf Senior,Outsource,21735512.3,1.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,31639047.16,3.0,Jasa,Online,Pernah Macet,Konsumsi,Tanah/Bangunan,Lain-lain,437946353.04,59.0
-Pegawai,24.0,15.0,Kepala Bagian,Outsource,22106262.71,5.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,58954031.09,7.0,Perdagangan,Pedesaan,Ada,Pembelian Aset,Persediaan,Usaha Sendiri,388980815.62,43.0
-UMKM/Pengusaha,,,,,,,,Layak,181103175.02,1.0,IT,Pinggir Kota,Ada,Konsumsi,Persediaan,Usaha Sendiri,197087741.62,20.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,46643314.54,5.0,Transportasi,Pinggir Kota,Pernah Macet,Investasi,Persediaan,Penjualan Aset,78387278.42,18.0
-UMKM/Pengusaha,,,,,,,,Layak,156321013.18,4.0,IT,Pinggir Kota,Tidak Ada,Pembelian Aset,Piutang,Lain-lain,454415026.5,41.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,72010860.32,7.0,Manufaktur,Pinggir Kota,Pernah Macet,Renovasi,Kendaraan,Lain-lain,13703007.01,18.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,64847934.31,8.0,Perdagangan,Pedesaan,Pernah Macet,Modal Kerja,Tanah/Bangunan,Lain-lain,120034834.78,10.0
-Pegawai,29.0,9.0,Supervisor,Tetap,29023164.21,0.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,62.0,21.0,Manajer,Kontrak,8962632.93,0.0,Ada,Layak,,,,,,,,,,
-Pegawai,39.0,20.0,Staf Pelaksana,Tetap,8943982.64,5.0,Tidak Ada,Layak,,,,,,,,,,
-Pegawai,51.0,26.0,Kepala Bagian,Kontrak,3733678.53,3.0,Ada,Tidak Layak,,,,,,,,,,
-Pegawai,47.0,24.0,Supervisor,Outsource,24340749.82,0.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,51.0,28.0,Staf Senior,Tetap,3782225.25,5.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,105832334.25,10.0,Kuliner,Pedesaan,Tidak Ada,Investasi,Piutang,Usaha Sendiri,280444161.34,10.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,9783693.2,1.0,IT,Online,Pernah Macet,Pembelian Aset,Piutang,Usaha Sendiri,385831349.6,16.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,104016266.72,8.0,Lainnya,Pusat Kota,Pernah Macet,Pembelian Aset,Persediaan,Tambahan Modal,359271489.03,70.0
-UMKM/Pengusaha,,,,,,,,Layak,114025235.03,4.0,Kuliner,Pinggir Kota,Tidak Ada,Konsumsi,Tanah/Bangunan,Lain-lain,477138589.84,36.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,86769931.64,0.0,IT,Pedesaan,Pernah Macet,Pembelian Aset,Kendaraan,Tambahan Modal,153399948.34,60.0
-Pegawai,28.0,14.0,Staf Senior,Kontrak,35250894.84,1.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,23.0,15.0,Staf Senior,Outsource,28924720.36,1.0,Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,127855181.89,0.0,Pertanian,Online,Tidak Ada,Modal Kerja,Tidak Ada,Lain-lain,170258466.75,49.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,13736065.04,8.0,Manufaktur,Online,Ada,Investasi,Persediaan,Lain-lain,492944101.64,13.0
-Pegawai,49.0,40.0,Staf Senior,Outsource,28886360.31,7.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,164986987.39,2.0,Jasa,Pinggir Kota,Pernah Macet,Investasi,Persediaan,Tambahan Modal,52024563.78,62.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,32528316.54,9.0,Jasa,Pedesaan,Pernah Macet,Renovasi,Tanah/Bangunan,Usaha Sendiri,281207313.71,13.0
-Pegawai,20.0,31.0,Staf Senior,Tetap,39774559.68,6.0,Ada,Tidak Layak,,,,,,,,,,
-Pegawai,30.0,18.0,Staf Pelaksana,Outsource,13126690.06,7.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,119276613.06,10.0,IT,Pedesaan,Tidak Ada,Pembelian Aset,Piutang,Lain-lain,211583446.24,13.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,140661277.29,0.0,Manufaktur,Pusat Kota,Pernah Macet,Modal Kerja,Kendaraan,Lain-lain,327881640.65,64.0
-Pegawai,54.0,26.0,Staf Senior,Kontrak,18140122.83,6.0,Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,123456628.78,5.0,Jasa,Pinggir Kota,Tidak Ada,Modal Kerja,Kendaraan,Lain-lain,104147777.79,18.0
-Pegawai,21.0,27.0,Kepala Bagian,Kontrak,24432715.32,3.0,Ada,Tidak Layak,,,,,,,,,,
-Pegawai,33.0,3.0,Direktur,Tetap,2509458.05,4.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,39601651.17,5.0,Pertanian,Pusat Kota,Ada,Konsumsi,Persediaan,Lain-lain,426846973.33,25.0
-Pegawai,51.0,7.0,Manajer,Kontrak,22156737.83,1.0,Ada,Pertimbangkan,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,56322384.88,8.0,Jasa,Pedesaan,Pernah Macet,Pembelian Aset,Tidak Ada,Penjualan Aset,246504457.49,13.0
-Pegawai,44.0,9.0,Supervisor,Kontrak,49215346.71,3.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,29.0,22.0,Kepala Bagian,Kontrak,15762423.89,7.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,52146148.22,4.0,Transportasi,Pusat Kota,Tidak Ada,Konsumsi,Persediaan,Penjualan Aset,340692630.97,52.0
-UMKM/Pengusaha,,,,,,,,Layak,87405068.43,10.0,IT,Pinggir Kota,Tidak Ada,Renovasi,Kendaraan,Penjualan Aset,12677302.54,38.0
-Pegawai,53.0,21.0,Kepala Bagian,Outsource,43388310.75,7.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,28.0,25.0,Staf Senior,Kontrak,40946089.98,4.0,Ada,Pertimbangkan,,,,,,,,,,
-Pegawai,44.0,30.0,Staf Senior,Tetap,17215367.15,6.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-Pegawai,48.0,28.0,Staf Pelaksana,Tetap,2725035.02,1.0,Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,117975955.95,9.0,Pertanian,Pedesaan,Ada,Pembelian Aset,Persediaan,Tambahan Modal,383905615.56,18.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,196367484.72,0.0,Jasa,Pusat Kota,Ada,Pembelian Aset,Piutang,Lain-lain,254132999.94,11.0
-Pegawai,63.0,5.0,Staf Senior,Outsource,36723005.38,0.0,Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,138383496.98,1.0,Perdagangan,Pedesaan,Tidak Ada,Pembelian Aset,Persediaan,Penjualan Aset,253054037.59,37.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,189062292.58,4.0,Perdagangan,Online,Pernah Macet,Investasi,Kendaraan,Lain-lain,295986120.81,36.0
-Pegawai,46.0,40.0,Staf Senior,Kontrak,41958953.7,3.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,20.0,20.0,Direktur,Kontrak,29568221.71,0.0,Ada,Tidak Layak,,,,,,,,,,
-Pegawai,61.0,9.0,Direktur,Outsource,27014721.19,5.0,Tidak Ada,Pertimbangkan,,,,,,,,,,
-Pegawai,60.0,40.0,Manajer,Tetap,35746875.96,1.0,Ada,Pertimbangkan,,,,,,,,,,
-Pegawai,23.0,12.0,Staf Senior,Tetap,37533651.74,4.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-Pegawai,40.0,37.0,Staf Pelaksana,Outsource,42305131.63,2.0,Ada,Layak,,,,,,,,,,
-Pegawai,46.0,39.0,Supervisor,Kontrak,33112048.01,1.0,Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,131997633.16,8.0,Manufaktur,Pinggir Kota,Ada,Modal Kerja,Tidak Ada,Tambahan Modal,26012837.87,8.0
-Pegawai,24.0,22.0,Staf Pelaksana,Kontrak,25467559.66,1.0,Tidak Ada,Pertimbangkan,,,,,,,,,,
-Pegawai,41.0,32.0,Supervisor,Kontrak,24530867.59,3.0,Tidak Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,151065867.21,3.0,Perdagangan,Pinggir Kota,Ada,Renovasi,Persediaan,Tambahan Modal,465995819.45,60.0
-Pegawai,27.0,29.0,Supervisor,Tetap,35695648.82,3.0,Tidak Ada,Layak,,,,,,,,,,
-Pegawai,29.0,28.0,Supervisor,Tetap,47807193.1,7.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-Pegawai,20.0,32.0,Manajer,Kontrak,48293116.26,7.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-Pegawai,42.0,30.0,Direktur,Tetap,28852335.18,2.0,Tidak Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,147946005.42,5.0,IT,Online,Ada,Investasi,Tanah/Bangunan,Tambahan Modal,270000770.02,51.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,26962511.45,9.0,Lainnya,Pusat Kota,Tidak Ada,Modal Kerja,Kendaraan,Usaha Sendiri,46750788.57,37.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,146420420.16,4.0,IT,Pinggir Kota,Ada,Renovasi,Kendaraan,Tambahan Modal,224318246.97,65.0
-Pegawai,61.0,30.0,Staf Senior,Outsource,3949680.99,0.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,36.0,39.0,Supervisor,Tetap,36455184.91,2.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-Pegawai,41.0,14.0,Direktur,Outsource,49931521.06,6.0,Ada,Tidak Layak,,,,,,,,,,
-Pegawai,36.0,7.0,Staf Senior,Kontrak,12399219.28,3.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,75638109.79,8.0,Pertanian,Pusat Kota,Tidak Ada,Konsumsi,Tanah/Bangunan,Usaha Sendiri,484304771.33,48.0
-Pegawai,49.0,31.0,Staf Senior,Outsource,32115797.75,6.0,Pernah Macet,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Pertimbangkan,48655009.15,1.0,Kuliner,Online,Tidak Ada,Investasi,Tidak Ada,Usaha Sendiri,157644405.81,66.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,171943772.94,8.0,Jasa,Pedesaan,Ada,Renovasi,Tanah/Bangunan,Penjualan Aset,48259217.16,71.0
-Pegawai,39.0,5.0,Staf Senior,Kontrak,47178975.56,6.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-Pegawai,37.0,16.0,Staf Senior,Tetap,7218339.52,3.0,Tidak Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,18908681.9,6.0,Manufaktur,Pusat Kota,Pernah Macet,Investasi,Tanah/Bangunan,Lain-lain,70765324.29,62.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,156115257.11,7.0,Jasa,Pedesaan,Pernah Macet,Pembelian Aset,Piutang,Tambahan Modal,15351252.27,18.0
-UMKM/Pengusaha,,,,,,,,Layak,78880522.63,8.0,Kuliner,Pedesaan,Ada,Pembelian Aset,Tidak Ada,Usaha Sendiri,93508349.11,33.0
-Pegawai,20.0,39.0,Staf Senior,Kontrak,22227976.45,2.0,Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,88304539.1,2.0,Transportasi,Pinggir Kota,Ada,Investasi,Tanah/Bangunan,Penjualan Aset,411529584.56,29.0
-Pegawai,39.0,16.0,Kepala Bagian,Tetap,39776795.41,7.0,Tidak Ada,Tidak Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Layak,52353527.0,9.0,Pertanian,Pinggir Kota,Tidak Ada,Modal Kerja,Kendaraan,Tambahan Modal,147937450.38,29.0
-Pegawai,49.0,18.0,Staf Pelaksana,Tetap,8459731.76,1.0,Tidak Ada,Layak,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,34350412.19,5.0,Kuliner,Pusat Kota,Pernah Macet,Investasi,Piutang,Tambahan Modal,45426584.72,53.0
-UMKM/Pengusaha,,,,,,,,Layak,143030062.7,6.0,Lainnya,Pusat Kota,Tidak Ada,Renovasi,Piutang,Usaha Sendiri,304038375.06,71.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,181463564.86,9.0,IT,Pusat Kota,Ada,Renovasi,Tidak Ada,Lain-lain,7422686.96,35.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,53904479.67,5.0,Kuliner,Pusat Kota,Pernah Macet,Modal Kerja,Persediaan,Tambahan Modal,311653370.5,33.0
-UMKM/Pengusaha,,,,,,,,Tidak Layak,142610688.53,2.0,Transportasi,Pedesaan,Tidak Ada,Investasi,Tanah/Bangunan,Penjualan Aset,26337633.6,46.0
-Pegawai,27.0,26.0,Staf Pelaksana,Outsource,48247242.65,4.0,Ada,Pertimbangkan,,,,,,,,,,
-UMKM/Pengusaha,,,,,,,,Tidak Layak,62739614.97,1.0,Perdagangan,Pusat Kota,Pernah Macet,Konsumsi,Piutang,Lain-lain,441659944.32,31.0
+application_type,usia,masa_kerja,golongan_jabatan,status_kepegawaian,gaji_bulanan,jumlah_tanggungan,riwayat_kredit,keputusan_kredit,omzet_usaha,lama_usaha,sektor_ekonomi,lokasi_usaha,riwayat_pinjaman,jenis_penggunaan_kredit,jenis_jaminan,sumber_dana_pengembalian,plafond_pengajuan,jangka_waktu_kredit,collateral_details
+Pegawai,49.0,22.0,Staf Senior,Tetap,6163847.01,0.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Tidak Ada,Pendapatan Lain,108654045.51,67,
+Pegawai,46.0,17.0,Staf Senior,Outsource,9262246.54,3.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Persediaan,Bonus,342732673.19,18,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nulla""}"
+Pegawai,56.0,16.0,Supervisor,Tetap,13341792.8,0.0,Pernah Macet,Pertimbangkan,,,,,,Pendidikan,Emas,Bonus,297790911.68,66,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""accusantium""}"
+UMKM/Pengusaha,,,,,,,,Layak,140247287.78,8.0,Perdagangan,Pusat Kota,Tidak Ada,Konsumsi,Persediaan,Tambahan Modal,426963959.28,30,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""vero""}"
+UMKM/Pengusaha,,,,,,,,Layak,37607935.8,8.0,IT,Online,Tidak Ada,Modal Kerja,Deposito,Usaha Sendiri,354800453.08,45,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ea""}"
+Pegawai,60.0,32.0,Staf Pelaksana,Kontrak,13774106.68,4.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Emas,Bonus,231339894.95,69,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""qui""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,92610790.54,15.0,Perdagangan,Pusat Kota,Pernah Macet,Investasi,Tanah/Bangunan,Tambahan Modal,255619403.08,13,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""occaecati""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,6964217.92,13.0,Perdagangan,Sleman,Ada,Investasi,Tidak Ada,Tambahan Modal,157073201.13,8,
+Pegawai,38.0,3.0,Administrasi,Kontrak,23699133.42,4.0,Pernah Macet,Tidak Layak,,,,,,Lain-lain,Emas,Bonus,471750924.18,68,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""eius""}"
+UMKM/Pengusaha,,,,,,,,Layak,113102947.08,13.0,Manufaktur,Pinggir Kota,Ada,Modal Kerja,Persediaan,Lain-lain,217154416.14,71,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""saepe""}"
+UMKM/Pengusaha,,,,,,,,Layak,68039045.16,9.0,Pertanian,Yogyakarta Kota,Ada,Investasi,Deposito,Usaha Sendiri,117668670.49,67,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""unde""}"
+UMKM/Pengusaha,,,,,,,,Layak,12808975.96,10.0,Kuliner,Pinggir Kota,Tidak Ada,Investasi,Deposito,Lain-lain,287964493.2,12,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""amet""}"
+Pegawai,20.0,31.0,Supervisor,Tetap,20228404.95,4.0,Ada,Pertimbangkan,,,,,,Pendidikan,Persediaan,Bonus,410256700.8,52,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""distinctio""}"
+Pegawai,48.0,11.0,Staf Senior,Tetap,15999548.83,5.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Tidak Ada,Pendapatan Lain,296254535.61,9,
+UMKM/Pengusaha,,,,,,,,Layak,139236577.07,15.0,Perdagangan,Pedesaan,Ada,Modal Kerja,Kendaraan,Penjualan Aset,225985919.99,10,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2003, ""atas_nama_kendaraan"": ""Sakura Puspasari"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,190347902.05,12.0,Transportasi,Pinggir Kota,Tidak Ada,Investasi,Persediaan,Lain-lain,391248238.52,72,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""debitis""}"
+Pegawai,45.0,30.0,Staf Pelaksana,Outsource,13626119.77,1.0,Tidak Ada,Layak,,,,,,Renovasi Rumah,Tanah/Bangunan,Pendapatan Lain,320447645.45,32,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""ad""}"
+Pegawai,40.0,27.0,Staf Senior,Kontrak,11466476.26,5.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Deposito,Pendapatan Lain,453744315.23,69,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""in""}"
+Pegawai,34.0,7.0,Staf Pelaksana,Tetap,24928166.99,3.0,Tidak Ada,Layak,,,,,,Konsumsi,Tidak Ada,Bonus,301111848.73,15,
+UMKM/Pengusaha,,,,,,,,Layak,77844041.19,14.0,Kuliner,Sleman,Pernah Macet,Investasi,Tanah/Bangunan,Usaha Sendiri,47692590.52,71,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""blanditiis""}"
+UMKM/Pengusaha,,,,,,,,Layak,152012595.31,11.0,IT,Pinggir Kota,Ada,Modal Kerja,Emas,Tambahan Modal,255323455.78,37,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""qui""}"
+Pegawai,21.0,34.0,Staf Pelaksana,Kontrak,13099831.84,0.0,Pernah Macet,Layak,,,,,,,Kendaraan,,48711289.43,13,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2016, ""atas_nama_kendaraan"": ""drg. Caturangga Wahyuni"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,142831779.16,6.0,Lainnya,Sleman,Tidak Ada,Investasi,Persediaan,Penjualan Aset,312251332.21,49,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""maxime""}"
+Pegawai,26.0,26.0,Supervisor,Outsource,8722236.99,1.0,Ada,Layak,,,,,,,Tanah/Bangunan,,188461752.04,49,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quia""}"
+UMKM/Pengusaha,,,,,,,,Layak,76157172.0,7.0,IT,Bantul,Tidak Ada,Investasi,Deposito,Tambahan Modal,454553438.65,40,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""consequatur""}"
+Pegawai,50.0,17.0,Administrasi,Kontrak,22021830.83,1.0,Pernah Macet,Layak,,,,,,Renovasi Rumah,Persediaan,Bonus,106006615.22,10,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""porro""}"
+Pegawai,48.0,25.0,Administrasi,Tetap,15430961.33,3.0,Tidak Ada,Layak,,,,,,Pembelian Kendaraan,Deposito,Lain-lain,127440983.65,42,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""aperiam""}"
+Pegawai,34.0,22.0,Supervisor,Tetap,10800195.2,0.0,Pernah Macet,Pertimbangkan,,,,,,,Piutang,,477044533.82,53,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dolor""}"
+UMKM/Pengusaha,,,,,,,,Layak,66765724.21,12.0,Perdagangan,Sleman,Ada,Pembelian Aset,Kendaraan,Usaha Sendiri,432961454.63,9,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2017, ""atas_nama_kendaraan"": ""Adinata Waluyo"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,23.0,35.0,Supervisor,Kontrak,19424748.14,2.0,Pernah Macet,Pertimbangkan,,,,,,Konsumsi,Kendaraan,Bonus,308758866.89,47,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2010, ""atas_nama_kendaraan"": ""Paramita Siregar, M.Ak"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,39.0,30.0,Supervisor,Kontrak,7303645.03,1.0,Ada,Layak,,,,,,Renovasi Rumah,Emas,Pendapatan Lain,5035606.44,57,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""placeat""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,141166879.22,2.0,Pertanian,Pusat Kota,Pernah Macet,Pembelian Aset,Emas,Tambahan Modal,22289625.09,41,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""optio""}"
+Pegawai,55.0,34.0,Staf Pelaksana,Outsource,29577585.48,5.0,Ada,Layak,,,,,,Konsumsi,Persediaan,Lain-lain,45578183.99,49,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""delectus""}"
+UMKM/Pengusaha,,,,,,,,Layak,91050685.18,12.0,Kuliner,Yogyakarta Kota,Pernah Macet,Modal Kerja,Tanah/Bangunan,Tambahan Modal,229969252.88,19,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nostrum""}"
+UMKM/Pengusaha,,,,,,,,Layak,61730394.22,9.0,Perdagangan,Yogyakarta Kota,Pernah Macet,Renovasi,Emas,Penjualan Aset,171831827.77,16,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""rem""}"
+UMKM/Pengusaha,,,,,,,,Layak,177319750.08,10.0,Kerajinan,Yogyakarta Kota,Ada,Investasi,Emas,Penjualan Aset,40498015.46,9,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quis""}"
+Pegawai,57.0,4.0,Supervisor,Outsource,19572579.65,1.0,Ada,Layak,,,,,,,Kendaraan,,33950655.35,50,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2011, ""atas_nama_kendaraan"": ""Salsabila Wahyudin"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,5001334.01,8.0,Transportasi,Sleman,Tidak Ada,Modal Kerja,Deposito,Lain-lain,419699998.54,55,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""adipisci""}"
+Pegawai,47.0,29.0,Staf Pelaksana,Tetap,19197420.14,2.0,Ada,Layak,,,,,,,Persediaan,,73472254.94,35,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""beatae""}"
+Pegawai,22.0,16.0,Staf Senior,Tetap,11973296.92,4.0,Pernah Macet,Pertimbangkan,,,,,,Pendidikan,Tidak Ada,Pendapatan Lain,329587736.54,56,
+Pegawai,38.0,15.0,Supervisor,Outsource,4476162.23,3.0,Ada,Pertimbangkan,,,,,,Renovasi Rumah,Deposito,Lain-lain,131239550.15,68,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""accusantium""}"
+Pegawai,60.0,28.0,Administrasi,Outsource,9190616.11,4.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Piutang,Bonus,378241280.15,72,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eum""}"
+Pegawai,26.0,2.0,Supervisor,Kontrak,7625737.98,5.0,Tidak Ada,Pertimbangkan,,,,,,,Tanah/Bangunan,,79166528.14,35,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""error""}"
+UMKM/Pengusaha,,,,,,,,Layak,122684450.95,12.0,Jasa,Bantul,Ada,Modal Kerja,Emas,Tambahan Modal,43373437.11,31,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""asperiores""}"
+UMKM/Pengusaha,,,,,,,,Layak,186911565.85,13.0,Pertanian,Pinggir Kota,Tidak Ada,Investasi,Tanah/Bangunan,Tambahan Modal,92415347.03,51,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""possimus""}"
+UMKM/Pengusaha,,,,,,,,Layak,107611560.04,8.0,Jasa,Pusat Kota,Pernah Macet,Investasi,Tanah/Bangunan,Tambahan Modal,375664040.13,34,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""reiciendis""}"
+Pegawai,59.0,24.0,Staf Pelaksana,Kontrak,24634671.19,0.0,Ada,Layak,,,,,,Renovasi Rumah,Piutang,Gaji,46342826.24,62,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""numquam""}"
+UMKM/Pengusaha,,,,,,,,Layak,32803326.16,7.0,Kerajinan,Sleman,Tidak Ada,Renovasi,Persediaan,Usaha Sendiri,322551861.4,21,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""delectus""}"
+Pegawai,30.0,31.0,Staf Pelaksana,Kontrak,19498193.2,1.0,Pernah Macet,Layak,,,,,,Pembelian Kendaraan,Deposito,Bonus,146504474.26,72,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""error""}"
+UMKM/Pengusaha,,,,,,,,Layak,194045119.21,1.0,Kerajinan,Pinggir Kota,Tidak Ada,Renovasi,Emas,Tambahan Modal,416355526.17,13,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""provident""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,15252692.27,9.0,Kuliner,Yogyakarta Kota,Pernah Macet,Renovasi,Kendaraan,Usaha Sendiri,156282575.77,17,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2011, ""atas_nama_kendaraan"": ""Lulut Napitupulu, S.I.Kom"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,36.0,35.0,Staf Pelaksana,Tetap,6513735.46,5.0,Pernah Macet,Tidak Layak,,,,,,Renovasi Rumah,Tanah/Bangunan,Gaji,489989402.22,13,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""sequi""}"
+Pegawai,35.0,14.0,Supervisor,Tetap,27394140.96,4.0,Ada,Pertimbangkan,,,,,,Pendidikan,Kendaraan,Lain-lain,366906572.51,56,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2008, ""atas_nama_kendaraan"": ""Puti Ayu Riyanti, S.Gz"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,14099535.74,12.0,Perdagangan,Yogyakarta Kota,Pernah Macet,Konsumsi,Deposito,Penjualan Aset,254895523.27,31,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eaque""}"
+Pegawai,35.0,30.0,Staf Senior,Kontrak,7174541.47,0.0,Ada,Pertimbangkan,,,,,,Pendidikan,Tidak Ada,Lain-lain,309118882.66,57,
+UMKM/Pengusaha,,,,,,,,Layak,57172210.1,7.0,Lainnya,Sleman,Ada,Modal Kerja,Piutang,Penjualan Aset,321799099.4,52,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""perspiciatis""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,147932547.07,2.0,Transportasi,Bantul,Pernah Macet,Pembelian Aset,Tanah/Bangunan,Usaha Sendiri,493924499.33,18,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""corporis""}"
+Pegawai,36.0,31.0,Administrasi,Outsource,24995991.51,3.0,Pernah Macet,Pertimbangkan,,,,,,,Emas,,83297599.58,31,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""praesentium""}"
+Pegawai,22.0,1.0,Staf Senior,Tetap,5478791.02,4.0,Pernah Macet,Tidak Layak,,,,,,Urusan Pribadi,Tanah/Bangunan,Lain-lain,229917059.89,57,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""corrupti""}"
+Pegawai,33.0,26.0,Administrasi,Tetap,21993351.02,3.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Kendaraan,Gaji,352755082.96,14,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2002, ""atas_nama_kendaraan"": ""Liman Simanjuntak"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,48.0,0.0,Supervisor,Kontrak,12672431.29,2.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Emas,Bonus,6938289.41,72,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""sit""}"
+Pegawai,53.0,30.0,Administrasi,Kontrak,13637513.06,2.0,Tidak Ada,Layak,,,,,,,Persediaan,,342898756.97,25,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""enim""}"
+Pegawai,55.0,26.0,Administrasi,Outsource,14305503.26,5.0,Pernah Macet,Pertimbangkan,,,,,,,Piutang,,345257887.4,22,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""perferendis""}"
+Pegawai,45.0,2.0,Supervisor,Kontrak,26125157.64,0.0,Tidak Ada,Layak,,,,,,,Tanah/Bangunan,,115604857.94,63,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""earum""}"
+Pegawai,39.0,34.0,Administrasi,Outsource,9497916.3,0.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Tidak Ada,Bonus,482017652.3,31,
+UMKM/Pengusaha,,,,,,,,Layak,92689214.5,7.0,Lainnya,Sleman,Tidak Ada,Investasi,Tidak Ada,Tambahan Modal,220405317.18,61,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,41880894.96,10.0,Kerajinan,Online,Pernah Macet,Pembelian Aset,Deposito,Lain-lain,65082047.75,69,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""asperiores""}"
+Pegawai,35.0,25.0,Staf Pelaksana,Outsource,10570245.88,2.0,Tidak Ada,Layak,,,,,,Lain-lain,Kendaraan,Lain-lain,109219822.63,7,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2016, ""atas_nama_kendaraan"": ""Ian Hutapea, M.Farm"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,42507464.24,2.0,Kuliner,Pinggir Kota,Ada,Investasi,Tanah/Bangunan,Lain-lain,216439960.39,68,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""praesentium""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,57623744.64,11.0,Lainnya,Pedesaan,Pernah Macet,Investasi,Tidak Ada,Tambahan Modal,471064200.2,27,
+Pegawai,50.0,35.0,Administrasi,Kontrak,23062152.52,3.0,Tidak Ada,Layak,,,,,,,Persediaan,,339979688.34,13,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""culpa""}"
+Pegawai,58.0,32.0,Supervisor,Outsource,25960596.91,2.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Piutang,Pendapatan Lain,312635422.38,22,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""culpa""}"
+UMKM/Pengusaha,,,,,,,,Layak,174830838.51,10.0,Transportasi,Pinggir Kota,Tidak Ada,Investasi,Deposito,Lain-lain,434057137.15,70,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""excepturi""}"
+Pegawai,38.0,32.0,Staf Senior,Kontrak,7654062.48,0.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Persediaan,Gaji,189657986.07,55,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""cum""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,143424700.42,6.0,Transportasi,Pedesaan,Pernah Macet,Modal Kerja,Persediaan,Tambahan Modal,137561306.07,15,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""totam""}"
+Pegawai,31.0,11.0,Supervisor,Tetap,21622998.79,1.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Kendaraan,Pendapatan Lain,273785358.21,50,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2023, ""atas_nama_kendaraan"": ""Qori Saputra"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,52.0,4.0,Supervisor,Outsource,26175581.52,3.0,Pernah Macet,Tidak Layak,,,,,,,Tidak Ada,,348592454.23,30,
+Pegawai,49.0,7.0,Administrasi,Tetap,21698456.72,5.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Deposito,Gaji,388699277.0,56,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""reiciendis""}"
+UMKM/Pengusaha,,,,,,,,Layak,32502837.06,13.0,Lainnya,Bantul,Ada,Renovasi,Tidak Ada,Penjualan Aset,55786019.14,30,
+Pegawai,59.0,8.0,Staf Senior,Tetap,29728526.38,5.0,Ada,Layak,,,,,,Pembelian Kendaraan,Kendaraan,Gaji,31187057.79,9,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2022, ""atas_nama_kendaraan"": ""Ifa Suartini"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,42505377.79,10.0,Kerajinan,Bantul,Pernah Macet,Investasi,Kendaraan,Tambahan Modal,146409835.01,25,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2019, ""atas_nama_kendaraan"": ""Sutan Dasa Uyainah"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,171997819.31,12.0,Kerajinan,Yogyakarta Kota,Tidak Ada,Konsumsi,Tanah/Bangunan,Tambahan Modal,83552042.62,62,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""tempore""}"
+Pegawai,47.0,9.0,Supervisor,Kontrak,18239781.0,0.0,Ada,Layak,,,,,,Pembelian Kendaraan,Persediaan,Lain-lain,31536876.52,55,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""odit""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,169866198.56,10.0,Lainnya,Online,Pernah Macet,Renovasi,Tanah/Bangunan,Lain-lain,391650761.47,48,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""commodi""}"
+Pegawai,25.0,16.0,Supervisor,Kontrak,22437366.45,4.0,Ada,Pertimbangkan,,,,,,Pendidikan,Kendaraan,Gaji,453507125.08,42,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2017, ""atas_nama_kendaraan"": ""Kezia Mardhiyah"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,25.0,26.0,Supervisor,Outsource,26415508.85,1.0,Pernah Macet,Layak,,,,,,,Persediaan,,194058687.46,18,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""iure""}"
+Pegawai,39.0,22.0,Administrasi,Tetap,9782919.01,3.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Emas,Pendapatan Lain,312865829.86,48,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quidem""}"
+Pegawai,47.0,1.0,Staf Senior,Outsource,29315594.1,2.0,Pernah Macet,Pertimbangkan,,,,,,Konsumsi,Kendaraan,Bonus,18091850.37,69,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2016, ""atas_nama_kendaraan"": ""Tgk. Puji Sihotang, S.E.I"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,23.0,23.0,Supervisor,Tetap,8705462.6,2.0,Pernah Macet,Pertimbangkan,,,,,,,Piutang,,320071617.67,67,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eum""}"
+Pegawai,58.0,0.0,Staf Pelaksana,Tetap,25629341.5,4.0,Ada,Pertimbangkan,,,,,,Renovasi Rumah,Deposito,Pendapatan Lain,463733901.89,14,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""in""}"
+Pegawai,45.0,1.0,Administrasi,Tetap,23558039.79,4.0,Ada,Pertimbangkan,,,,,,,Persediaan,,335730113.91,36,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""placeat""}"
+Pegawai,54.0,7.0,Staf Pelaksana,Kontrak,16927987.0,1.0,Pernah Macet,Pertimbangkan,,,,,,Konsumsi,Emas,Lain-lain,214040853.33,72,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nulla""}"
+UMKM/Pengusaha,,,,,,,,Layak,40141558.27,10.0,Manufaktur,Sleman,Pernah Macet,Renovasi,Piutang,Penjualan Aset,216152381.65,34,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""officia""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,15094013.6,15.0,Kerajinan,Bantul,Tidak Ada,Modal Kerja,Kendaraan,Lain-lain,119189718.66,55,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2022, ""atas_nama_kendaraan"": ""Baktiadi Widiastuti"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,38.0,9.0,Supervisor,Tetap,4797357.77,2.0,Pernah Macet,Pertimbangkan,,,,,,,Kendaraan,,332597511.3,50,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2019, ""atas_nama_kendaraan"": ""Baktianto Yuniar"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,43.0,24.0,Supervisor,Kontrak,26189533.61,2.0,Tidak Ada,Layak,,,,,,,Piutang,,357727198.33,34,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""perferendis""}"
+Pegawai,35.0,26.0,Staf Senior,Kontrak,18172826.97,3.0,Tidak Ada,Layak,,,,,,Konsumsi,Persediaan,Pendapatan Lain,158010811.72,70,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""vero""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,95374751.74,1.0,IT,Bantul,Pernah Macet,Renovasi,Kendaraan,Usaha Sendiri,129636538.31,54,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2013, ""atas_nama_kendaraan"": ""Faizah Hutasoit"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,42.0,1.0,Staf Pelaksana,Tetap,20377082.81,0.0,Ada,Pertimbangkan,,,,,,Urusan Pribadi,Tanah/Bangunan,Lain-lain,370229938.36,46,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""repudiandae""}"
+Pegawai,48.0,25.0,Supervisor,Outsource,20283753.02,4.0,Tidak Ada,Layak,,,,,,,Emas,,16800491.9,32,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""labore""}"
+Pegawai,59.0,23.0,Supervisor,Tetap,10667055.42,5.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Piutang,Bonus,492366598.35,67,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""omnis""}"
+UMKM/Pengusaha,,,,,,,,Layak,32919678.21,15.0,Kerajinan,Sleman,Pernah Macet,Pembelian Aset,Piutang,Lain-lain,160728434.88,27,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""vero""}"
+Pegawai,60.0,3.0,Staf Pelaksana,Kontrak,9735548.07,4.0,Pernah Macet,Tidak Layak,,,,,,,Deposito,,207842917.36,30,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""debitis""}"
+UMKM/Pengusaha,,,,,,,,Layak,123568747.48,7.0,Jasa,Pedesaan,Ada,Konsumsi,Deposito,Lain-lain,417999175.62,65,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quibusdam""}"
+UMKM/Pengusaha,,,,,,,,Layak,128164218.96,10.0,Jasa,Pedesaan,Tidak Ada,Konsumsi,Persediaan,Tambahan Modal,187866696.7,20,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""provident""}"
+Pegawai,30.0,7.0,Administrasi,Outsource,22292507.89,1.0,Pernah Macet,Layak,,,,,,Pembelian Kendaraan,Tidak Ada,Bonus,26218323.92,61,
+UMKM/Pengusaha,,,,,,,,Layak,89847254.63,14.0,Pertanian,Bantul,Ada,Modal Kerja,Persediaan,Usaha Sendiri,332420238.13,8,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ullam""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,28376396.81,14.0,Kerajinan,Pedesaan,Tidak Ada,Investasi,Persediaan,Lain-lain,224217428.58,54,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""explicabo""}"
+Pegawai,56.0,18.0,Staf Pelaksana,Tetap,16719077.81,3.0,Ada,Pertimbangkan,,,,,,,Kendaraan,,348307793.59,45,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2003, ""atas_nama_kendaraan"": ""Queen Hastuti"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Tidak Layak,14686263.16,10.0,Lainnya,Pinggir Kota,Pernah Macet,Modal Kerja,Deposito,Penjualan Aset,379634439.34,61,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""magni""}"
+Pegawai,56.0,20.0,Staf Pelaksana,Tetap,27023149.94,0.0,Tidak Ada,Layak,,,,,,Lain-lain,Persediaan,Pendapatan Lain,351028209.09,26,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""commodi""}"
+Pegawai,54.0,30.0,Staf Senior,Kontrak,19093578.13,3.0,Ada,Pertimbangkan,,,,,,Pendidikan,Kendaraan,Gaji,272284978.96,69,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2000, ""atas_nama_kendaraan"": ""Uda Laksmiwati"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,46.0,3.0,Administrasi,Kontrak,5601816.22,5.0,Ada,Tidak Layak,,,,,,,Deposito,,268980072.37,6,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""necessitatibus""}"
+UMKM/Pengusaha,,,,,,,,Layak,82536778.76,7.0,Lainnya,Pedesaan,Ada,Investasi,Persediaan,Tambahan Modal,143942259.66,29,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ut""}"
+UMKM/Pengusaha,,,,,,,,Layak,78449315.7,15.0,Lainnya,Pusat Kota,Tidak Ada,Renovasi,Tidak Ada,Penjualan Aset,401409963.19,9,
+Pegawai,59.0,23.0,Staf Pelaksana,Kontrak,23390734.71,3.0,Pernah Macet,Pertimbangkan,,,,,,Konsumsi,Tidak Ada,Pendapatan Lain,380177940.07,26,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,80312802.93,4.0,Manufaktur,Bantul,Pernah Macet,Konsumsi,Kendaraan,Penjualan Aset,31409796.38,66,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2001, ""atas_nama_kendaraan"": ""T. Radika Susanti, S.Kom"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,50.0,9.0,Staf Pelaksana,Outsource,10384748.48,3.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Tidak Ada,Lain-lain,448992042.62,56,
+Pegawai,40.0,24.0,Staf Pelaksana,Outsource,20819132.81,3.0,Ada,Pertimbangkan,,,,,,,Persediaan,,349073172.67,40,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""perferendis""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,61460403.08,5.0,Manufaktur,Bantul,Pernah Macet,Renovasi,Piutang,Tambahan Modal,487730453.75,29,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""natus""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,82178801.97,6.0,Transportasi,Pusat Kota,Pernah Macet,Konsumsi,Tidak Ada,Usaha Sendiri,428370866.36,54,
+UMKM/Pengusaha,,,,,,,,Layak,96026245.4,13.0,Pertanian,Pedesaan,Tidak Ada,Investasi,Deposito,Penjualan Aset,181627487.43,36,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""molestias""}"
+UMKM/Pengusaha,,,,,,,,Layak,98361010.14,8.0,IT,Sleman,Ada,Pembelian Aset,Tanah/Bangunan,Usaha Sendiri,65984260.5,22,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""cupiditate""}"
+Pegawai,50.0,20.0,Supervisor,Tetap,4959536.37,3.0,Ada,Pertimbangkan,,,,,,,Deposito,,294310570.48,39,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quibusdam""}"
+UMKM/Pengusaha,,,,,,,,Layak,165707437.51,8.0,Kerajinan,Pusat Kota,Ada,Modal Kerja,Deposito,Lain-lain,38663713.65,25,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quae""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,99035660.95,1.0,IT,Pedesaan,Pernah Macet,Investasi,Emas,Tambahan Modal,491236689.89,68,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""voluptatibus""}"
+UMKM/Pengusaha,,,,,,,,Layak,78490814.69,14.0,Manufaktur,Sleman,Ada,Modal Kerja,Kendaraan,Usaha Sendiri,25190129.72,67,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2019, ""atas_nama_kendaraan"": ""Purwadi Ardianto"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,29293360.72,6.0,Perdagangan,Yogyakarta Kota,Ada,Investasi,Piutang,Usaha Sendiri,420814068.91,42,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quidem""}"
+UMKM/Pengusaha,,,,,,,,Layak,32182353.91,13.0,Jasa,Pusat Kota,Pernah Macet,Pembelian Aset,Persediaan,Lain-lain,257300279.7,27,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quis""}"
+Pegawai,55.0,29.0,Supervisor,Kontrak,16969880.01,5.0,Ada,Pertimbangkan,,,,,,Pembelian Kendaraan,Tanah/Bangunan,Lain-lain,300844013.51,45,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ea""}"
+Pegawai,25.0,30.0,Supervisor,Outsource,20257139.88,1.0,Ada,Layak,,,,,,Lain-lain,Tidak Ada,Lain-lain,217547306.1,7,
+UMKM/Pengusaha,,,,,,,,Layak,182022527.83,9.0,IT,Online,Pernah Macet,Konsumsi,Persediaan,Usaha Sendiri,369632346.27,36,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""rem""}"
+UMKM/Pengusaha,,,,,,,,Layak,44886151.35,4.0,IT,Yogyakarta Kota,Tidak Ada,Modal Kerja,Piutang,Lain-lain,145538140.98,27,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""fugit""}"
+UMKM/Pengusaha,,,,,,,,Tidak Layak,28201095.2,2.0,Transportasi,Online,Ada,Pembelian Aset,Deposito,Usaha Sendiri,449483280.63,54,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""est""}"
+Pegawai,29.0,9.0,Supervisor,Kontrak,6194624.65,1.0,Ada,Pertimbangkan,,,,,,Lain-lain,Tanah/Bangunan,Bonus,357721354.09,15,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""consequuntur""}"
+Pegawai,29.0,25.0,Supervisor,Kontrak,16368879.47,2.0,Ada,Layak,,,,,,Renovasi Rumah,Kendaraan,Bonus,255769226.6,7,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2006, ""atas_nama_kendaraan"": ""Leo Tamba, S.Psi"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,51.0,29.0,Staf Senior,Outsource,25448131.05,3.0,Pernah Macet,Pertimbangkan,,,,,,Lain-lain,Kendaraan,Lain-lain,199472806.25,66,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2000, ""atas_nama_kendaraan"": ""Dimaz Melani, M.Farm"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,183363857.25,7.0,Transportasi,Online,Pernah Macet,Modal Kerja,Persediaan,Lain-lain,393104584.45,33,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""tempore""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,175860500.56,4.0,Manufaktur,Pinggir Kota,Ada,Renovasi,Deposito,Penjualan Aset,36857906.73,49,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""repellendus""}"
+Pegawai,29.0,14.0,Staf Senior,Tetap,25365157.41,3.0,Pernah Macet,Pertimbangkan,,,,,,Lain-lain,Persediaan,Gaji,47314011.42,59,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""iure""}"
+Pegawai,33.0,9.0,Supervisor,Tetap,23758085.98,2.0,Tidak Ada,Layak,,,,,,Pendidikan,Tidak Ada,Lain-lain,110335905.23,72,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,42696549.31,2.0,Kerajinan,Sleman,Pernah Macet,Konsumsi,Tidak Ada,Penjualan Aset,297368956.73,35,
+UMKM/Pengusaha,,,,,,,,Layak,46275960.98,14.0,Perdagangan,Pusat Kota,Ada,Pembelian Aset,Tanah/Bangunan,Tambahan Modal,258171089.86,50,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nemo""}"
+Pegawai,24.0,6.0,Staf Senior,Kontrak,25524023.41,2.0,Pernah Macet,Pertimbangkan,,,,,,Lain-lain,Kendaraan,Gaji,442834398.88,50,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2007, ""atas_nama_kendaraan"": ""Gasti Sirait"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,28.0,11.0,Administrasi,Tetap,5676005.1,2.0,Tidak Ada,Layak,,,,,,Pendidikan,Piutang,Pendapatan Lain,258499286.27,44,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""non""}"
+Pegawai,59.0,14.0,Administrasi,Outsource,11500643.79,4.0,Tidak Ada,Layak,,,,,,,Piutang,,399871905.97,12,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eos""}"
+UMKM/Pengusaha,,,,,,,,Layak,158724959.3,2.0,Jasa,Pedesaan,Ada,Modal Kerja,Tidak Ada,Tambahan Modal,449504537.26,49,
+Pegawai,32.0,4.0,Staf Pelaksana,Outsource,11390638.25,4.0,Ada,Pertimbangkan,,,,,,,Kendaraan,,63385499.38,25,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2011, ""atas_nama_kendaraan"": ""Jayeng Usamah"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,187813361.87,13.0,Perdagangan,Pinggir Kota,Pernah Macet,Investasi,Kendaraan,Tambahan Modal,223768084.59,38,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2003, ""atas_nama_kendaraan"": ""Padmi Kusmawati"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,196021105.72,15.0,Manufaktur,Pusat Kota,Tidak Ada,Modal Kerja,Tanah/Bangunan,Penjualan Aset,196826315.62,65,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""aspernatur""}"
+Pegawai,26.0,29.0,Administrasi,Tetap,19632137.9,4.0,Tidak Ada,Layak,,,,,,Lain-lain,Emas,Bonus,131301361.85,38,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nobis""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,161836013.21,9.0,Transportasi,Pusat Kota,Pernah Macet,Konsumsi,Tidak Ada,Penjualan Aset,420575150.51,33,
+Pegawai,23.0,35.0,Staf Pelaksana,Tetap,27323118.93,4.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Kendaraan,Gaji,47210511.7,71,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2004, ""atas_nama_kendaraan"": ""Dalimin Hardiansyah"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,53.0,8.0,Administrasi,Outsource,18432055.87,5.0,Tidak Ada,Layak,,,,,,,Tanah/Bangunan,,376962853.8,28,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""alias""}"
+UMKM/Pengusaha,,,,,,,,Layak,97801321.76,10.0,Pertanian,Pusat Kota,Tidak Ada,Investasi,Piutang,Tambahan Modal,98673331.28,30,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""voluptatibus""}"
+Pegawai,51.0,5.0,Supervisor,Tetap,13226903.84,3.0,Tidak Ada,Pertimbangkan,,,,,,Lain-lain,Tanah/Bangunan,Lain-lain,431973301.36,68,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""delectus""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,21666000.95,7.0,Transportasi,Bantul,Ada,Konsumsi,Piutang,Tambahan Modal,181528114.19,65,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quidem""}"
+UMKM/Pengusaha,,,,,,,,Layak,199099766.11,15.0,Manufaktur,Yogyakarta Kota,Ada,Modal Kerja,Tanah/Bangunan,Penjualan Aset,228770107.85,10,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""porro""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,19730946.09,4.0,Kuliner,Yogyakarta Kota,Pernah Macet,Investasi,Tanah/Bangunan,Penjualan Aset,368059897.54,59,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""vel""}"
+UMKM/Pengusaha,,,,,,,,Layak,86890286.16,9.0,Pertanian,Sleman,Pernah Macet,Investasi,Tanah/Bangunan,Usaha Sendiri,420902439.11,13,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""exercitationem""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,131885782.62,3.0,Perdagangan,Pinggir Kota,Ada,Renovasi,Deposito,Lain-lain,368016279.64,49,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""reiciendis""}"
+UMKM/Pengusaha,,,,,,,,Layak,36007538.43,3.0,Jasa,Yogyakarta Kota,Pernah Macet,Modal Kerja,Piutang,Usaha Sendiri,133033229.66,62,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""assumenda""}"
+UMKM/Pengusaha,,,,,,,,Tidak Layak,25040368.64,4.0,Manufaktur,Pinggir Kota,Pernah Macet,Renovasi,Deposito,Penjualan Aset,267942208.44,50,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""aliquam""}"
+Pegawai,48.0,9.0,Administrasi,Tetap,27867175.99,1.0,Tidak Ada,Layak,,,,,,Pembelian Kendaraan,Persediaan,Lain-lain,24758375.4,28,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""explicabo""}"
+Pegawai,55.0,14.0,Staf Pelaksana,Tetap,29433717.51,5.0,Pernah Macet,Pertimbangkan,,,,,,,Tanah/Bangunan,,460140930.72,36,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""laborum""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,67531893.17,6.0,Transportasi,Pusat Kota,Pernah Macet,Pembelian Aset,Deposito,Tambahan Modal,354197387.59,26,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nulla""}"
+Pegawai,30.0,35.0,Staf Pelaksana,Outsource,19273372.67,2.0,Tidak Ada,Layak,,,,,,,Emas,,177675800.23,15,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""consectetur""}"
+Pegawai,49.0,19.0,Supervisor,Outsource,11612222.13,2.0,Pernah Macet,Pertimbangkan,,,,,,Lain-lain,Emas,Lain-lain,139108364.23,41,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dolorem""}"
+Pegawai,36.0,25.0,Administrasi,Outsource,28978594.36,1.0,Tidak Ada,Layak,,,,,,Renovasi Rumah,Kendaraan,Gaji,322521180.76,16,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2018, ""atas_nama_kendaraan"": ""Betania Suryatmi"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,185702989.29,12.0,Pertanian,Pusat Kota,Tidak Ada,Renovasi,Tidak Ada,Usaha Sendiri,332815218.79,19,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,111261481.45,14.0,Manufaktur,Bantul,Pernah Macet,Konsumsi,Deposito,Usaha Sendiri,82758082.84,62,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""molestias""}"
+Pegawai,53.0,31.0,Supervisor,Kontrak,15973029.04,2.0,Tidak Ada,Layak,,,,,,Konsumsi,Tidak Ada,Lain-lain,352003452.41,10,
+Pegawai,27.0,31.0,Administrasi,Kontrak,9803024.98,3.0,Tidak Ada,Layak,,,,,,Pembelian Kendaraan,Persediaan,Bonus,451634136.93,22,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""illum""}"
+UMKM/Pengusaha,,,,,,,,Layak,148744756.34,14.0,Manufaktur,Yogyakarta Kota,Tidak Ada,Modal Kerja,Persediaan,Tambahan Modal,48267801.03,19,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eveniet""}"
+Pegawai,33.0,7.0,Supervisor,Kontrak,7889803.46,2.0,Ada,Pertimbangkan,,,,,,Renovasi Rumah,Persediaan,Lain-lain,294244745.07,71,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""eveniet""}"
+Pegawai,50.0,17.0,Staf Senior,Outsource,12665537.44,2.0,Ada,Layak,,,,,,Pembelian Kendaraan,Kendaraan,Gaji,37726242.98,26,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2018, ""atas_nama_kendaraan"": ""R.A. Vanesa Thamrin"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,31.0,0.0,Staf Pelaksana,Tetap,9140160.66,2.0,Tidak Ada,Layak,,,,,,Pembelian Kendaraan,Piutang,Pendapatan Lain,402641258.93,39,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quae""}"
+UMKM/Pengusaha,,,,,,,,Layak,54916821.24,7.0,Pertanian,Online,Tidak Ada,Konsumsi,Tidak Ada,Lain-lain,437262791.19,54,
+UMKM/Pengusaha,,,,,,,,Tidak Layak,29742724.24,4.0,Jasa,Pedesaan,Pernah Macet,Modal Kerja,Piutang,Tambahan Modal,178460139.9,63,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""maxime""}"
+UMKM/Pengusaha,,,,,,,,Layak,191403841.06,4.0,Manufaktur,Yogyakarta Kota,Ada,Konsumsi,Persediaan,Penjualan Aset,179090561.67,72,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nesciunt""}"
+UMKM/Pengusaha,,,,,,,,Layak,69952435.4,8.0,Manufaktur,Online,Tidak Ada,Pembelian Aset,Tanah/Bangunan,Tambahan Modal,45032299.56,28,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""sit""}"
+UMKM/Pengusaha,,,,,,,,Layak,196654149.5,11.0,Perdagangan,Sleman,Tidak Ada,Renovasi,Persediaan,Lain-lain,229565043.91,11,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quas""}"
+Pegawai,55.0,25.0,Staf Pelaksana,Outsource,16525901.28,1.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Emas,Pendapatan Lain,249248117.38,47,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""aperiam""}"
+UMKM/Pengusaha,,,,,,,,Layak,142800620.52,10.0,Manufaktur,Yogyakarta Kota,Ada,Investasi,Persediaan,Lain-lain,357434499.79,11,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eos""}"
+Pegawai,49.0,7.0,Administrasi,Kontrak,19985732.22,5.0,Ada,Pertimbangkan,,,,,,Pendidikan,Emas,Lain-lain,413537467.95,71,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""porro""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,74342891.77,2.0,Kerajinan,Online,Ada,Modal Kerja,Deposito,Usaha Sendiri,45046749.69,9,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""vero""}"
+Pegawai,39.0,2.0,Staf Senior,Kontrak,5042749.5,4.0,Ada,Tidak Layak,,,,,,Pendidikan,Tidak Ada,Pendapatan Lain,187090933.59,6,
+UMKM/Pengusaha,,,,,,,,Layak,89203788.83,9.0,Perdagangan,Sleman,Pernah Macet,Modal Kerja,Tanah/Bangunan,Lain-lain,98723904.09,10,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""ad""}"
+UMKM/Pengusaha,,,,,,,,Layak,81917357.12,11.0,Pertanian,Sleman,Ada,Renovasi,Persediaan,Usaha Sendiri,124106624.87,11,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""hic""}"
+UMKM/Pengusaha,,,,,,,,Layak,198133303.68,7.0,Jasa,Pedesaan,Pernah Macet,Modal Kerja,Piutang,Usaha Sendiri,206765735.93,58,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""aliquid""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,29597302.34,8.0,Kerajinan,Sleman,Pernah Macet,Konsumsi,Piutang,Lain-lain,82746709.81,27,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""magni""}"
+Pegawai,22.0,19.0,Administrasi,Tetap,21749703.76,4.0,Ada,Layak,,,,,,Lain-lain,Piutang,Lain-lain,30475694.17,23,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""incidunt""}"
+Pegawai,44.0,30.0,Administrasi,Outsource,15886894.44,0.0,Pernah Macet,Layak,,,,,,Pendidikan,Tidak Ada,Pendapatan Lain,80396032.8,61,
+UMKM/Pengusaha,,,,,,,,Layak,199187432.36,4.0,Pertanian,Yogyakarta Kota,Tidak Ada,Modal Kerja,Emas,Lain-lain,355593610.76,21,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""deserunt""}"
+Pegawai,28.0,21.0,Administrasi,Kontrak,18250244.84,3.0,Pernah Macet,Pertimbangkan,,,,,,,Deposito,,69149207.03,16,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""aspernatur""}"
+Pegawai,43.0,17.0,Staf Pelaksana,Outsource,17971611.37,4.0,Ada,Pertimbangkan,,,,,,Urusan Pribadi,Tidak Ada,Gaji,194898321.78,19,
+UMKM/Pengusaha,,,,,,,,Layak,184272828.62,14.0,Jasa,Pinggir Kota,Ada,Modal Kerja,Emas,Lain-lain,47083036.15,69,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""ut""}"
+Pegawai,26.0,1.0,Supervisor,Tetap,28791793.25,4.0,Tidak Ada,Layak,,,,,,Pembelian Kendaraan,Kendaraan,Bonus,198748436.07,54,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2013, ""atas_nama_kendaraan"": ""Ir. Padma Sirait"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,59.0,35.0,Administrasi,Outsource,13728997.42,4.0,Tidak Ada,Layak,,,,,,Renovasi Rumah,Kendaraan,Pendapatan Lain,133144495.54,58,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2000, ""atas_nama_kendaraan"": ""Betania Palastri"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,42345627.18,12.0,Transportasi,Online,Tidak Ada,Investasi,Kendaraan,Tambahan Modal,80819677.05,58,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2002, ""atas_nama_kendaraan"": ""Edward Nasyiah"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,37.0,15.0,Supervisor,Kontrak,4550035.75,4.0,Ada,Pertimbangkan,,,,,,Renovasi Rumah,Emas,Bonus,381947369.24,70,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""atque""}"
+Pegawai,21.0,1.0,Supervisor,Kontrak,20939190.98,3.0,Tidak Ada,Layak,,,,,,,Persediaan,,175176134.44,22,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nemo""}"
+Pegawai,42.0,15.0,Supervisor,Outsource,6877529.0,4.0,Tidak Ada,Layak,,,,,,,Kendaraan,,56987252.0,24,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2022, ""atas_nama_kendaraan"": ""Taswir Damanik"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,32.0,28.0,Supervisor,Kontrak,18944314.88,4.0,Pernah Macet,Pertimbangkan,,,,,,,Tidak Ada,,308390756.69,11,
+Pegawai,36.0,10.0,Supervisor,Outsource,6202207.99,1.0,Tidak Ada,Layak,,,,,,Konsumsi,Deposito,Gaji,240677249.7,33,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""laudantium""}"
+Pegawai,41.0,14.0,Administrasi,Kontrak,9251030.18,5.0,Tidak Ada,Layak,,,,,,Urusan Pribadi,Kendaraan,Gaji,153128621.78,38,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2005, ""atas_nama_kendaraan"": ""Raisa Pratiwi, S.Psi"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,114947973.22,10.0,Pertanian,Bantul,Tidak Ada,Renovasi,Emas,Tambahan Modal,482106796.91,51,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""minus""}"
+UMKM/Pengusaha,,,,,,,,Layak,183932249.37,6.0,Manufaktur,Pusat Kota,Ada,Konsumsi,Emas,Lain-lain,65271758.37,21,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""officiis""}"
+Pegawai,32.0,20.0,Staf Senior,Outsource,24893188.41,5.0,Ada,Layak,,,,,,Pembelian Kendaraan,Emas,Pendapatan Lain,60932737.13,17,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ratione""}"
+Pegawai,52.0,12.0,Administrasi,Outsource,13059828.22,1.0,Ada,Layak,,,,,,Urusan Pribadi,Tidak Ada,Gaji,98249077.97,41,
+UMKM/Pengusaha,,,,,,,,Layak,198027759.12,9.0,Jasa,Pusat Kota,Pernah Macet,Konsumsi,Tanah/Bangunan,Tambahan Modal,280124606.83,55,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quis""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,177767676.56,5.0,Transportasi,Pedesaan,Ada,Pembelian Aset,Tidak Ada,Lain-lain,449020280.57,32,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,117071659.24,1.0,Pertanian,Pinggir Kota,Pernah Macet,Investasi,Tanah/Bangunan,Usaha Sendiri,325621496.28,21,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""fuga""}"
+Pegawai,54.0,7.0,Staf Senior,Tetap,27736091.21,3.0,Tidak Ada,Layak,,,,,,Urusan Pribadi,Emas,Bonus,290102043.52,38,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""odit""}"
+UMKM/Pengusaha,,,,,,,,Layak,79845136.93,8.0,Transportasi,Sleman,Ada,Renovasi,Kendaraan,Penjualan Aset,224284373.59,55,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2017, ""atas_nama_kendaraan"": ""Putri Usada"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,39.0,5.0,Staf Pelaksana,Kontrak,13321648.99,0.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Piutang,Bonus,161620241.04,28,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""cum""}"
+Pegawai,42.0,13.0,Staf Senior,Kontrak,12586279.6,3.0,Ada,Pertimbangkan,,,,,,Lain-lain,Emas,Gaji,381139003.6,28,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""consectetur""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,85429928.4,8.0,Transportasi,Bantul,Pernah Macet,Konsumsi,Kendaraan,Usaha Sendiri,86592395.57,66,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2017, ""atas_nama_kendaraan"": ""dr. Salsabila Kurniawan"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,48.0,35.0,Staf Senior,Tetap,22557152.79,1.0,Tidak Ada,Layak,,,,,,Urusan Pribadi,Emas,Lain-lain,80732999.94,55,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""dolorem""}"
+Pegawai,39.0,14.0,Administrasi,Kontrak,28047064.47,3.0,Ada,Layak,,,,,,Pendidikan,Persediaan,Bonus,209525069.24,45,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""minus""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,72539852.77,13.0,Pertanian,Pusat Kota,Pernah Macet,Pembelian Aset,Tidak Ada,Lain-lain,335574995.74,64,
+UMKM/Pengusaha,,,,,,,,Layak,79499123.57,7.0,Pertanian,Pusat Kota,Ada,Konsumsi,Tanah/Bangunan,Penjualan Aset,445753509.36,59,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""necessitatibus""}"
+UMKM/Pengusaha,,,,,,,,Layak,162676877.3,3.0,Manufaktur,Pinggir Kota,Tidak Ada,Konsumsi,Piutang,Lain-lain,283908563.56,50,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""minima""}"
+UMKM/Pengusaha,,,,,,,,Layak,47727015.58,5.0,Jasa,Sleman,Ada,Konsumsi,Emas,Penjualan Aset,361293681.66,45,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""eaque""}"
+UMKM/Pengusaha,,,,,,,,Layak,172300513.07,15.0,Kuliner,Pinggir Kota,Ada,Renovasi,Emas,Penjualan Aset,302915500.91,21,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""beatae""}"
+Pegawai,26.0,28.0,Administrasi,Outsource,17667438.13,2.0,Ada,Layak,,,,,,,Piutang,,275573939.37,58,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""tenetur""}"
+UMKM/Pengusaha,,,,,,,,Layak,89498201.04,14.0,Kuliner,Sleman,Ada,Pembelian Aset,Emas,Usaha Sendiri,191763596.26,38,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ex""}"
+UMKM/Pengusaha,,,,,,,,Layak,69015398.47,11.0,Jasa,Pusat Kota,Pernah Macet,Konsumsi,Tidak Ada,Tambahan Modal,194612157.86,27,
+UMKM/Pengusaha,,,,,,,,Layak,135938694.95,14.0,Lainnya,Bantul,Tidak Ada,Pembelian Aset,Tanah/Bangunan,Usaha Sendiri,300675231.14,51,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quis""}"
+Pegawai,37.0,11.0,Staf Senior,Tetap,16872028.08,5.0,Pernah Macet,Pertimbangkan,,,,,,,Tidak Ada,,190267777.66,22,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,119847797.6,2.0,Pertanian,Pusat Kota,Pernah Macet,Renovasi,Persediaan,Lain-lain,18836892.3,53,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""harum""}"
+Pegawai,31.0,27.0,Staf Senior,Kontrak,16695246.43,1.0,Ada,Layak,,,,,,Konsumsi,Deposito,Bonus,456276582.3,42,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""accusantium""}"
+Pegawai,42.0,25.0,Administrasi,Kontrak,4753987.51,0.0,Pernah Macet,Pertimbangkan,,,,,,,Piutang,,490207883.17,38,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""excepturi""}"
+Pegawai,33.0,30.0,Staf Senior,Tetap,12912356.34,3.0,Tidak Ada,Layak,,,,,,Urusan Pribadi,Kendaraan,Pendapatan Lain,252198059.57,51,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2000, ""atas_nama_kendaraan"": ""Prabawa Marbun"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,105124172.0,12.0,Transportasi,Pusat Kota,Ada,Renovasi,Emas,Usaha Sendiri,231702596.7,46,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""earum""}"
+UMKM/Pengusaha,,,,,,,,Layak,152147610.85,2.0,Kuliner,Sleman,Tidak Ada,Renovasi,Emas,Tambahan Modal,28873097.87,8,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""illum""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,26060975.75,9.0,Lainnya,Sleman,Pernah Macet,Modal Kerja,Tidak Ada,Penjualan Aset,5243827.66,66,
+Pegawai,50.0,15.0,Supervisor,Outsource,28759347.07,5.0,Ada,Pertimbangkan,,,,,,Renovasi Rumah,Persediaan,Bonus,462534155.39,35,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""reiciendis""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,17352618.89,13.0,Pertanian,Bantul,Ada,Investasi,Deposito,Penjualan Aset,472394808.17,34,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dolores""}"
+Pegawai,32.0,9.0,Staf Senior,Outsource,24320232.22,4.0,Tidak Ada,Layak,,,,,,Pendidikan,Kendaraan,Lain-lain,172799817.45,36,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2000, ""atas_nama_kendaraan"": ""Devi Nuraini"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,42294665.04,12.0,Kerajinan,Bantul,Pernah Macet,Konsumsi,Persediaan,Penjualan Aset,285355239.98,41,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""mollitia""}"
+UMKM/Pengusaha,,,,,,,,Layak,143035052.93,5.0,Transportasi,Sleman,Tidak Ada,Pembelian Aset,Tanah/Bangunan,Lain-lain,303094641.44,40,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""occaecati""}"
+UMKM/Pengusaha,,,,,,,,Layak,49670089.13,12.0,Jasa,Online,Tidak Ada,Renovasi,Tanah/Bangunan,Penjualan Aset,430003749.37,29,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quibusdam""}"
+UMKM/Pengusaha,,,,,,,,Layak,77296833.98,15.0,Transportasi,Yogyakarta Kota,Tidak Ada,Renovasi,Piutang,Lain-lain,48133926.52,51,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""cupiditate""}"
+UMKM/Pengusaha,,,,,,,,Layak,166409898.37,11.0,Perdagangan,Yogyakarta Kota,Pernah Macet,Investasi,Tidak Ada,Lain-lain,125757332.32,29,
+UMKM/Pengusaha,,,,,,,,Layak,125892629.68,11.0,Kuliner,Pedesaan,Pernah Macet,Konsumsi,Persediaan,Usaha Sendiri,410004562.54,55,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""provident""}"
+Pegawai,34.0,24.0,Staf Senior,Kontrak,9765648.92,4.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Deposito,Lain-lain,136224041.87,7,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nam""}"
+UMKM/Pengusaha,,,,,,,,Layak,195934982.59,12.0,Perdagangan,Yogyakarta Kota,Ada,Investasi,Deposito,Penjualan Aset,11192765.78,63,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""voluptatum""}"
+UMKM/Pengusaha,,,,,,,,Layak,121539313.9,6.0,Jasa,Pinggir Kota,Pernah Macet,Renovasi,Tanah/Bangunan,Usaha Sendiri,50149508.73,24,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""maiores""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,102432910.47,4.0,Manufaktur,Pusat Kota,Pernah Macet,Investasi,Tidak Ada,Penjualan Aset,394731476.29,14,
+UMKM/Pengusaha,,,,,,,,Layak,157188758.39,1.0,Pertanian,Pinggir Kota,Tidak Ada,Investasi,Kendaraan,Tambahan Modal,217436867.37,33,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2014, ""atas_nama_kendaraan"": ""Taufan Prayoga, S.IP"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,75710025.53,7.0,Kerajinan,Pusat Kota,Pernah Macet,Modal Kerja,Emas,Tambahan Modal,138128401.95,68,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eius""}"
+Pegawai,41.0,0.0,Staf Pelaksana,Kontrak,20194531.12,1.0,Tidak Ada,Layak,,,,,,Pendidikan,Persediaan,Gaji,269159149.63,11,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""assumenda""}"
+UMKM/Pengusaha,,,,,,,,Layak,52707353.84,15.0,Transportasi,Yogyakarta Kota,Tidak Ada,Konsumsi,Tanah/Bangunan,Tambahan Modal,438788446.02,31,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""aliquid""}"
+UMKM/Pengusaha,,,,,,,,Layak,91855980.81,4.0,Pertanian,Pedesaan,Tidak Ada,Investasi,Kendaraan,Tambahan Modal,78895103.78,60,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2014, ""atas_nama_kendaraan"": ""drg. Karma Hutasoit, M.M."", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,59.0,31.0,Staf Pelaksana,Kontrak,13712576.94,2.0,Ada,Layak,,,,,,Pendidikan,Kendaraan,Bonus,303664389.14,34,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2012, ""atas_nama_kendaraan"": ""Ajimat Widiastuti"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,44.0,34.0,Administrasi,Outsource,14072606.23,3.0,Pernah Macet,Pertimbangkan,,,,,,Pendidikan,Piutang,Lain-lain,384610107.13,56,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""neque""}"
+UMKM/Pengusaha,,,,,,,,Layak,123947915.96,3.0,IT,Yogyakarta Kota,Ada,Renovasi,Kendaraan,Usaha Sendiri,356158389.72,41,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2018, ""atas_nama_kendaraan"": ""Cut Ella Safitri"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,51.0,15.0,Administrasi,Kontrak,12282926.78,3.0,Pernah Macet,Pertimbangkan,,,,,,,Persediaan,,236300840.99,70,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""illo""}"
+Pegawai,31.0,5.0,Staf Senior,Kontrak,25619768.89,0.0,Tidak Ada,Layak,,,,,,Urusan Pribadi,Emas,Gaji,344320454.44,39,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""dolore""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,24356324.36,15.0,Manufaktur,Yogyakarta Kota,Ada,Pembelian Aset,Kendaraan,Penjualan Aset,153490690.27,30,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2010, ""atas_nama_kendaraan"": ""Mutia Sudiati"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,110740852.33,2.0,IT,Bantul,Tidak Ada,Modal Kerja,Kendaraan,Penjualan Aset,266240995.0,63,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2023, ""atas_nama_kendaraan"": ""Dr. Jamil Siregar, M.Farm"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,56466388.72,13.0,Perdagangan,Bantul,Tidak Ada,Renovasi,Piutang,Tambahan Modal,25837896.26,21,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nisi""}"
+Pegawai,45.0,30.0,Staf Pelaksana,Tetap,23603712.15,1.0,Tidak Ada,Layak,,,,,,Urusan Pribadi,Tanah/Bangunan,Pendapatan Lain,398499977.6,68,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""molestiae""}"
+UMKM/Pengusaha,,,,,,,,Layak,135297533.59,12.0,Kuliner,Yogyakarta Kota,Tidak Ada,Renovasi,Piutang,Lain-lain,40958793.2,47,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""non""}"
+Pegawai,49.0,9.0,Staf Senior,Tetap,17164729.65,0.0,Pernah Macet,Pertimbangkan,,,,,,,Tanah/Bangunan,,215825066.56,15,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""natus""}"
+UMKM/Pengusaha,,,,,,,,Layak,198963830.62,4.0,Kuliner,Sleman,Ada,Investasi,Tanah/Bangunan,Usaha Sendiri,170446591.56,6,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""possimus""}"
+Pegawai,35.0,32.0,Supervisor,Kontrak,7231814.76,1.0,Tidak Ada,Layak,,,,,,Lain-lain,Deposito,Bonus,6831567.11,65,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dignissimos""}"
+UMKM/Pengusaha,,,,,,,,Layak,127170085.65,6.0,Perdagangan,Bantul,Ada,Pembelian Aset,Persediaan,Usaha Sendiri,460105920.01,46,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""omnis""}"
+UMKM/Pengusaha,,,,,,,,Layak,107920585.9,1.0,Transportasi,Yogyakarta Kota,Tidak Ada,Konsumsi,Persediaan,Penjualan Aset,9854456.7,21,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""neque""}"
+UMKM/Pengusaha,,,,,,,,Layak,187292978.55,15.0,Pertanian,Online,Ada,Investasi,Persediaan,Lain-lain,249946733.18,52,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quo""}"
+Pegawai,42.0,0.0,Supervisor,Outsource,24166924.73,5.0,Ada,Pertimbangkan,,,,,,,Kendaraan,,435585387.59,13,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2001, ""atas_nama_kendaraan"": ""dr. Darsirah Nababan, S.Ked"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,60.0,1.0,Staf Senior,Kontrak,18894700.1,4.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Kendaraan,Lain-lain,145602303.98,23,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2007, ""atas_nama_kendaraan"": ""Farah Natsir"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,27.0,28.0,Staf Senior,Kontrak,19911178.04,2.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Tanah/Bangunan,Lain-lain,255697572.01,24,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""necessitatibus""}"
+UMKM/Pengusaha,,,,,,,,Layak,106138512.77,10.0,Pertanian,Sleman,Ada,Renovasi,Emas,Usaha Sendiri,19431495.59,69,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""ipsum""}"
+Pegawai,44.0,6.0,Administrasi,Tetap,20271794.98,0.0,Tidak Ada,Layak,,,,,,Renovasi Rumah,Kendaraan,Gaji,291946937.22,22,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2023, ""atas_nama_kendaraan"": ""Sutan Mahmud Winarno"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,33.0,23.0,Staf Senior,Tetap,11973565.78,0.0,Ada,Layak,,,,,,,Tidak Ada,,112486889.99,10,
+Pegawai,45.0,6.0,Supervisor,Outsource,4622005.58,1.0,Ada,Layak,,,,,,Konsumsi,Piutang,Gaji,45581131.22,9,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dicta""}"
+Pegawai,27.0,4.0,Staf Pelaksana,Tetap,18869874.86,0.0,Ada,Pertimbangkan,,,,,,Pembelian Kendaraan,Tanah/Bangunan,Pendapatan Lain,212107806.33,60,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""distinctio""}"
+Pegawai,24.0,1.0,Administrasi,Kontrak,24763044.33,3.0,Tidak Ada,Layak,,,,,,,Tanah/Bangunan,,14258300.57,72,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""maxime""}"
+Pegawai,40.0,25.0,Supervisor,Outsource,24497005.19,3.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Persediaan,Lain-lain,181864012.74,34,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""illo""}"
+Pegawai,49.0,32.0,Staf Senior,Kontrak,9328390.66,5.0,Tidak Ada,Layak,,,,,,Urusan Pribadi,Kendaraan,Pendapatan Lain,226210051.59,68,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2009, ""atas_nama_kendaraan"": ""Gasti Fujiati, S.E."", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,175860879.57,8.0,Kuliner,Sleman,Ada,Modal Kerja,Piutang,Penjualan Aset,480833855.57,9,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dolorum""}"
+UMKM/Pengusaha,,,,,,,,Layak,91973031.7,9.0,Pertanian,Sleman,Ada,Renovasi,Tanah/Bangunan,Lain-lain,270362079.95,35,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""enim""}"
+Pegawai,56.0,16.0,Staf Senior,Tetap,24812278.05,3.0,Tidak Ada,Layak,,,,,,,Persediaan,,136971797.45,30,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""ea""}"
+UMKM/Pengusaha,,,,,,,,Layak,113612651.07,5.0,Perdagangan,Pedesaan,Tidak Ada,Modal Kerja,Tidak Ada,Penjualan Aset,53546598.55,27,
+UMKM/Pengusaha,,,,,,,,Tidak Layak,5567390.97,2.0,Transportasi,Pinggir Kota,Ada,Pembelian Aset,Persediaan,Lain-lain,153664811.79,56,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""non""}"
+UMKM/Pengusaha,,,,,,,,Layak,42209227.07,10.0,Kuliner,Pusat Kota,Ada,Modal Kerja,Emas,Penjualan Aset,210047303.77,24,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""voluptate""}"
+UMKM/Pengusaha,,,,,,,,Layak,192790677.67,11.0,Perdagangan,Pusat Kota,Ada,Renovasi,Piutang,Usaha Sendiri,444667461.61,23,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""odio""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,199599574.75,13.0,Perdagangan,Pedesaan,Pernah Macet,Investasi,Persediaan,Tambahan Modal,231066028.67,6,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""sit""}"
+Pegawai,51.0,10.0,Supervisor,Outsource,12003881.05,3.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Kendaraan,Pendapatan Lain,343208140.12,32,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2020, ""atas_nama_kendaraan"": ""KH. Najam Waluyo, M.M."", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,31.0,33.0,Administrasi,Outsource,22499803.07,1.0,Ada,Layak,,,,,,Urusan Pribadi,Piutang,Bonus,163939874.43,60,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""molestias""}"
+UMKM/Pengusaha,,,,,,,,Layak,168959015.86,9.0,Perdagangan,Yogyakarta Kota,Pernah Macet,Pembelian Aset,Tidak Ada,Usaha Sendiri,167897520.17,33,
+Pegawai,30.0,28.0,Staf Pelaksana,Outsource,4844423.97,4.0,Pernah Macet,Tidak Layak,,,,,,Pendidikan,Deposito,Gaji,235404902.24,69,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""fugiat""}"
+Pegawai,57.0,0.0,Supervisor,Tetap,8928383.84,4.0,Ada,Pertimbangkan,,,,,,,Piutang,,385546930.41,59,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""dolores""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,16291336.94,7.0,IT,Online,Ada,Pembelian Aset,Emas,Tambahan Modal,7194009.25,39,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""architecto""}"
+Pegawai,21.0,8.0,Staf Senior,Outsource,10874181.13,4.0,Tidak Ada,Layak,,,,,,,Kendaraan,,499534481.48,28,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2020, ""atas_nama_kendaraan"": ""dr. Indra Padmasari, S.Farm"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,42.0,22.0,Supervisor,Tetap,12364224.74,4.0,Ada,Layak,,,,,,,Emas,,93715775.35,34,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""cumque""}"
+UMKM/Pengusaha,,,,,,,,Layak,93715605.49,11.0,Transportasi,Sleman,Pernah Macet,Renovasi,Tanah/Bangunan,Lain-lain,406970495.29,13,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nulla""}"
+UMKM/Pengusaha,,,,,,,,Layak,91749585.83,11.0,IT,Pinggir Kota,Ada,Pembelian Aset,Tidak Ada,Tambahan Modal,365001482.18,62,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,162217718.41,5.0,Transportasi,Pinggir Kota,Ada,Investasi,Kendaraan,Usaha Sendiri,6026313.08,21,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2019, ""atas_nama_kendaraan"": ""Betania Permadi"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Tidak Layak,13332072.4,7.0,Kerajinan,Pinggir Kota,Pernah Macet,Renovasi,Emas,Lain-lain,314442794.33,55,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ad""}"
+Pegawai,39.0,18.0,Staf Pelaksana,Tetap,14271354.94,0.0,Ada,Layak,,,,,,Lain-lain,Kendaraan,Gaji,349413432.95,28,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2017, ""atas_nama_kendaraan"": ""Hilda Lailasari"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,35.0,31.0,Supervisor,Tetap,29444297.29,0.0,Tidak Ada,Layak,,,,,,,Kendaraan,,337550532.95,27,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2000, ""atas_nama_kendaraan"": ""Suci Yuliarti"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,34.0,16.0,Administrasi,Kontrak,23945268.56,2.0,Ada,Layak,,,,,,Konsumsi,Emas,Gaji,464563114.9,67,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dolore""}"
+Pegawai,58.0,4.0,Staf Senior,Outsource,19357219.18,3.0,Pernah Macet,Tidak Layak,,,,,,Pendidikan,Kendaraan,Pendapatan Lain,454204993.69,43,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2024, ""atas_nama_kendaraan"": ""Gamanto Handayani"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,81191614.75,2.0,Jasa,Bantul,Tidak Ada,Modal Kerja,Emas,Usaha Sendiri,412132331.24,50,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""deleniti""}"
+Pegawai,51.0,17.0,Supervisor,Outsource,11476865.54,5.0,Tidak Ada,Layak,,,,,,,Tanah/Bangunan,,490915802.37,53,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quos""}"
+UMKM/Pengusaha,,,,,,,,Layak,183591323.23,6.0,Perdagangan,Bantul,Tidak Ada,Pembelian Aset,Persediaan,Penjualan Aset,357035494.6,7,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""dignissimos""}"
+Pegawai,29.0,0.0,Staf Senior,Outsource,13472942.02,2.0,Ada,Pertimbangkan,,,,,,Urusan Pribadi,Persediaan,Pendapatan Lain,493141622.11,40,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""similique""}"
+Pegawai,27.0,12.0,Staf Senior,Outsource,29646563.26,3.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Deposito,Pendapatan Lain,71074811.52,63,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nobis""}"
+UMKM/Pengusaha,,,,,,,,Layak,87524083.07,7.0,Jasa,Yogyakarta Kota,Pernah Macet,Investasi,Tanah/Bangunan,Penjualan Aset,332872893.73,64,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""eaque""}"
+UMKM/Pengusaha,,,,,,,,Layak,33360077.53,10.0,Jasa,Pinggir Kota,Tidak Ada,Konsumsi,Persediaan,Lain-lain,306044591.6,14,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nulla""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,109978170.6,13.0,Manufaktur,Pusat Kota,Pernah Macet,Investasi,Tidak Ada,Penjualan Aset,442358434.59,51,
+UMKM/Pengusaha,,,,,,,,Layak,150728101.76,2.0,Jasa,Pusat Kota,Ada,Pembelian Aset,Kendaraan,Lain-lain,430268527.42,11,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2014, ""atas_nama_kendaraan"": ""Eko Habibi"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,34794359.16,11.0,Transportasi,Pedesaan,Pernah Macet,Pembelian Aset,Kendaraan,Penjualan Aset,191494648.65,15,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2013, ""atas_nama_kendaraan"": ""Emil Permata, S.T."", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,43.0,8.0,Administrasi,Outsource,19775939.6,2.0,Ada,Layak,,,,,,,Kendaraan,,400312647.0,7,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2006, ""atas_nama_kendaraan"": ""Ayu Padmasari"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,118407532.08,2.0,Pertanian,Sleman,Tidak Ada,Investasi,Persediaan,Penjualan Aset,240428222.16,70,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""aliquam""}"
+Pegawai,25.0,5.0,Staf Senior,Tetap,27324509.28,2.0,Tidak Ada,Layak,,,,,,,Deposito,,112326255.84,12,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nesciunt""}"
+UMKM/Pengusaha,,,,,,,,Layak,50011461.18,10.0,Jasa,Pinggir Kota,Tidak Ada,Modal Kerja,Tanah/Bangunan,Lain-lain,483801810.04,21,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""occaecati""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,195106134.51,2.0,Pertanian,Yogyakarta Kota,Pernah Macet,Konsumsi,Tidak Ada,Tambahan Modal,378017849.77,62,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,129014039.28,5.0,Kerajinan,Pinggir Kota,Ada,Investasi,Kendaraan,Lain-lain,220627594.82,27,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2010, ""atas_nama_kendaraan"": ""Almira Mayasari"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Tidak Layak,26242346.9,14.0,Pertanian,Bantul,Pernah Macet,Renovasi,Tidak Ada,Penjualan Aset,248579711.47,44,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,140096467.57,2.0,Transportasi,Pinggir Kota,Pernah Macet,Konsumsi,Deposito,Usaha Sendiri,178218355.3,23,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eligendi""}"
+UMKM/Pengusaha,,,,,,,,Layak,88358990.19,1.0,IT,Yogyakarta Kota,Tidak Ada,Modal Kerja,Persediaan,Penjualan Aset,355391997.77,9,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""dolorem""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,101746672.18,1.0,Pertanian,Pinggir Kota,Ada,Konsumsi,Tidak Ada,Tambahan Modal,467183665.26,30,
+Pegawai,58.0,13.0,Staf Pelaksana,Tetap,16897884.97,2.0,Ada,Layak,,,,,,Pembelian Kendaraan,Kendaraan,Bonus,187589003.11,11,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2019, ""atas_nama_kendaraan"": ""Ilsa Kuswandari"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,52.0,17.0,Staf Senior,Tetap,10372257.71,4.0,Pernah Macet,Pertimbangkan,,,,,,Pendidikan,Deposito,Gaji,385394481.13,30,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""itaque""}"
+Pegawai,32.0,28.0,Administrasi,Kontrak,27050517.54,4.0,Ada,Layak,,,,,,,Kendaraan,,51741463.11,27,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2021, ""atas_nama_kendaraan"": ""Melinda Natsir"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,164814864.48,5.0,Jasa,Online,Tidak Ada,Modal Kerja,Deposito,Penjualan Aset,329332940.69,64,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""natus""}"
+Pegawai,55.0,11.0,Supervisor,Outsource,12379558.76,0.0,Ada,Layak,,,,,,Renovasi Rumah,Piutang,Lain-lain,199364385.08,11,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""cupiditate""}"
+UMKM/Pengusaha,,,,,,,,Layak,188871717.97,15.0,Jasa,Pinggir Kota,Ada,Pembelian Aset,Kendaraan,Lain-lain,298530870.2,12,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2000, ""atas_nama_kendaraan"": ""Suci Mardhiyah"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,32162167.31,12.0,Kuliner,Pinggir Kota,Ada,Renovasi,Piutang,Lain-lain,480247067.1,50,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nobis""}"
+UMKM/Pengusaha,,,,,,,,Layak,108058235.78,13.0,Transportasi,Pinggir Kota,Ada,Konsumsi,Tidak Ada,Penjualan Aset,43614734.0,20,
+Pegawai,28.0,29.0,Administrasi,Outsource,19661353.64,5.0,Ada,Pertimbangkan,,,,,,Pendidikan,Emas,Bonus,494329432.55,49,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quam""}"
+Pegawai,36.0,24.0,Administrasi,Kontrak,12646685.97,4.0,Ada,Layak,,,,,,Pendidikan,Persediaan,Gaji,54065936.71,30,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""consequatur""}"
+UMKM/Pengusaha,,,,,,,,Layak,75941407.89,12.0,Manufaktur,Bantul,Tidak Ada,Modal Kerja,Emas,Lain-lain,167645340.84,6,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""omnis""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,9000062.01,15.0,Kerajinan,Yogyakarta Kota,Ada,Konsumsi,Persediaan,Lain-lain,114297707.92,56,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""ex""}"
+Pegawai,45.0,4.0,Administrasi,Outsource,11439994.66,3.0,Tidak Ada,Pertimbangkan,,,,,,Renovasi Rumah,Kendaraan,Pendapatan Lain,471502659.98,32,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2004, ""atas_nama_kendaraan"": ""Karimah Hidayanto"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,39.0,21.0,Staf Senior,Outsource,10866419.6,2.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Persediaan,Lain-lain,302959477.14,49,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""illo""}"
+Pegawai,36.0,8.0,Staf Senior,Outsource,18088057.58,1.0,Pernah Macet,Layak,,,,,,Pembelian Kendaraan,Kendaraan,Bonus,163371005.43,62,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2000, ""atas_nama_kendaraan"": ""Devi Jailani"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,35.0,4.0,Supervisor,Outsource,8419929.19,5.0,Ada,Pertimbangkan,,,,,,Renovasi Rumah,Deposito,Gaji,498628241.12,52,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eius""}"
+Pegawai,39.0,3.0,Staf Pelaksana,Tetap,29358890.25,0.0,Pernah Macet,Pertimbangkan,,,,,,,Tidak Ada,,483340633.26,19,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,150667707.99,14.0,Transportasi,Pinggir Kota,Pernah Macet,Konsumsi,Persediaan,Lain-lain,349570746.61,63,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""aperiam""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,73698285.65,11.0,Manufaktur,Pinggir Kota,Pernah Macet,Modal Kerja,Persediaan,Penjualan Aset,87591247.84,55,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""perspiciatis""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,169899835.3,1.0,Transportasi,Bantul,Ada,Modal Kerja,Tanah/Bangunan,Usaha Sendiri,175496899.44,48,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""corporis""}"
+Pegawai,32.0,11.0,Supervisor,Outsource,23757799.52,0.0,Ada,Layak,,,,,,,Kendaraan,,205748154.03,29,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2004, ""atas_nama_kendaraan"": ""Rama Wastuti"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,103015765.06,9.0,Lainnya,Online,Ada,Modal Kerja,Tidak Ada,Tambahan Modal,467535187.93,32,
+Pegawai,36.0,23.0,Administrasi,Tetap,7196761.62,3.0,Ada,Pertimbangkan,,,,,,Urusan Pribadi,Kendaraan,Lain-lain,222939569.78,9,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2022, ""atas_nama_kendaraan"": ""Farah Salahudin, S.I.Kom"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,75162810.4,11.0,Pertanian,Yogyakarta Kota,Tidak Ada,Modal Kerja,Emas,Tambahan Modal,314682262.08,46,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quod""}"
+Pegawai,35.0,4.0,Supervisor,Outsource,19726643.03,1.0,Ada,Pertimbangkan,,,,,,,Tidak Ada,,227294350.8,57,
+UMKM/Pengusaha,,,,,,,,Layak,156803770.67,10.0,Pertanian,Pinggir Kota,Tidak Ada,Pembelian Aset,Emas,Lain-lain,387937202.49,50,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""adipisci""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,24426528.18,12.0,IT,Pusat Kota,Pernah Macet,Modal Kerja,Kendaraan,Usaha Sendiri,485426881.26,51,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2008, ""atas_nama_kendaraan"": ""Humaira Simanjuntak"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,20426333.37,6.0,Kerajinan,Pinggir Kota,Tidak Ada,Konsumsi,Piutang,Lain-lain,35834779.91,23,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eligendi""}"
+Pegawai,51.0,2.0,Staf Pelaksana,Kontrak,6122619.42,3.0,Tidak Ada,Pertimbangkan,,,,,,,Piutang,,466324912.16,37,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""magni""}"
+UMKM/Pengusaha,,,,,,,,Layak,49875693.81,12.0,Lainnya,Pedesaan,Ada,Investasi,Kendaraan,Tambahan Modal,71174359.15,67,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2016, ""atas_nama_kendaraan"": ""KH. Kayun Sihotang"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,33063728.61,8.0,IT,Pusat Kota,Pernah Macet,Konsumsi,Kendaraan,Usaha Sendiri,144069899.37,31,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2004, ""atas_nama_kendaraan"": ""Jelita Pranowo"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,59.0,10.0,Supervisor,Tetap,15448170.47,5.0,Ada,Layak,,,,,,Konsumsi,Tidak Ada,Pendapatan Lain,52633039.71,47,
+UMKM/Pengusaha,,,,,,,,Layak,87630994.41,7.0,Perdagangan,Yogyakarta Kota,Pernah Macet,Pembelian Aset,Emas,Tambahan Modal,413388345.34,65,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""totam""}"
+UMKM/Pengusaha,,,,,,,,Layak,57451151.04,8.0,Jasa,Pusat Kota,Pernah Macet,Konsumsi,Deposito,Lain-lain,293998631.56,40,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""atque""}"
+UMKM/Pengusaha,,,,,,,,Layak,154291450.33,10.0,Transportasi,Online,Ada,Modal Kerja,Tanah/Bangunan,Lain-lain,426450240.65,54,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""repellendus""}"
+Pegawai,24.0,5.0,Supervisor,Kontrak,23261233.12,0.0,Ada,Pertimbangkan,,,,,,,Tidak Ada,,481923666.01,66,
+UMKM/Pengusaha,,,,,,,,Layak,137946087.36,9.0,Lainnya,Online,Ada,Renovasi,Tanah/Bangunan,Penjualan Aset,101757367.73,68,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""consectetur""}"
+UMKM/Pengusaha,,,,,,,,Layak,194761155.16,15.0,Lainnya,Pusat Kota,Tidak Ada,Investasi,Kendaraan,Usaha Sendiri,30982101.95,25,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2005, ""atas_nama_kendaraan"": ""Najwa Maryati, S.Pd"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,91089270.2,5.0,Transportasi,Online,Tidak Ada,Investasi,Tanah/Bangunan,Tambahan Modal,488147196.73,22,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""hic""}"
+UMKM/Pengusaha,,,,,,,,Layak,186525509.99,13.0,Kerajinan,Pusat Kota,Ada,Renovasi,Persediaan,Usaha Sendiri,95808370.85,65,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""voluptatibus""}"
+Pegawai,56.0,22.0,Staf Senior,Tetap,10017950.83,4.0,Pernah Macet,Pertimbangkan,,,,,,Konsumsi,Persediaan,Pendapatan Lain,332139584.1,33,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""expedita""}"
+UMKM/Pengusaha,,,,,,,,Layak,86429732.16,4.0,Pertanian,Sleman,Tidak Ada,Konsumsi,Tidak Ada,Penjualan Aset,373367474.65,61,
+Pegawai,28.0,22.0,Staf Senior,Kontrak,4311906.55,3.0,Ada,Pertimbangkan,,,,,,Pendidikan,Tidak Ada,Pendapatan Lain,141307008.7,17,
+UMKM/Pengusaha,,,,,,,,Layak,153562943.16,3.0,Perdagangan,Sleman,Tidak Ada,Konsumsi,Persediaan,Tambahan Modal,50991103.29,58,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""temporibus""}"
+Pegawai,56.0,14.0,Staf Pelaksana,Outsource,23283515.58,1.0,Ada,Layak,,,,,,Urusan Pribadi,Emas,Gaji,92186914.42,58,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""voluptatum""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,19829632.03,9.0,IT,Pedesaan,Ada,Konsumsi,Tidak Ada,Tambahan Modal,143587076.14,7,
+Pegawai,59.0,20.0,Staf Senior,Kontrak,13796253.35,2.0,Tidak Ada,Layak,,,,,,Konsumsi,Persediaan,Bonus,247075078.5,17,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""provident""}"
+Pegawai,38.0,28.0,Administrasi,Kontrak,21307751.16,5.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Tanah/Bangunan,Gaji,181813746.29,15,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""perspiciatis""}"
+Pegawai,53.0,6.0,Supervisor,Outsource,11231699.32,5.0,Ada,Pertimbangkan,,,,,,Lain-lain,Piutang,Bonus,370972742.36,60,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""in""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,119040688.41,12.0,Perdagangan,Bantul,Pernah Macet,Konsumsi,Tanah/Bangunan,Penjualan Aset,321005982.15,51,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""harum""}"
+UMKM/Pengusaha,,,,,,,,Layak,61494673.22,1.0,IT,Pusat Kota,Tidak Ada,Renovasi,Persediaan,Usaha Sendiri,175044653.73,64,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""blanditiis""}"
+UMKM/Pengusaha,,,,,,,,Layak,47069937.83,12.0,Kuliner,Yogyakarta Kota,Pernah Macet,Renovasi,Tidak Ada,Usaha Sendiri,308654714.87,49,
+Pegawai,44.0,0.0,Supervisor,Outsource,21993502.21,2.0,Tidak Ada,Layak,,,,,,,Deposito,,351187320.12,12,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""eligendi""}"
+Pegawai,45.0,7.0,Administrasi,Outsource,8626427.55,4.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Deposito,Bonus,181694641.29,38,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""est""}"
+Pegawai,57.0,25.0,Staf Pelaksana,Kontrak,4129715.5,4.0,Ada,Pertimbangkan,,,,,,,Kendaraan,,61909183.16,30,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2013, ""atas_nama_kendaraan"": ""Respati Waskita"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,111648816.42,7.0,Kuliner,Pusat Kota,Tidak Ada,Renovasi,Persediaan,Tambahan Modal,352767324.63,57,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""officiis""}"
+Pegawai,39.0,18.0,Staf Senior,Kontrak,18124642.88,1.0,Tidak Ada,Layak,,,,,,,Emas,,111390063.61,16,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""perferendis""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,110901274.86,4.0,Transportasi,Pinggir Kota,Ada,Investasi,Tidak Ada,Tambahan Modal,81413868.15,61,
+UMKM/Pengusaha,,,,,,,,Layak,151454483.08,14.0,Lainnya,Yogyakarta Kota,Pernah Macet,Pembelian Aset,Tidak Ada,Penjualan Aset,201980925.95,20,
+Pegawai,55.0,13.0,Staf Senior,Outsource,24516332.97,5.0,Ada,Layak,,,,,,,Tanah/Bangunan,,222676372.11,38,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quas""}"
+Pegawai,32.0,18.0,Administrasi,Tetap,21912687.97,0.0,Pernah Macet,Pertimbangkan,,,,,,,Piutang,,431287134.15,10,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nam""}"
+Pegawai,49.0,16.0,Administrasi,Kontrak,18410287.39,0.0,Tidak Ada,Layak,,,,,,Urusan Pribadi,Piutang,Lain-lain,15201704.28,43,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""alias""}"
+Pegawai,45.0,11.0,Administrasi,Tetap,20073827.44,0.0,Ada,Layak,,,,,,Pendidikan,Persediaan,Gaji,6167085.55,46,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""natus""}"
+UMKM/Pengusaha,,,,,,,,Layak,176762425.73,15.0,IT,Pedesaan,Ada,Pembelian Aset,Deposito,Lain-lain,68379644.7,65,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""animi""}"
+UMKM/Pengusaha,,,,,,,,Layak,80921901.4,15.0,Transportasi,Bantul,Ada,Konsumsi,Tidak Ada,Tambahan Modal,191373692.41,26,
+UMKM/Pengusaha,,,,,,,,Layak,96022248.83,1.0,Perdagangan,Yogyakarta Kota,Ada,Modal Kerja,Tidak Ada,Usaha Sendiri,10850411.41,11,
+Pegawai,57.0,15.0,Administrasi,Outsource,8208652.96,2.0,Ada,Layak,,,,,,Urusan Pribadi,Deposito,Pendapatan Lain,59783140.79,30,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""inventore""}"
+UMKM/Pengusaha,,,,,,,,Layak,97345541.7,6.0,Kerajinan,Pedesaan,Ada,Konsumsi,Tidak Ada,Usaha Sendiri,301173458.18,63,
+Pegawai,24.0,1.0,Staf Senior,Tetap,4333766.08,3.0,Ada,Tidak Layak,,,,,,,Tanah/Bangunan,,80739791.43,64,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""mollitia""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,22399299.76,6.0,Lainnya,Pinggir Kota,Ada,Pembelian Aset,Emas,Usaha Sendiri,260425873.13,41,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""aliquid""}"
+Pegawai,37.0,27.0,Supervisor,Kontrak,21029416.65,1.0,Pernah Macet,Layak,,,,,,,Emas,,132766763.0,70,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quas""}"
+Pegawai,47.0,33.0,Supervisor,Outsource,4668768.38,5.0,Pernah Macet,Tidak Layak,,,,,,,Emas,,292149377.68,44,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""magnam""}"
+UMKM/Pengusaha,,,,,,,,Layak,138873831.9,5.0,Jasa,Yogyakarta Kota,Pernah Macet,Investasi,Deposito,Penjualan Aset,251797240.07,15,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""placeat""}"
+Pegawai,28.0,12.0,Administrasi,Kontrak,15945624.93,0.0,Ada,Layak,,,,,,Urusan Pribadi,Piutang,Lain-lain,498837457.9,23,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""sunt""}"
+UMKM/Pengusaha,,,,,,,,Layak,198370695.54,13.0,Lainnya,Pedesaan,Ada,Konsumsi,Tidak Ada,Usaha Sendiri,106424079.13,49,
+Pegawai,28.0,22.0,Staf Senior,Tetap,4238934.38,1.0,Tidak Ada,Layak,,,,,,Pendidikan,Deposito,Pendapatan Lain,413510248.63,16,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""harum""}"
+Pegawai,56.0,21.0,Supervisor,Outsource,20084562.95,4.0,Ada,Layak,,,,,,Konsumsi,Piutang,Lain-lain,27043686.02,34,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""placeat""}"
+Pegawai,57.0,21.0,Administrasi,Outsource,18605643.59,5.0,Tidak Ada,Layak,,,,,,,Kendaraan,,436659081.1,19,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2009, ""atas_nama_kendaraan"": ""Aslijan Mahendra"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,48.0,21.0,Supervisor,Tetap,27057176.78,2.0,Tidak Ada,Layak,,,,,,Pembelian Kendaraan,Tanah/Bangunan,Lain-lain,375836901.2,20,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""facilis""}"
+UMKM/Pengusaha,,,,,,,,Layak,65091670.3,7.0,Jasa,Yogyakarta Kota,Tidak Ada,Pembelian Aset,Kendaraan,Lain-lain,177620167.2,27,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2006, ""atas_nama_kendaraan"": ""Gawati Narpati"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,45.0,3.0,Staf Pelaksana,Tetap,24004696.99,5.0,Pernah Macet,Pertimbangkan,,,,,,Konsumsi,Deposito,Bonus,88622565.77,45,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""laboriosam""}"
+Pegawai,59.0,0.0,Supervisor,Tetap,25131084.81,4.0,Ada,Pertimbangkan,,,,,,,Deposito,,43449071.3,68,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""facere""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,115412962.18,2.0,Lainnya,Pedesaan,Ada,Konsumsi,Persediaan,Penjualan Aset,202148507.16,12,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""sapiente""}"
+Pegawai,54.0,25.0,Administrasi,Kontrak,11774891.48,5.0,Tidak Ada,Layak,,,,,,Pendidikan,Piutang,Pendapatan Lain,468454905.15,19,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""voluptates""}"
+UMKM/Pengusaha,,,,,,,,Layak,159618504.7,8.0,Kerajinan,Pusat Kota,Ada,Modal Kerja,Tanah/Bangunan,Penjualan Aset,12363954.77,13,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ea""}"
+Pegawai,56.0,34.0,Staf Senior,Kontrak,24981883.45,1.0,Tidak Ada,Layak,,,,,,Lain-lain,Tanah/Bangunan,Lain-lain,204746512.88,34,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""aspernatur""}"
+UMKM/Pengusaha,,,,,,,,Layak,197760694.05,10.0,Kuliner,Yogyakarta Kota,Pernah Macet,Renovasi,Piutang,Usaha Sendiri,178683196.17,23,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""non""}"
+UMKM/Pengusaha,,,,,,,,Layak,117547902.75,11.0,Kerajinan,Sleman,Tidak Ada,Renovasi,Deposito,Usaha Sendiri,391100832.53,62,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""commodi""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,20782868.93,14.0,Manufaktur,Online,Ada,Investasi,Tanah/Bangunan,Penjualan Aset,60719351.7,17,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quisquam""}"
+Pegawai,29.0,20.0,Staf Pelaksana,Outsource,15919836.54,5.0,Pernah Macet,Pertimbangkan,,,,,,,Emas,,376044780.11,15,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""esse""}"
+Pegawai,26.0,24.0,Supervisor,Kontrak,9287564.99,0.0,Ada,Layak,,,,,,,Kendaraan,,332069293.4,57,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2017, ""atas_nama_kendaraan"": ""Queen Megantara"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,33.0,16.0,Staf Pelaksana,Outsource,9604505.86,2.0,Tidak Ada,Layak,,,,,,Urusan Pribadi,Tanah/Bangunan,Bonus,294038593.93,30,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""numquam""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,44721563.24,5.0,Perdagangan,Pedesaan,Pernah Macet,Modal Kerja,Tidak Ada,Lain-lain,387507052.05,28,
+UMKM/Pengusaha,,,,,,,,Layak,109332815.66,9.0,IT,Pedesaan,Tidak Ada,Renovasi,Piutang,Lain-lain,334888955.4,44,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""possimus""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,81038969.11,5.0,Manufaktur,Pusat Kota,Pernah Macet,Konsumsi,Piutang,Penjualan Aset,374483123.43,46,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""voluptate""}"
+Pegawai,49.0,20.0,Staf Pelaksana,Tetap,15436289.68,1.0,Pernah Macet,Pertimbangkan,,,,,,Urusan Pribadi,Tidak Ada,Bonus,226745022.42,24,
+Pegawai,47.0,27.0,Administrasi,Outsource,24091757.99,0.0,Pernah Macet,Pertimbangkan,,,,,,,Kendaraan,,301234933.21,48,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2009, ""atas_nama_kendaraan"": ""Cayadi Nashiruddin, S.Gz"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,29.0,9.0,Staf Pelaksana,Outsource,27559053.58,0.0,Ada,Layak,,,,,,,Tanah/Bangunan,,341518402.74,8,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dolores""}"
+Pegawai,29.0,13.0,Administrasi,Outsource,10286236.45,0.0,Ada,Layak,,,,,,,Tidak Ada,,243705116.28,9,
+UMKM/Pengusaha,,,,,,,,Layak,178721606.02,6.0,Kuliner,Pedesaan,Pernah Macet,Investasi,Tanah/Bangunan,Usaha Sendiri,58594678.03,47,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""dolore""}"
+UMKM/Pengusaha,,,,,,,,Layak,163667662.81,14.0,Kuliner,Yogyakarta Kota,Tidak Ada,Konsumsi,Emas,Lain-lain,303681246.25,31,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""aut""}"
+Pegawai,44.0,35.0,Supervisor,Tetap,25352324.81,0.0,Pernah Macet,Layak,,,,,,,Persediaan,,128695873.15,48,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""a""}"
+UMKM/Pengusaha,,,,,,,,Layak,73291413.69,12.0,Jasa,Pusat Kota,Ada,Konsumsi,Deposito,Usaha Sendiri,117380009.34,15,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""sit""}"
+UMKM/Pengusaha,,,,,,,,Layak,121916873.64,8.0,Kerajinan,Pinggir Kota,Tidak Ada,Modal Kerja,Persediaan,Penjualan Aset,193360065.62,40,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dolore""}"
+Pegawai,60.0,5.0,Staf Senior,Tetap,29757745.26,1.0,Tidak Ada,Layak,,,,,,Konsumsi,Tanah/Bangunan,Bonus,88704493.71,25,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""assumenda""}"
+Pegawai,55.0,29.0,Administrasi,Outsource,6305705.07,5.0,Ada,Pertimbangkan,,,,,,,Tanah/Bangunan,,208671073.61,66,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""at""}"
+Pegawai,51.0,29.0,Administrasi,Outsource,17903700.77,2.0,Ada,Layak,,,,,,,Piutang,,480156600.22,10,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quia""}"
+Pegawai,57.0,33.0,Administrasi,Outsource,7833274.58,5.0,Ada,Pertimbangkan,,,,,,Konsumsi,Piutang,Bonus,422573101.08,71,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""porro""}"
+UMKM/Pengusaha,,,,,,,,Layak,180903520.39,13.0,Manufaktur,Pusat Kota,Ada,Konsumsi,Emas,Penjualan Aset,184165236.5,19,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""dolorum""}"
+UMKM/Pengusaha,,,,,,,,Layak,98297911.3,12.0,Transportasi,Bantul,Ada,Pembelian Aset,Tidak Ada,Usaha Sendiri,52074883.37,13,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,66543559.87,15.0,Pertanian,Pedesaan,Pernah Macet,Renovasi,Deposito,Usaha Sendiri,439756644.26,22,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""rerum""}"
+Pegawai,51.0,2.0,Administrasi,Kontrak,16381933.67,4.0,Ada,Pertimbangkan,,,,,,Lain-lain,Tanah/Bangunan,Gaji,440110973.74,39,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""laudantium""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,35467987.4,3.0,IT,Pedesaan,Pernah Macet,Renovasi,Kendaraan,Tambahan Modal,476292147.51,32,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2017, ""atas_nama_kendaraan"": ""Karja Mardhiyah"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,72449939.34,9.0,IT,Online,Tidak Ada,Modal Kerja,Deposito,Tambahan Modal,334170307.4,72,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nostrum""}"
+UMKM/Pengusaha,,,,,,,,Layak,107793801.82,11.0,Jasa,Pedesaan,Tidak Ada,Investasi,Persediaan,Tambahan Modal,310867661.66,32,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""occaecati""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,147025601.27,13.0,Pertanian,Pinggir Kota,Pernah Macet,Pembelian Aset,Piutang,Penjualan Aset,183163410.86,66,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""perferendis""}"
+Pegawai,40.0,5.0,Staf Pelaksana,Outsource,9653860.57,3.0,Tidak Ada,Pertimbangkan,,,,,,Urusan Pribadi,Persediaan,Bonus,226464059.81,47,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""numquam""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,126325557.12,5.0,Perdagangan,Pedesaan,Ada,Konsumsi,Kendaraan,Lain-lain,112981898.17,31,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2010, ""atas_nama_kendaraan"": ""Raisa Lailasari"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,30.0,12.0,Administrasi,Kontrak,23007456.68,1.0,Pernah Macet,Pertimbangkan,,,,,,,Tanah/Bangunan,,394742064.96,50,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""voluptates""}"
+Pegawai,47.0,18.0,Staf Senior,Kontrak,13841605.65,0.0,Tidak Ada,Layak,,,,,,Konsumsi,Kendaraan,Pendapatan Lain,496517715.33,64,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2000, ""atas_nama_kendaraan"": ""Hairyanto Utami"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,32.0,8.0,Staf Senior,Kontrak,10413590.12,0.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Emas,Pendapatan Lain,227820633.34,40,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""enim""}"
+Pegawai,42.0,7.0,Staf Senior,Tetap,10452228.65,4.0,Ada,Pertimbangkan,,,,,,,Tanah/Bangunan,,157709423.82,60,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""doloremque""}"
+Pegawai,28.0,15.0,Staf Senior,Outsource,22666763.64,0.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Kendaraan,Pendapatan Lain,342715312.03,31,"{""merk_kendaraan"": ""Suzuki"", ""tahun_kendaraan"": 2019, ""atas_nama_kendaraan"": ""Daryani Saptono"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,62729140.76,14.0,Kuliner,Yogyakarta Kota,Tidak Ada,Investasi,Tanah/Bangunan,Tambahan Modal,347619385.96,68,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""totam""}"
+UMKM/Pengusaha,,,,,,,,Layak,170919408.15,7.0,Perdagangan,Pinggir Kota,Ada,Konsumsi,Tanah/Bangunan,Lain-lain,422944781.84,47,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""aliquam""}"
+Pegawai,33.0,24.0,Staf Pelaksana,Tetap,6613261.96,0.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Emas,Lain-lain,483028398.64,68,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""delectus""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,69520677.4,13.0,Pertanian,Pusat Kota,Pernah Macet,Konsumsi,Kendaraan,Lain-lain,95935189.79,37,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2022, ""atas_nama_kendaraan"": ""Dewi Lestari"", ""lokasi_jaminan"": ""Yogyakarta""}"
+UMKM/Pengusaha,,,,,,,,Layak,134975560.95,14.0,IT,Pusat Kota,Pernah Macet,Renovasi,Emas,Penjualan Aset,10424628.78,16,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ducimus""}"
+UMKM/Pengusaha,,,,,,,,Layak,104692852.51,5.0,Lainnya,Pedesaan,Tidak Ada,Investasi,Emas,Penjualan Aset,287474171.09,58,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quisquam""}"
+Pegawai,48.0,31.0,Supervisor,Outsource,14477974.74,2.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Tidak Ada,Pendapatan Lain,150183877.18,34,
+Pegawai,58.0,30.0,Supervisor,Outsource,7275295.7,0.0,Ada,Layak,,,,,,Urusan Pribadi,Kendaraan,Gaji,64349060.89,38,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2020, ""atas_nama_kendaraan"": ""Maryadi Prastuti, M.Pd"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,46.0,9.0,Supervisor,Outsource,20005404.93,2.0,Pernah Macet,Pertimbangkan,,,,,,Pendidikan,Kendaraan,Pendapatan Lain,248506776.85,26,"{""merk_kendaraan"": ""Honda"", ""tahun_kendaraan"": 2013, ""atas_nama_kendaraan"": ""Rachel Namaga"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,50.0,9.0,Supervisor,Tetap,22096184.35,0.0,Pernah Macet,Layak,,,,,,,Emas,,25456006.89,59,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nisi""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,21720109.75,13.0,Lainnya,Sleman,Pernah Macet,Modal Kerja,Tidak Ada,Penjualan Aset,39482891.73,18,
+Pegawai,48.0,18.0,Staf Senior,Tetap,10932015.3,3.0,Pernah Macet,Pertimbangkan,,,,,,Pembelian Kendaraan,Piutang,Pendapatan Lain,497566870.62,54,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""nesciunt""}"
+Pegawai,37.0,10.0,Staf Senior,Tetap,29030786.88,5.0,Tidak Ada,Layak,,,,,,,Persediaan,,450511385.43,17,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""accusamus""}"
+Pegawai,37.0,12.0,Supervisor,Outsource,9271634.88,2.0,Ada,Layak,,,,,,Konsumsi,Kendaraan,Bonus,181897944.95,35,"{""merk_kendaraan"": ""Toyota"", ""tahun_kendaraan"": 2019, ""atas_nama_kendaraan"": ""Arsipatra Mandala"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,30.0,34.0,Staf Senior,Kontrak,29573004.91,1.0,Ada,Layak,,,,,,Pembelian Kendaraan,Piutang,Lain-lain,389121126.66,18,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""iure""}"
+Pegawai,40.0,10.0,Supervisor,Outsource,4007690.68,2.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Piutang,Gaji,448925424.84,62,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""velit""}"
+UMKM/Pengusaha,,,,,,,,Layak,33945119.37,14.0,Kuliner,Pusat Kota,Tidak Ada,Modal Kerja,Emas,Lain-lain,31881974.76,17,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""voluptas""}"
+UMKM/Pengusaha,,,,,,,,Layak,160848710.05,5.0,IT,Bantul,Tidak Ada,Konsumsi,Kendaraan,Tambahan Modal,118586893.04,6,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2010, ""atas_nama_kendaraan"": ""Tgk. Cinthia Budiyanto"", ""lokasi_jaminan"": ""Luar Yogyakarta""}"
+Pegawai,36.0,1.0,Staf Senior,Outsource,16157974.93,4.0,Tidak Ada,Layak,,,,,,Konsumsi,Piutang,Gaji,121713188.96,39,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""quos""}"
+Pegawai,47.0,21.0,Supervisor,Kontrak,27327327.13,5.0,Tidak Ada,Layak,,,,,,Pendidikan,Deposito,Pendapatan Lain,106482072.55,9,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""natus""}"
+Pegawai,53.0,2.0,Administrasi,Tetap,22796648.74,5.0,Tidak Ada,Layak,,,,,,Lain-lain,Tidak Ada,Bonus,159831626.85,19,
+UMKM/Pengusaha,,,,,,,,Layak,139776814.64,12.0,Pertanian,Sleman,Pernah Macet,Pembelian Aset,Tidak Ada,Tambahan Modal,489808259.39,34,
+UMKM/Pengusaha,,,,,,,,Layak,37085086.41,2.0,Kuliner,Bantul,Ada,Pembelian Aset,Piutang,Lain-lain,306531807.06,52,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""suscipit""}"
+Pegawai,23.0,13.0,Staf Pelaksana,Outsource,22528044.7,1.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Piutang,Pendapatan Lain,268976058.09,46,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""incidunt""}"
+Pegawai,33.0,20.0,Staf Pelaksana,Tetap,4258603.92,1.0,Ada,Pertimbangkan,,,,,,Konsumsi,Piutang,Gaji,378084440.29,72,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""deserunt""}"
+Pegawai,45.0,33.0,Staf Senior,Tetap,12622259.2,5.0,Ada,Pertimbangkan,,,,,,Konsumsi,Tidak Ada,Pendapatan Lain,179567801.01,71,
+UMKM/Pengusaha,,,,,,,,Layak,104879975.07,9.0,Kuliner,Online,Ada,Pembelian Aset,Persediaan,Penjualan Aset,130736693.34,6,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""sint""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,55766197.27,7.0,Transportasi,Bantul,Pernah Macet,Investasi,Deposito,Lain-lain,301164688.38,13,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quos""}"
+UMKM/Pengusaha,,,,,,,,Layak,106700614.77,8.0,Manufaktur,Yogyakarta Kota,Pernah Macet,Modal Kerja,Piutang,Usaha Sendiri,131972654.63,27,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""ipsa""}"
+Pegawai,33.0,17.0,Staf Pelaksana,Outsource,10591890.31,3.0,Pernah Macet,Pertimbangkan,,,,,,Pendidikan,Deposito,Lain-lain,403455510.41,55,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""debitis""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,195979475.9,1.0,Pertanian,Pusat Kota,Pernah Macet,Modal Kerja,Tanah/Bangunan,Tambahan Modal,280572223.48,6,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""facere""}"
+UMKM/Pengusaha,,,,,,,,Layak,198022612.13,2.0,Kuliner,Pinggir Kota,Tidak Ada,Modal Kerja,Kendaraan,Usaha Sendiri,463688286.8,61,"{""merk_kendaraan"": ""Mitsubishi"", ""tahun_kendaraan"": 2004, ""atas_nama_kendaraan"": ""H. Jais Yolanda, S.IP"", ""lokasi_jaminan"": ""Yogyakarta""}"
+Pegawai,40.0,13.0,Supervisor,Tetap,13425654.3,0.0,Pernah Macet,Layak,,,,,,,Tanah/Bangunan,,30258615.07,18,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""nemo""}"
+Pegawai,56.0,12.0,Staf Pelaksana,Kontrak,18163315.74,2.0,Ada,Layak,,,,,,Pembelian Kendaraan,Emas,Pendapatan Lain,97731812.72,60,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""assumenda""}"
+Pegawai,28.0,7.0,Administrasi,Kontrak,13013973.88,5.0,Ada,Pertimbangkan,,,,,,,Tidak Ada,,171338306.06,22,
+UMKM/Pengusaha,,,,,,,,Layak,63343051.15,3.0,Kuliner,Online,Ada,Pembelian Aset,Emas,Penjualan Aset,398036457.94,49,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""atque""}"
+UMKM/Pengusaha,,,,,,,,Layak,48842984.29,2.0,IT,Yogyakarta Kota,Pernah Macet,Renovasi,Tidak Ada,Tambahan Modal,499246335.22,63,
+UMKM/Pengusaha,,,,,,,,Layak,192928065.84,11.0,Kuliner,Yogyakarta Kota,Ada,Renovasi,Deposito,Tambahan Modal,80012106.28,58,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""sint""}"
+Pegawai,47.0,7.0,Administrasi,Kontrak,14883750.39,2.0,Pernah Macet,Layak,,,,,,Konsumsi,Emas,Pendapatan Lain,99479221.15,32,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""magni""}"
+Pegawai,20.0,9.0,Staf Pelaksana,Kontrak,10616214.28,3.0,Pernah Macet,Pertimbangkan,,,,,,Renovasi Rumah,Persediaan,Pendapatan Lain,124929266.82,50,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""ullam""}"
+Pegawai,20.0,5.0,Staf Senior,Tetap,11529496.19,3.0,Tidak Ada,Pertimbangkan,,,,,,Urusan Pribadi,Deposito,Gaji,426427874.52,13,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""illum""}"
+UMKM/Pengusaha,,,,,,,,Layak,50331527.1,10.0,Kuliner,Pusat Kota,Ada,Modal Kerja,Tidak Ada,Lain-lain,65468168.27,69,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,147708954.38,11.0,Perdagangan,Pedesaan,Pernah Macet,Modal Kerja,Piutang,Lain-lain,5353029.38,17,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""asperiores""}"
+UMKM/Pengusaha,,,,,,,,Tidak Layak,10926170.15,5.0,Jasa,Online,Pernah Macet,Pembelian Aset,Persediaan,Lain-lain,113002494.63,66,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""dignissimos""}"
+Pegawai,57.0,7.0,Supervisor,Tetap,17454628.4,2.0,Pernah Macet,Layak,,,,,,,Emas,,99512158.64,65,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""suscipit""}"
+Pegawai,22.0,17.0,Supervisor,Kontrak,25088507.78,4.0,Ada,Layak,,,,,,Lain-lain,Tidak Ada,Gaji,127637703.93,8,
+Pegawai,44.0,1.0,Staf Pelaksana,Tetap,13974568.7,1.0,Tidak Ada,Layak,,,,,,Pendidikan,Emas,Bonus,288471517.93,22,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""porro""}"
+UMKM/Pengusaha,,,,,,,,Layak,45568306.02,12.0,Kerajinan,Online,Tidak Ada,Renovasi,Tidak Ada,Penjualan Aset,153786754.01,18,
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,89588757.74,7.0,Pertanian,Online,Pernah Macet,Konsumsi,Tidak Ada,Tambahan Modal,474997067.7,63,
+Pegawai,26.0,19.0,Staf Pelaksana,Outsource,9819741.67,1.0,Pernah Macet,Pertimbangkan,,,,,,,Piutang,,269509687.4,31,"{""lokasi_jaminan"": ""Luar Yogyakarta"", ""deskripsi"": ""iste""}"
+UMKM/Pengusaha,,,,,,,,Pertimbangkan,19648445.44,7.0,Lainnya,Pusat Kota,Ada,Investasi,Emas,Lain-lain,245221320.41,64,"{""lokasi_jaminan"": ""Yogyakarta"", ""deskripsi"": ""quisquam""}"
