@@ -161,11 +161,11 @@
             }
 
             .auth-buttons-container a.bg-white {
-                border: 1px solid #4F80FF !important; /* Border biru */
-                color: #4F80FF !important; /* Teks biru */
+                border: 1px solid #203875ff !important; /* Border biru */
+                color: #21366aff !important; /* Teks biru */
             }
             .auth-buttons-container a.bg-white:hover {
-                background-color: #4F80FF !important;
+                background-color: #035850ff !important;
                 color: white !important;
                 transform: translateY(-1px);
                 box-shadow: 0 5px 15px rgba(79, 128, 255, 0.2);

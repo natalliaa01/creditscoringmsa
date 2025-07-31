@@ -42,7 +42,7 @@
             opacity: 0.95;
         }
         .hero-section .cta-button {
-            background-color: #2196F3;
+            background-color: #0047AB;
             color: white;
             padding: 16px 32px;
             text-decoration: none;
