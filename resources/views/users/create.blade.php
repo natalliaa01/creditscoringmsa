@@ -65,7 +65,6 @@
                                 @endforeach
                             </select>
                             <x-input-error :messages="$errors->get('roles')" class="mt-2" />
-                            <p class="text-sm text-gray-500 mt-1">Pilih satu atau lebih peran untuk pengguna ini (gunakan Ctrl/Cmd + klik untuk memilih beberapa).</p>
                         </div>
 
                         <div class="flex items-center justify-end mt-4">
