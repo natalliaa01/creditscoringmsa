@@ -7,7 +7,6 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -16,7 +15,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <style>
@@ -96,7 +94,7 @@
             }
 
             /* Main navigation flex container */
-            .main-nav-container {
+            .main-nav-container { /* This class is currently not explicitly used, but good to keep */
                 display: flex;
                 justify-content: space-between; /* Memisahkan logo/menu dan tombol auth */
                 align-items: center;
@@ -104,15 +102,23 @@
             }
 
             /* Left side: Logo and Nav Links */
-            .nav-left-section {
+            .nav-left-section { /* This will now only contain the logo/app name */
                 display: flex;
                 align-items: center;
-                gap: 2.5rem; /* Jarak antara logo dan menu navigasi */
+                /* Removed gap here */
             }
 
             .nav-brand {
                 flex-shrink: 0; /* Mencegah logo menyusut */
             }
+
+            /* New: Container for Nav Links AND Auth Buttons */
+            .nav-links-and-auth {
+                display: flex;
+                align-items: center;
+                gap: 2rem; /* Adjust this value to control spacing between nav links and auth buttons */
+            }
+
 
             /* Nav Link Styling */
             .space-x-8.sm\:flex > a { /* Target x-nav-link */
@@ -165,7 +171,7 @@
                 color: #21366aff !important; /* Teks biru */
             }
             .auth-buttons-container a.bg-white:hover {
-                background-color: #035850ff !important;
+                background-color: #035850ff !important; /* This seems like a strong green, consider if this is desired */
                 color: white !important;
                 transform: translateY(-1px);
                 box-shadow: 0 5px 15px rgba(79, 128, 255, 0.2);
@@ -240,7 +246,10 @@
                     height: 3.5rem !important; /* Lebih ringkas di mobile */
                 }
                 .nav-left-section {
-                    gap: 1.5rem; /* Kurangi jarak di mobile */
+                    /* Removed gap here as it's not needed for just logo/app name */
+                }
+                .nav-links-and-auth {
+                    gap: 1.5rem; /* Adjust spacing for mobile */
                 }
             }
         </style>
@@ -250,17 +259,17 @@
             <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between items-center nav-height">
-                        <!-- Logo dan Nama Aplikasi di ujung kiri -->
-                        <div class="nav-left-section"> {{-- Menggunakan class baru --}}
+                        <div class="nav-left-section"> {{-- This now strictly contains the logo/app name --}}
                             <div class="shrink-0 flex items-center nav-brand">
                                 <a href="{{ route('dashboard') }}" class="flex items-center">
                                     <img src="{{ asset('img/msa.png') }}" alt="MSA Logo" class="logo-msa mr-3">
                                     <span class="app-title text-msa-blue">Credit Smart</span>
                                 </a>
                             </div>
+                        </div>
 
-                            <!-- Menu Navigation -->
-                            <div class="hidden space-x-8 sm:flex">
+                        <div class="hidden sm:flex sm:items-center nav-links-and-auth"> {{-- New flex container --}}
+                            <div class="flex space-x-8"> {{-- Removed sm:flex here, already handled by parent --}}
                                 @guest
                                     {{-- Hanya tampil untuk pengunjung umum --}}
                                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
@@ -302,48 +311,44 @@
                                     @endrole
                                 @endauth
                             </div>
-                        </div>
 
-                        <!-- Button Login/Register atau User Dropdown (Right side) -->
-                        <div class="hidden sm:flex sm:items-center sm:ml-6 auth-buttons-container"> {{-- Menggunakan class baru --}}
-                            @guest
-                                <!-- Button Login dan Register untuk Tamu -->
-                                <a href="{{ route('login') }}" class="inline-flex items-center px-4 py-2 bg-msa-blue-light border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-msa-blue-dark focus:outline-none focus:border-msa-blue-dark focus:ring focus:ring-blue-200 active:bg-msa-blue-dark disabled:opacity-25 transition">
-                                    {{ __('Login') }}
-                                </a>
-                                <a href="{{ route('register') }}" class="inline-flex items-center px-4 py-2 bg-white border border-msa-blue-light rounded-md font-semibold text-xs text-msa-blue-light uppercase tracking-widest hover:bg-msa-blue-50 focus:outline-none focus:border-msa-blue-dark focus:ring focus:ring-blue-200 active:bg-msa-blue-50 disabled:opacity-25 transition">
-                                    {{ __('Register') }}
-                                </a>
-                            @else
-                                <!-- User Dropdown untuk yang sudah login -->
-                                <x-dropdown align="right" width="48">
-                                    <x-slot name="trigger">
-                                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150 user-dropdown-trigger"> {{-- Class baru --}}
-                                            <div>{{ Auth::user()->name }}</div>
-                                            <div class="ml-1">
-                                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                                </svg>
-                                            </div>
-                                        </button>
-                                    </x-slot>
+                            <div class="auth-buttons-container"> {{-- Retained: Uses your existing class for button styling --}}
+                                @guest
+                                    <a href="{{ route('login') }}" class="inline-flex items-center px-4 py-2 bg-msa-blue-light border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-msa-blue-dark focus:outline-none focus:border-msa-blue-dark focus:ring focus:ring-blue-200 active:bg-msa-blue-dark disabled:opacity-25 transition">
+                                        {{ __('Login') }}
+                                    </a>
+                                    <a href="{{ route('register') }}" class="inline-flex items-center px-4 py-2 bg-white border border-msa-blue-light rounded-md font-semibold text-xs text-msa-blue-light uppercase tracking-widest hover:bg-msa-blue-50 focus:outline-none focus:border-msa-blue-dark focus:ring focus:ring-blue-200 active:bg-msa-blue-50 disabled:opacity-25 transition">
+                                        {{ __('Register') }}
+                                    </a>
+                                @else
+                                    <x-dropdown align="right" width="48">
+                                        <x-slot name="trigger">
+                                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150 user-dropdown-trigger">
+                                                <div>{{ Auth::user()->name }}</div>
+                                                <div class="ml-1">
+                                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </x-slot>
 
-                                    <x-slot name="content">
-                                        <x-dropdown-link :href="route('profile.edit')">
-                                            {{ __('Profile') }}
-                                        </x-dropdown-link>
-                                        <form method="POST" action="{{ route('logout') }}">
-                                            @csrf
-                                            <x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
-                                                {{ __('Log Out') }}
+                                        <x-slot name="content">
+                                            <x-dropdown-link :href="route('profile.edit')">
+                                                {{ __('Profile') }}
                                             </x-dropdown-link>
-                                        </form>
-                                    </x-slot>
-                                </x-dropdown>
-                            @endauth
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                                                    {{ __('Log Out') }}
+                                                </x-dropdown-link>
+                                            </form>
+                                        </x-slot>
+                                    </x-dropdown>
+                                @endauth
+                            </div>
                         </div>
 
-                        <!-- Mobile menu button -->
                         <div class="-mr-2 flex items-center sm:hidden">
                             <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
                                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -398,10 +403,8 @@
                         @endauth
                     </div>
 
-                    <!-- Mobile User Section -->
-                    <div class="pt-4 pb-1 mobile-auth-buttons-container"> {{-- Menggunakan class baru --}}
+                    <div class="pt-4 pb-1 mobile-auth-buttons-container">
                         @guest
-                            <!-- Mobile Login/Register Buttons -->
                             <div class="space-y-2">
                                 <a href="{{ route('login') }}" class="block w-full text-center px-4 py-2 bg-msa-blue-light border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-msa-blue-dark focus:outline-none transition">
                                     {{ __('Login') }}
@@ -411,7 +414,6 @@
                                 </a>
                             </div>
                         @else
-                            <!-- Mobile User Info -->
                             <div class="px-4">
                                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
