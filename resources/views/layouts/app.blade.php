@@ -261,7 +261,6 @@
                     <div class="flex justify-between items-center nav-height">
                         <div class="nav-left-section"> {{-- This now strictly contains the logo/app name --}}
                             <div class="shrink-0 flex items-center nav-brand">
-                                <a href="{{ route('dashboard') }}" class="flex items-center">
                                     <img src="{{ asset('img/msa.png') }}" alt="MSA Logo" class="logo-msa mr-3">
                                     <span class="app-title text-msa-blue">Credit Smart</span>
                                 </a>
