@@ -5,11 +5,15 @@
         </h2>
     </x-slot>
 
-    <!-- Boxicons CSS for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Custom Styles to Match Landing Page -->
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
         .hero-contact {
             background: linear-gradient(135deg, #4a90e2, #357abd);
             color: white;
@@ -48,13 +52,13 @@
             padding: 80px 5%;
             background-color: #f8f9fa;
         }
-
+        
         .contact-container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1fr;
+            gap: 40px;
             align-items: start;
         }
 
@@ -65,7 +69,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             height: fit-content;
         }
-
         .contact-info-card h2 {
             font-size: 32px;
             margin-bottom: 30px;
@@ -109,7 +112,6 @@
             color: #2c3e50;
             margin-bottom: 5px;
         }
-
         .contact-details p {
             color: #666;
             font-size: 15px;
@@ -159,95 +161,12 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
         }
-
-        .contact-form-card {
-            background: white;
-            padding: 50px 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        
+        /* Hapus atau ubah gaya formulir yang tidak digunakan */
+        .contact-form-card, .form-group, .submit-btn, .success-message, .error-message {
+            display: none;
         }
-
-        .contact-form-card h2 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 16px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px 18px;
-            border: 2px solid #e1e5e9;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: #fafbfc;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #4a90e2;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 18px 30px;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-        }
-
-        .success-message {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
-        }
-
-        .error-message {
-            color: #dc3545;
-            font-size: 14px;
-            margin-top: 5px;
-            font-weight: 500;
-        }
-
+        
         /* Map Section */
         .map-section {
             padding: 80px 5%;
@@ -301,13 +220,11 @@
                 gap: 40px;
             }
 
-            .contact-info-card,
-            .contact-form-card {
+            .contact-info-card {
                 padding: 30px 25px;
             }
 
-            .contact-info-card h2,
-            .contact-form-card h2 {
+            .contact-info-card h2 {
                 font-size: 26px;
             }
 
@@ -340,16 +257,13 @@
     </style>
 
     <div class="min-h-screen">
-        <!-- Hero Section -->
         <section class="hero-contact">
             <h1>Hubungi Kami</h1>
             <p>Kami siap membantu Anda dengan segala kebutuhan perbankan dan layanan keuangan. Jangan ragu untuk menghubungi tim profesional kami.</p>
         </section>
 
-        <!-- Contact Main Section -->
         <section class="contact-main-section">
             <div class="contact-container">
-                <!-- Contact Information -->
                 <div class="contact-info-card">
                     <h2>Informasi Kontak</h2>
 
@@ -424,63 +338,12 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Contact Form -->
-                <div class="contact-form-card">
-                    <h2>Kirim Pesan Anda</h2>
-
-                    @if(session('success'))
-                        <div class="success-message">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-
-                    <form method="POST" action="{{ route('contact') }}">
-                        @csrf
-
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required value="{{ old('name') }}">
-                            @error('name')<div class="error-message">{{ $message }}</div>@enderror
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Alamat Email</label>
-                            <input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda" required value="{{ old('email') }}">
-                            @error('email')<div class="error-message">{{ $message }}</div>@enderror
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subjek Pesan</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Pilih subjek pesan</option>
-                                <option value="informasi_produk" {{ old('subject') == 'informasi_produk' ? 'selected' : '' }}>Informasi Produk</option>
-                                <option value="kerjasama_umkm" {{ old('subject') == 'kerjasama_umkm' ? 'selected' : '' }}>Kerja Sama UMKM</option>
-                                <option value="bantuan_umum" {{ old('subject') == 'bantuan_umum' ? 'selected' : '' }}>Bantuan Umum</option>
-                                <option value="lainnya" {{ old('subject') == 'lainnya' ? 'selected' : '' }}>Lainnya</option>
-                            </select>
-                            @error('subject')<div class="error-message">{{ $message }}</div>@enderror
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Isi Pesan</label>
-                            <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..." required>{{ old('message') }}</textarea>
-                            @error('message')<div class="error-message">{{ $message }}</div>@enderror
-                        </div>
-
-                        <button type="submit" class="submit-btn">
-                            Kirim Pesan
-                        </button>
-                    </form>
-                </div>
             </div>
         </section>
 
-        <!-- Map Section -->
         <section class="map-section">
             <h2>Lokasi Kami</h2>
             <p>Temukan kantor BPR Madani Sejahtera Abadi dengan mudah melalui peta di bawah ini. Kami siap melayani Anda dengan profesional.</p>
-
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.1895697298647!2d110.37525387431548!3d-7.772591677271008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a582310860549%3A0x6a05d8f6f5b9d3e8!2sJl.+C.+Simanjuntak+No.26%2C+Terban%2C+Kecamatan+Gondokusuman%2C+Kota+Yogyakarta%2C+Daerah+Istimewa+Yogyakarta+55223!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
