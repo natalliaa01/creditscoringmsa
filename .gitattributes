@@ -5,6 +5,7 @@
 *.html diff=html
 *.md diff=markdown
 *.php diff=php
+*.php text eol=lf
 
 /.github export-ignore
 CHANGELOG.md export-ignore

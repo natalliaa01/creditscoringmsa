@@ -4,6 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import pickle
+import sys
 import os
 
 def train_and_save_model(data_df, model_type, features, categorical_features, target_col):
